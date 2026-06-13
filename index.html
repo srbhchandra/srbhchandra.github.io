@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saurabh Bipin Chandra</title>
+  <meta name="description" content="Projects, data experiments, and writing by Saurabh Bipin Chandra." />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <h1>Saurabh Bipin Chandra</h1>
+      <!-- TODO: make this tagline your own -->
+      <p class="tagline">Projects, data experiments, and the occasional write-up.</p>
+      <nav class="top">
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="https://github.com/srbhchandra">GitHub</a>
+        <a href="mailto:srbhchandra@gmail.com">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <!-- TODO: replace with a couple of sentences about yourself -->
+      <p class="lede">
+        This is where I collect my public work — interactive visualizations, small
+        tools, and notes on things I'm figuring out. Most of it starts as a question
+        I wanted to answer for myself.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <a class="card" href="/projects/man-utd-xg/">
+        <h3>Manchester United — Expected Goals For vs Against</h3>
+        <p>A 12-season look at how many chances United create vs concede, with a
+           LOWESS trend and manager eras. Interactive.</p>
+        <div class="meta">Python · pandas · statsmodels · Plotly · data from Understat</div>
+      </a>
+    </section>
+
+    <section id="writing">
+      <h2>Writing</h2>
+      <p class="soon">Posts coming soon.</p>
+    </section>
+
+    <section id="links">
+      <h2>Elsewhere</h2>
+      <p>
+        <a href="https://github.com/srbhchandra">GitHub</a> ·
+        <a href="mailto:srbhchandra@gmail.com">Email</a> ·
+        <!-- TODO: add your resume (drop a resume.pdf in the repo root) or LinkedIn -->
+        <a href="/resume.pdf">Résumé</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      © <span id="yr"></span> Saurabh Bipin Chandra
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

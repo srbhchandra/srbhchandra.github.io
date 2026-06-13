@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manchester United — Expected Goals For vs Against</title>
+  <meta name="description" content="A 12-season view of Manchester United's expected goals created vs conceded, with a LOWESS trend and manager eras." />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <div class="wrap wide">
+    <a class="back" href="/">&larr; Saurabh Bipin Chandra</a>
+    <article>
+      <h1>Manchester United — Expected Goals For vs Against</h1>
+      <p class="byline">A 12-season view of how many chances United create versus concede.</p>
+
+      <p>
+        Expected goals (xG) estimates the quality of chances a team creates;
+        xGA does the same for chances they allow. Plotting both over time —
+        smoothed into a trend — shows United's underlying performance with the
+        match-to-match noise stripped out. The shaded band is the gap between
+        them: <strong>deeper green where United create far more than they concede,
+        deeper red where it flips</strong>.
+      </p>
+
+      <iframe class="chart-frame" src="chart.html" title="Interactive xG vs xGA chart" loading="lazy"></iframe>
+      <p class="note">Hover for values; drag to zoom; double-click to reset. Best viewed on a wider screen.</p>
+
+      <h2>How it's built</h2>
+      <p>
+        The trend lines are a LOWESS smoother (each local fit spans roughly two
+        seasons), drawn over a faint 38-match moving average for texture. Dotted
+        lines mark manager changes; sub-month caretaker spells are omitted.
+        Match data is from Understat (2014/15 onward, when xG coverage begins).
+        Built in Python with pandas, statsmodels, and Plotly.
+      </p>
+
+      <h2>Static version</h2>
+      <p>For sharing or print:</p>
+      <img src="man-utd-xg.png" alt="Manchester United xG vs xGA, static chart" />
+
+      <p class="note" style="margin-top:28px;">Data: Understat · Chart: Saurabh Bipin Chandra</p>
+    </article>
+  </div>
+</body>
+</html>
