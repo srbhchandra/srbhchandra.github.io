@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Résumé — Saurabh Bipin Chandra</title>
+  <meta name="description" content="Résumé of Saurabh Bipin Chandra — machine learning scientist working on high-precision ML for education and integrity." />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">&larr; Saurabh Bipin Chandra</a>
+    <article>
+      <h1>Saurabh Bipin Chandra</h1>
+      <p class="byline">
+        Machine learning scientist · Mountain View, CA ·
+        <a href="mailto:srbhchandra@gmail.com">srbhchandra@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/srbhchandra">LinkedIn</a> ·
+        <a href="https://github.com/srbhchandra">GitHub</a>
+      </p>
+
+      <p>
+        Principal machine learning scientist with an MS in CS from UCSD and 9+ years
+        applying deep learning to computer vision and NLP problems. First ML hire at
+        Gradescope (acquired by Turnitin), with experience spanning ML engineering,
+        data science, and technical leadership — 12+ models across 10+ projects taken
+        from research to production, most of them in settings that demand very high
+        precision. Currently tech-leading AI content detection, with a focus on
+        agentic data generation and automated training and evaluation pipelines.
+        Previously four years on optimized CV algorithms for automotive ADAS and
+        multimedia frameworks for embedded systems.
+      </p>
+
+      <h2>Experience</h2>
+
+      <h3>Turnitin — Principal Machine Learning Scientist
+        <span class="place-note">2016; 2017 – present</span></h3>
+
+      <h4>AI-generated text detection</h4>
+      <ul>
+        <li>Tech-leading the AI-generated text detection system; reduced release
+            cadence from 4–6 months to 1 month.</li>
+        <li>Trained, evaluated, and deployed a 3-model ensemble detecting AI-written,
+            AI-paraphrased, and AI-bypassed ("humanized") content.</li>
+        <li>State-of-the-art performance among competitors while holding a
+            false-positive rate below 0.5% across all groups, evaluated on 1M+
+            documents; ran extensive statistical testing for fairness and absence of
+            bias across groups.</li>
+        <li>Spearheaded AI-paraphrased text detection from conception to deployment,
+            tech-leading 3 AI team members and coordinating a cross-functional team of
+            7 across design, PM, integrations, and QA — including a three-phase
+            incremental release strategy.</li>
+        <li>Building automated, rerunnable training and evaluation pipelines covering
+            the full model lifecycle from data preparation to production deployment.</li>
+      </ul>
+
+      <h4>Clarity — student writing assistant &amp; instructor report</h4>
+      <ul>
+        <li>Co-led development, evaluation, and deployment of the LLM-based student
+            writing assistant, providing real-time feedback and Socratic guidance.
+            Product named a TIME Best Invention of 2025.</li>
+        <li>Sole developer of the AI-powered instructor report's three LLM components:
+            a prompt classifier categorizing student requests by writing stage and
+            intent, plus two summarization systems (full-conversation and
+            per-category).</li>
+        <li>Cut LLM cost 81–89% while maintaining quality via multi-region model
+            strategies across US/EU/APAC.</li>
+        <li>Built reusable LLM infrastructure adopted organization-wide: an enhanced
+            GEval evaluation framework, a prompt builder for systematic prompt
+            development, evaluation tracking (Langfuse, Weave), and a multilingual
+            evaluation framework.</li>
+        <li>Developed a student agent for systematic multi-turn testing against diverse
+            personas, surfacing edge cases and enabling multilingual expansion.</li>
+      </ul>
+
+      <h4>Gradescope — document AI &amp; grading automation</h4>
+      <ul>
+        <li>ML/CV technical lead for the paper-to-digital automated grading workflow,
+            which cuts grading time by ~50%. Built and maintained all ML/CV services
+            on a two-person team, including data flywheels (discovery, tagging,
+            annotation, production evaluation) and one-script on-premise training.</li>
+        <li><strong>Handwritten text recognition</strong> — CNN + BiLSTM network for
+            single-line text, with a CV solution splitting multi-line text into lines.</li>
+        <li><strong>Automated scan splitting</strong> — split multi-page PDFs into
+            individual student submissions; 100% accuracy at 80% recall through
+            confidence tuning, enabling a workflow needing no manual review when
+            confident.</li>
+        <li><strong>Image alignment, masking, and overlaying</strong> — projective
+            transformation aligning submissions to templates, with a novel iterative
+            selective feature-outlier removal method and a custom alignment metric.</li>
+        <li><strong>Automated roster matching</strong> — deep network matching inferred
+            handwritten names/IDs to roster entries only when fully confident; 100%
+            precision in production via a novel "not-confident" softmax label, paired
+            with a three-tier confidence-based user workflow.</li>
+        <li><strong>Multiple-choice grading</strong> — inception-based fully
+            convolutional detector for mark regions with a confidence network and
+            contour analysis, plus a model detecting student ink within marks.</li>
+        <li><strong>Blank answer detection</strong> — Siamese-like residual CNN robust
+            to misaligned and incorrectly overlaid images.</li>
+        <li><strong>Question type classification</strong> — CNN classifier for question
+            type (multiple choice, fill-in-the-blank, short answer) and answer type.</li>
+        <li><strong>Fast multi-head attention</strong> — optimized forward pass reducing
+            time complexity from O(T²) to O(T), significantly speeding multi-line HTR
+            and enabling low-cost deployment. Acknowledged in the ICDAR 2021 paper
+            "Full Page Handwriting Recognition via Image to Sequence Extraction."</li>
+        <li><strong>Template PDF parser</strong> — graph-based solution parsing PDF
+            structure and segmenting regions, text, and images.</li>
+        <li>Assisted the NSF SBIR project "Grading 10x Faster with AI Assistance,"
+            demonstrating few-shot feasibility for grading unseen questions after an
+            instructor grades ≤10% of answers.</li>
+      </ul>
+
+      <h3>Texas Instruments India — Senior Software Engineer
+        <span class="place-note">2011 – 2015</span></h3>
+      <ul>
+        <li>Optimized machine vision algorithms for real-time, safety-critical
+            automotive driver assistance (ADAS) on EVE, a SIMD compute engine.
+            The lens distortion correction algorithm was 4× better than the existing
+            DSP solution and was productized for surround view.</li>
+        <li>Sole developer of an OS-agnostic remote multimedia framework stack
+            (Android, Linux, QNX) for TI's heterogeneous OMAP4/5 processors, offloading
+            multimedia work to a remote core over IPC with resource, memory, and power
+            management.</li>
+        <li>Built an OpenMAX-based pipelined scalable video codec encoder using two SIMD
+            compute engines alongside the hardware accelerator to deliver 1080p30.</li>
+      </ul>
+
+      <h2>Collaborations</h2>
+      <ul>
+        <li>Collaborated with Dr. Nikita Hari (University of Cambridge) on her PhD,
+            "Gallium Nitride (GaN) Power Electronics using Machine Learning" —
+            developed a deep network predicting time-series voltage waveforms for GaN
+            devices from intrinsic properties and device current.</li>
+        <li>Created labs for the Full Stack Deep Learning bootcamp (2018, 2020, 2022),
+            now offered as a course at UC Berkeley — a CNN text-line region predictor
+            and ResNet + Transformer handwriting recognition models for single lines
+            and paragraphs.</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages</strong> — Python, SQL (PostgreSQL), C</li>
+        <li><strong>ML &amp; data science</strong> — PyTorch, TensorFlow, Keras,
+            scikit-learn, NumPy, pandas, SciPy, Wandb, Matplotlib</li>
+        <li><strong>CV &amp; NLP</strong> — OpenCV, Hugging Face, spaCy</li>
+        <li><strong>LLM &amp; prompt engineering</strong> — LiteLLM, OpenAI, AWS
+            Bedrock, Langfuse, Weave, GEval</li>
+        <li><strong>Cloud &amp; deployment</strong> — AWS (Lambda, S3, SageMaker,
+            Redshift, Bedrock), Docker</li>
+        <li><strong>Version control, CI/CD</strong> — Git, CircleCI, Jenkins</li>
+      </ul>
+
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MS, Computer Science</strong> — University of California San Diego,
+            2017. AI, data mining, ML, neural networks, image recognition. GPA 3.77/4.</li>
+        <li><strong>B.Tech, Computer Engineering</strong> — National Institute of
+            Technology Karnataka, 2011. GPA 8.9/10.</li>
+      </ul>
+    </article>
+  </div>
+</body>
+</html>

@@ -13,6 +13,9 @@ projects/
     index.html          Project write-up
     chart.html          Interactive Plotly chart (loads plotly.js from CDN)
     man-utd-xg.png      Static export
+travel/
+  index.html            Travel landing page (list of itineraries)
+  central-europe/       14-day Czechia/Poland/Slovakia/Hungary/Austria/Slovenia/Italy itinerary
 blog/                   Writing (placeholder; add a generator when posts start)
 ```
 
