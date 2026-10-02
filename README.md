@@ -13,6 +13,9 @@ projects/
     index.html          Project write-up
     chart.html          Interactive Plotly chart (loads plotly.js from CDN)
     man-utd-xg.png      Static export
+  football-tactics-board/  Interactive tactics board (React app). Build output only,
+                        published by `npm run deploy:hub` in the private
+                        football-tactics-board repo; don't edit by hand
 travel/
   index.html            Travel landing page (list of itineraries)
   central-europe/       14-day Czechia/Poland/Slovakia/Hungary/Austria/Slovenia/Italy itinerary
@@ -23,6 +26,11 @@ blog/                   Writing (placeholder; add a generator when posts start)
 
 Export the artifact (PNG / self-contained or CDN-based HTML) and drop it under
 `projects/<slug>/`, then add a card linking to it on `index.html`.
+
+For a built web app (Vite/React etc.), build with the subfolder as its base
+path (e.g. `vite build --base=/projects/<slug>/`), or its asset URLs point at the
+site root and the page loads blank. Automate the build-and-copy with a script in
+the source repo, like `scripts/deploy-hub.sh` in football-tactics-board.
 
 ## Things to personalize
 
