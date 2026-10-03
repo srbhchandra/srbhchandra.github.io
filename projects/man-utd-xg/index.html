@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Manchester United — Expected Goals For vs Against</title>
-  <meta name="description" content="A 12-season view of Manchester United's expected goals created vs conceded, with a LOWESS trend and manager eras." />
+  <meta name="description" content="Manchester United's expected goals created vs conceded since 2014/15, with a LOWESS trend and manager eras." />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
     <a class="back" href="/">&larr; Saurabh Bipin Chandra</a>
     <article>
       <h1>Manchester United — Expected Goals For vs Against</h1>
-      <p class="byline">A 12-season view of how many chances United create versus concede.</p>
+      <p class="byline">How many chances United have created versus conceded since 2014/15, updated through the current season.</p>
 
       <p>
         Expected goals (xG) estimates the quality of chances a team creates;
@@ -28,9 +28,17 @@
 
       <h2>How it's built</h2>
       <p>
-        The trend lines are a LOWESS smoother (each local fit spans roughly two
-        seasons), drawn over a faint 38-match moving average for texture. Dotted
-        lines mark manager changes; sub-month caretaker spells are omitted.
+        Per-match xG is very noisy, so the chart smooths it in two stages.
+        The <strong>faint lines are themselves moving averages</strong>: each point
+        averages the 38 matches around it (roughly a season). That evens out
+        single games but still jitters as matches enter and leave the window.
+        The <strong>bold trend lines</strong> add a LOWESS smoother (a local linear
+        fit spanning roughly two seasons) on top, giving the long-run shape.
+        The trend is least settled at the right-hand edge, where only past
+        matches inform it, so it will shift as the current season plays out.
+      </p>
+      <p>
+        Dotted lines mark manager changes; sub-month caretaker spells are omitted.
         Match data is from Understat (2014/15 onward, when xG coverage begins).
         Built in Python with pandas, statsmodels, and Plotly.
       </p>
