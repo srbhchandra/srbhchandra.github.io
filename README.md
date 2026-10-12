@@ -9,9 +9,10 @@ and links. Served via GitHub Pages at **https://srbhchandra.github.io**.
 index.html              Landing page (about, projects, links)
 assets/style.css        Shared styles
 projects/
-  man-utd-xg/           Manchester United xG vs xGA visualization
-    index.html          Project write-up
-    chart.html          Interactive Plotly chart (loads plotly.js from CDN)
+  man-utd-xg/           Manchester United expected-goals page. Build output only,
+                        published by scripts/deploy-hub.sh in the private
+                        football-performance-viz repo; don't edit by hand
+    index.html          The whole page (text + Chart.js charts + data)
     man-utd-xg.png      Static export
   football-tactics-board/  Interactive tactics board (React app). Build output only,
                         published by `npm run deploy:hub` in the private
