@@ -55,7 +55,7 @@ window.TRIP = {
         { kind: 'food', tags: ['hl'], best: 'Best food & beer', text: 'Lunch at Strahov Monastery – best beer and food of the entire trip. Beer: IPA + dark beer brewed by the monastery. Food: pork tenderloin, steak', stops: [['Strahov Monastery Brewery', 14.3897, 50.0861]] },
         { kind: 'see', tags: ['hl'], text: 'Sedlec Ossuary, Kutná Hora (chapel adorned with human skeletons)', stops: [['Sedlec Ossuary', 15.2886, 49.9620]] },
         { kind: 'see', text: 'Ukraine war exhibit, Brno-střed', stops: [['Brno-střed', 16.6068, 49.1951]] },
-        { kind: 'food', text: 'Fried grundle fish (netholi-like!) at Soul Bistro, Brno', stops: [['Soul Bistro']] }
+        { kind: 'food', text: 'Fried grundle fish at Soul Bistro, Brno', stops: [['Soul Bistro']] }
       ]
     },
     {
