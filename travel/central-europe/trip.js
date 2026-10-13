@@ -99,11 +99,11 @@ window.TRIP = {
     },
     {
       n: 6, title: 'Drive to Budapest, Hungary via Slovakia', place: 'Tatras → Budapest', base: 'Budapest', country: 'HU', via: ['SK'],
-      drive: [[19.9502, 49.2960], [20.2716, 49.2709], [19.0400, 47.4979]],
+      drive: [[19.9502, 49.2960], [20.2275, 49.2737], [19.0400, 47.4979]],
       items: [
-        { kind: 'food', text: 'Excellent breakfast at Restauracja Zakopiańska – tried bliny gryczane' },
+        { kind: 'food', text: 'Excellent breakfast at Restauracja Zakopiańska – tried bliny gryczane', stops: [['Restauracja Zakopiańska', 19.9630, 49.2968]] },
         { kind: 'see', tags: ['nature'], text: 'Tatra National Park – hike up Sarnia Skała for views', stops: [['Sarnia Skała', 19.9410, 49.2649]] },
-        { kind: 'see', tags: ['nature'], text: 'Drive through Slovakia with views of the Tatras; stop at Ždiar for photos', stops: [['Ždiar', 20.2716, 49.2709]] },
+        { kind: 'see', tags: ['nature'], text: 'Drive through Slovakia with views of the Tatras; stop at Ždiar for photos', stops: [['Ždiar', 20.2275, 49.2737]] },
         { kind: 'miss', text: 'An extra day in the Tatras: stay on the Slovak side, and hike to Morskie Oko (on the Polish side)', stops: [['Morskie Oko', 20.0707, 49.1974]] }
       ]
     },
@@ -124,14 +124,14 @@ window.TRIP = {
     },
     {
       n: 8, title: 'Budapest, then drive to Vienna, Austria via Slovakia', place: 'Budapest → Vienna', base: 'Vienna', country: 'AT', via: ['SK'],
-      drive: [[19.0457, 47.5071], [18.7522, 47.4467], [17.1077, 48.1437], [16.3731, 48.2085]],
+      drive: [[19.0457, 47.5071], [18.7406, 47.4403], [17.1077, 48.1437], [16.3731, 48.2085]],
       items: [
-        { kind: 'see', tags: ['tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
         { kind: 'walk', stops: [
           ['Széchenyi Thermal Bath', 19.0819, 47.5186], ['Gatehouse Tower', 19.0815, 47.5155],
           ['Vajdahunyad Castle', 19.0820, 47.5150], ['Museum of Ethnography', 19.0759, 47.5193] ] },
+        { kind: 'see', tags: ['tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
         { kind: 'food', text: 'A very beautiful café – Ohana, the coffee family, Budapest' },
-        { kind: 'food', text: 'Etyeki Manor vineyard, Etyek', stops: [['Etyek', 18.7522, 47.4467]] },
+        { kind: 'food', text: 'Etyeki Manor vineyard, Etyek', stops: [['Etyek', 18.7406, 47.4403]] },
         { kind: 'walk', label: 'Bratislava, Slovakia', stops: [['Bratislava Castle', 17.1000, 48.1421], ['Old Town', 17.1077, 48.1437]] }
       ]
     },
@@ -140,22 +140,23 @@ window.TRIP = {
       items: [
         { kind: 'walk', label: 'Innere Stadt', stops: [
           ['Naschmarkt', 16.3623, 48.1983], ["St. Charles's Church", 16.3717, 48.1983],
-          ['Vienna State Opera', 16.3692, 48.2031], ['Albertina', 16.3683, 48.2045],
+          ['Vienna State Opera', 16.3692, 48.2031],
           ['Michaelerplatz', 16.3667, 48.2080], ['Austrian National Library', 16.3670, 48.2066],
           ['Spanish Riding School', 16.3664, 48.2075], ['The Hofburg', 16.3653, 48.2066],
           ['Kunsthistorisches Museum', 16.3617, 48.2038], ['Parliament (no guided tour)', 16.3586, 48.2083],
-          ['Rathausplatz', 16.3575, 48.2105], ["St. Stephen's Cathedral (elevator up the tower)", 16.3731, 48.2085] ] },
+          ['Rathausplatz', 16.3575, 48.2105] ] },
         { kind: 'see', text: 'Hundertwasser House and Village', stops: [['Hundertwasser House', 16.3944, 48.2072]] },
+        { kind: 'walk', stops: [["St. Stephen's Cathedral (elevator up the tower)", 16.3731, 48.2085], ['Albertina', 16.3683, 48.2045]] },
         { kind: 'see', tags: ['tour'], text: 'Watch the opera “Daphne” at the Vienna State Opera', stops: [['Vienna State Opera', 16.3692, 48.2031]] },
         { kind: 'food', text: 'Viennese coffee and pastries, such as Sachertorte and Apfelstrudel, at Café Demel', stops: [['Café Demel', 16.3673, 48.2087]] }
       ]
     },
     {
       n: 10, title: 'Vienna, then drive to Slovenia', place: 'Vienna → Slovenia', base: 'Kranjska Gora', country: 'SI',
-      drive: [[16.3122, 48.1845], [16.8380, 47.8547], [13.7850, 46.4847]],
+      drive: [[16.3122, 48.1845], [16.8310, 47.8504], [13.7850, 46.4847]],
       items: [
         { kind: 'see', tags: ['tour'], text: 'Schönbrunn Palace (Habsburg architecture) – audio-guided tour', stops: [['Schönbrunn Palace', 16.3122, 48.1845]] },
-        { kind: 'food', text: 'Heuriger wine at Fabian Inh. Johann Sloboda, Podersdorf am See', stops: [['Podersdorf am See', 16.8380, 47.8547]] }
+        { kind: 'food', text: 'Heuriger wine at Fabian Inh. Johann Sloboda, Podersdorf am See', stops: [['Podersdorf am See', 16.8310, 47.8504]] }
       ]
     },
     {
@@ -167,8 +168,8 @@ window.TRIP = {
       ]
     },
     {
-      n: 12, title: 'Bled, then drive to the Dolomites, Italy', place: 'Bled → Dolomites', base: "Cortina d'Ampezzo", country: 'IT',
-      drive: [[13.7850, 46.4847], [14.0927, 46.3986], [14.0938, 46.3683], [14.1270, 45.8156], [12.1357, 46.5369]],
+      n: 12, title: 'Bled, then drive to the Dolomites, Italy', place: 'Bled → Dolomites', base: 'Colle Santa Lucia', country: 'IT',
+      drive: [[13.7850, 46.4847], [14.0927, 46.3986], [14.0938, 46.3683], [14.1270, 45.8156], [12.0138, 46.4479]],
       items: [
         { kind: 'walk', tags: ['hl', 'nature'], best: 'Best nature', text: 'Vintgar Gorge – the best nature of the trip: blue, green and yellow water in the gorge', stops: [['Vintgar Gorge', 14.0927, 46.3986]] },
         { kind: 'see', tags: ['nature'], text: 'Lake Bled, with its island – did the mountain coaster', stops: [['Lake Bled', 14.0938, 46.3625]] },
@@ -178,23 +179,23 @@ window.TRIP = {
       ]
     },
     {
-      n: 13, title: 'The Dolomites, Italy', place: 'Dolomites', base: "Cortina d'Ampezzo", country: 'IT',
-      drive: [[12.1357, 46.5369], [12.1174, 46.5258], [12.0540, 46.4831], [12.0090, 46.5196], [12.1357, 46.5369]],
+      n: 13, title: 'The Dolomites, Italy', place: 'Dolomites', base: 'Colle Santa Lucia', country: 'IT',
+      drive: [[12.0138, 46.4479], [12.0540, 46.4831], [12.0084, 46.5192], [12.1174, 46.5258], [12.1357, 46.5369], [12.0138, 46.4479]],
       items: [
         { kind: 'see', tags: ['hl', 'nature'], best: 'Best drive', text: 'The best drive, with many hairpin bends', stops: [
-          ['Belvedere di Pocol', 12.1174, 46.5258], ['Punto Panoramico'], ['Passo Giau', 12.0540, 46.4831],
-          ['Cascate di Limedes'], ['Lagazuoi cable car', 12.0090, 46.5196], ['Parcheggio Belvedere'] ] },
+          ['Passo Giau', 12.0540, 46.4831], ['Cascate di Limedes'], ['Lagazuoi cable car', 12.0084, 46.5192],
+          ['Belvedere di Pocol', 12.1174, 46.5258], ['Punto Panoramico'], ['Parcheggio Belvedere'] ] },
         { kind: 'walk', stops: [["Cortina d'Ampezzo", 12.1357, 46.5369]] },
         { kind: 'food', text: 'Hot chocolate from Pasticceria Panificio Alverà, Cortina', stops: [['Pasticceria Alverà', 12.1365, 46.5380]] }
       ]
     },
     {
       n: 14, title: 'The Dolomites, then drive to Venice', place: 'Dolomites → Venice', base: 'Venice', country: 'IT',
-      drive: [[12.1357, 46.5369], [12.0215, 46.4078], [12.0565, 46.1733], [12.3180, 45.4380]],
+      drive: [[12.0138, 46.4479], [12.0215, 46.4078], [12.0419, 46.1878], [12.0624, 46.1657], [12.2334, 45.4827]],
       items: [
         { kind: 'see', tags: ['nature'], text: 'Lake Alleghe', stops: [['Lake Alleghe', 12.0215, 46.4078]] },
         { kind: 'see', tags: ['hl', 'nature'], text: 'Dolomiti Bellunesi National Park', stops: [
-          ['Lago del Mis', 12.0565, 46.1733], ['Cadini del Brenton', 12.0365, 46.1879], ['Sentiero Natura Val Falcina'] ] },
+          ['Cadini del Brenton', 12.0419, 46.1878], ['Lago del Mis', 12.0624, 46.1657], ['Sentiero Natura Val Falcina'] ] },
         { kind: 'walk', label: 'Venice, on foot and by ferry', stops: [
           ['Venezia Santa Lucia station', 12.3210, 45.4410], ['Rialto Bridge', 12.3359, 45.4380],
           ['Basilica dei Frari', 12.3263, 45.4370], ["St. Mark's Square", 12.3388, 45.4341],
