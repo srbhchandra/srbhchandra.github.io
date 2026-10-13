@@ -27,8 +27,7 @@ window.TRIP = {
           ['Franz Kafka – Rotating Head', 14.4204, 50.0819],
           ['Man Hanging Out (Sigmund Freud)', 14.4187, 50.0846],
           ['Prague Jewish Quarter', 14.4185, 50.0900],
-          ['Prašná brána (climb the tower)', 14.4278, 50.0870],
-          ['Il Commendatore by Anna Chromý', 14.4233, 50.0857] ] },
+          ['Prašná brána (climb the tower)', 14.4278, 50.0870] ] },
         { kind: 'walk', label: 'Old Town Square', stops: [
           ['Prague Astronomical Clock', 14.4206, 50.0870],
           ['Památník Jana Husa', 14.4214, 50.0876],
@@ -51,6 +50,7 @@ window.TRIP = {
       items: [
         { kind: 'see', tags: ['hl', 'tour'], text: 'Klementinum (baroque library) – guided tour', stops: [['Klementinum', 14.4163, 50.0864]] },
         { kind: 'see', text: 'Prague main station', stops: [['Prague main station', 14.4353, 50.0831]] },
+        { kind: 'see', text: 'Il Commendatore by Anna Chromý, by the Estates Theatre', stops: [['Il Commendatore', 14.4233, 50.0857]] },
         { kind: 'see', tags: ['hl'], text: 'Strahov Monastery – museum, baroque library', stops: [['Strahov Monastery', 14.3893, 50.0863]] },
         { kind: 'food', tags: ['hl'], best: 'Best food & beer', text: 'Lunch at Strahov Monastery – best beer and food of the entire trip. Beer: IPA + dark beer brewed by the monastery. Food: pork tenderloin, steak', stops: [['Strahov Monastery Brewery', 14.3897, 50.0861]] },
         { kind: 'see', tags: ['hl'], text: 'Sedlec Ossuary, Kutná Hora (chapel adorned with human skeletons)', stops: [['Sedlec Ossuary', 15.2886, 49.9620]] },
@@ -115,6 +115,7 @@ window.TRIP = {
           ["Fisherman's Bastion", 19.0350, 47.5022], ['Buda Castle', 19.0396, 47.4962],
           ['Budapest History Museum / Castle Museum', 19.0395, 47.4955], ['Várkert Bazár', 19.0434, 47.4963] ] },
         { kind: 'walk', stops: [
+          ['Hungarian Parliament, from outside (the tour is on day 8)', 19.0457, 47.5071],
           ["St. Stephen's Basilica (climb the tower)", 19.0539, 47.5008],
           ['Vörösmarty tér – very happening', 19.0510, 47.4970] ] },
         { kind: 'see', tags: ['tour'], text: "Danube night cruise to admire the city's landmarks", stops: [['Danube cruise pier', 19.0480, 47.4960]] },
@@ -161,10 +162,10 @@ window.TRIP = {
     },
     {
       n: 11, title: 'Kranjska Gora, Slovenia', place: 'Kranjska Gora', base: 'Kranjska Gora', country: 'SI',
-      drive: [[13.7850, 46.4847], [13.7841, 46.4718], [13.7436, 46.4339], [13.7520, 46.3810], [13.7850, 46.4847]],
+      drive: [[13.7850, 46.4847], [13.7841, 46.4718], [13.7436, 46.4339], [13.7850, 46.4847]],
       items: [
         { kind: 'see', tags: ['nature'], text: 'Lake Jasna', stops: [['Lake Jasna', 13.7841, 46.4718]] },
-        { kind: 'see', tags: ['nature'], text: 'Drive through Triglav National Park over the Vršič Pass to Trenta and back', stops: [['Vršič Pass', 13.7436, 46.4339], ['Trenta', 13.7520, 46.3810]] }
+        { kind: 'see', tags: ['nature'], text: 'Drive through Triglav National Park up to the Vršič Pass and back', stops: [['Vršič Pass', 13.7436, 46.4339]] }
       ]
     },
     {
@@ -173,7 +174,7 @@ window.TRIP = {
       items: [
         { kind: 'walk', tags: ['hl', 'nature'], best: 'Best nature', text: 'Vintgar Gorge – the best nature of the trip: blue, green and yellow water in the gorge', stops: [['Vintgar Gorge', 14.0927, 46.3986]] },
         { kind: 'see', tags: ['nature'], text: 'Lake Bled, with its island – did the mountain coaster', stops: [['Lake Bled', 14.0938, 46.3625]] },
-        { kind: 'see', text: 'Predjama Castle', stops: [['Predjama Castle', 14.1270, 45.8156]] },
+        { kind: 'see', text: 'Predjama Castle – seen from outside', stops: [['Predjama Castle', 14.1270, 45.8156]] },
         { kind: 'food', text: 'Bled cream cake', stops: [['Bled', 14.1100, 46.3680]] },
         { kind: 'miss', text: 'Postojna Cave or Škocjan Caves', stops: [['Postojna Cave', 14.2034, 45.7826], ['Škocjan Caves', 13.9895, 45.6634]] }
       ]
@@ -183,7 +184,7 @@ window.TRIP = {
       drive: [[12.0138, 46.4479], [12.0540, 46.4831], [12.0084, 46.5192], [12.1174, 46.5258], [12.1357, 46.5369], [12.0138, 46.4479]],
       items: [
         { kind: 'see', tags: ['hl', 'nature'], best: 'Best drive', text: 'The best drive, with many hairpin bends', stops: [
-          ['Passo Giau', 12.0540, 46.4831], ['Cascate di Limedes'], ['Lagazuoi cable car', 12.0084, 46.5192],
+          ['Passo Giau', 12.0540, 46.4831], ['Cascate di Limedes'], ['Lagazuoi cable car (skipped: the top was in cloud)', 12.0084, 46.5192],
           ['Belvedere di Pocol', 12.1174, 46.5258], ['Punto Panoramico'], ['Parcheggio Belvedere'] ] },
         { kind: 'walk', stops: [["Cortina d'Ampezzo", 12.1357, 46.5369]] },
         { kind: 'food', text: 'Hot chocolate from Pasticceria Panificio Alverà, Cortina', stops: [['Pasticceria Alverà', 12.1365, 46.5380]] }
@@ -191,13 +192,14 @@ window.TRIP = {
     },
     {
       n: 14, title: 'The Dolomites, then drive to Venice', place: 'Dolomites → Venice', base: 'Venice', country: 'IT',
-      drive: [[12.0138, 46.4479], [12.0215, 46.4078], [12.0419, 46.1878], [12.0624, 46.1657], [12.2334, 45.4827]],
+      drive: [[12.0138, 46.4479], [12.0215, 46.4078], [11.9947, 46.2210], [12.0419, 46.1878], [12.0624, 46.1657], [12.2334, 45.4827]],
       items: [
         { kind: 'see', tags: ['nature'], text: 'Lake Alleghe', stops: [['Lake Alleghe', 12.0215, 46.4078]] },
         { kind: 'see', tags: ['hl', 'nature'], text: 'Dolomiti Bellunesi National Park', stops: [
-          ['Cadini del Brenton', 12.0419, 46.1878], ['Lago del Mis', 12.0624, 46.1657], ['Sentiero Natura Val Falcina'] ] },
-        { kind: 'walk', label: 'Venice, on foot and by ferry', stops: [
-          ['Venezia Santa Lucia station', 12.3210, 45.4410], ['Rialto Bridge', 12.3359, 45.4380],
+          ['Valle del Mis – stopped just for fun', 11.9947, 46.2210], ['Cadini del Brenton', 12.0419, 46.1878], ['Lago del Mis', 12.0624, 46.1657], ['Sentiero Natura Val Falcina'] ] },
+        { kind: 'see', text: 'Leave the car in Mestre and cross the causeway into Venice', stops: [['Mestre', 12.2334, 45.4827]] },
+        { kind: 'walk', label: 'Venice, on foot and by boat', stops: [
+          ['Venezia Santa Lucia station', 12.3210, 45.4410], ['Rialto Bridge (from the boat)', 12.3359, 45.4380],
           ['Basilica dei Frari', 12.3263, 45.4370], ["St. Mark's Square", 12.3388, 45.4341],
           ["Doge's Palace", 12.3401, 45.4337], ["St. Mark's Basilica", 12.3397, 45.4345],
           ['National Archaeological Museum', 12.3383, 45.4338] ] }
