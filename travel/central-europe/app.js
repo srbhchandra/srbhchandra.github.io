@@ -79,6 +79,57 @@
 
   /* ---------- day sections ---------- */
   const KIND = { walk: 'Walk', see: 'See', food: 'Eat', miss: 'Missed' };
+
+  /* ---------- photos (photos.js) ---------- */
+  const PH = window.PHOTOS || { days: {}, stops: {} };
+  const stopPhotos = (n, name) => PH.stops[`${n}|${name}`] || [];
+  const imgSmall = (src) => `photos/${src}-s.jpg`;
+  const imgLarge = (src) => `photos/${src}.jpg`;
+  const gallery = {}; // day -> [{src, cap}], the order the viewer steps through
+  days.forEach((d) => {
+    const g = [];
+    if (PH.days[d.n]) g.push({ src: PH.days[d.n].src, cap: PH.days[d.n].cap });
+    d.items.forEach((it) => (it.stops || []).forEach((st) => stopPhotos(d.n, st[0]).forEach((src) => g.push({ src, cap: st[0] }))));
+    gallery[d.n] = g;
+  });
+  const photoBtn = (day, src, label, inner) =>
+    `<button type="button" data-photo="${src}" data-pday="${day}" aria-label="View photo: ${esc(label)}">${inner}</button>`;
+
+  const lb = el('dialog', 'lightbox');
+  lb.innerHTML = `<figure><img alt=""><figcaption></figcaption></figure>
+    <button type="button" class="lb-prev" aria-label="Previous photo">‹</button>
+    <button type="button" class="lb-next" aria-label="Next photo">›</button>
+    <button type="button" class="lb-close" aria-label="Close">×</button>`;
+  document.body.appendChild(lb);
+  let lbDay = 0, lbI = 0;
+  function lbShow() {
+    const g = gallery[lbDay], p = g[lbI], img = lb.querySelector('img');
+    img.src = imgLarge(p.src);
+    img.alt = p.cap;
+    lb.querySelector('figcaption').textContent = `${p.cap} · Day ${lbDay} · ${lbI + 1} of ${g.length}`;
+  }
+  function openPhoto(day, src) {
+    lbDay = day;
+    lbI = Math.max(0, gallery[day].findIndex((p) => p.src === src));
+    lbShow();
+    if (!lb.open) lb.showModal();
+  }
+  const step = (k) => { const n = gallery[lbDay].length; lbI = (lbI + k + n) % n; lbShow(); };
+  lb.querySelector('.lb-prev').addEventListener('click', () => step(-1));
+  lb.querySelector('.lb-next').addEventListener('click', () => step(1));
+  lb.querySelector('.lb-close').addEventListener('click', () => lb.close());
+  lb.addEventListener('click', (e) => { if (e.target === lb || e.target.tagName === 'FIGURE') lb.close(); });
+  lb.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-photo]');
+    if (b) { e.preventDefault(); openPhoto(+b.dataset.pday, b.dataset.photo); }
+  });
+
+  // Mosaic under the title: four days that sell the trip
+  const MOSAIC = { 2: 'Prague', 7: 'Budapest', 12: 'Vintgar Gorge', 14: 'The Dolomites' };
+  $('#mosaic').innerHTML = Object.entries(MOSAIC).filter(([n]) => PH.days[n]).map(([n, label]) =>
+    `<button type="button" data-goto="${n}" aria-label="Go to day ${n}: ${label}"><img src="${imgSmall(PH.days[n].src)}" alt="${esc(PH.days[n].cap)}"><span>Day ${n} · ${label}</span></button>`).join('');
+  $('#mosaic').addEventListener('click', (e) => { const b = e.target.closest('[data-goto]'); if (b) goTo(+b.dataset.goto); });
   const box = $('#days');
   const ov = el('section', 'overview');
   ov.id = 'day-0';
@@ -102,7 +153,10 @@
     meta.push(`Night in <b>${d.base}</b>`);
     if (d.via) meta.push(`Through ${d.via.map((v) => C[v].name).join(', ')}`);
     const col = C[d.country].color;
-    s.innerHTML = `<p class="daynum"><i style="background:${segBg(d, di)}"></i>Day ${d.n}</p>
+    const hero = PH.days[d.n];
+    const heroHtml = hero ? `<figure class="dayphoto">${photoBtn(d.n, hero.src, hero.cap,
+      `<img src="${imgSmall(hero.src)}" srcset="${imgSmall(hero.src)} 900w, ${imgLarge(hero.src)} 1600w" sizes="(max-width: 900px) 100vw, 30rem" loading="lazy" alt="${esc(hero.cap)}">`)}<figcaption>${esc(hero.cap)}</figcaption></figure>` : '';
+    s.innerHTML = heroHtml + `<p class="daynum"><i style="background:${segBg(d, di)}"></i>Day ${d.n}</p>
       <h2>${esc(d.title)}${d.note ? ` <span class="note">${esc(d.note)}</span>` : ''}</h2>
       <p class="meta">${meta.map((m) => `<span>${m}</span>`).join('')}</p>`;
     const ul = el('ul', 'items');
@@ -126,6 +180,9 @@
       if (w) body += ` <span class="wm">${w.km} km · ~${Math.max(5, Math.round(w.min / 5) * 5)} min</span>`;
       if (it.best) body += ` <span class="badge best">★ ${esc(it.best)}</span>`;
       if ((it.tags || []).includes('book')) body += ` <span class="badge book">Book ahead</span>`;
+      const pics = stops.flatMap((st) => stopPhotos(d.n, st[0]).map((src) => ({ src, name: st[0] })));
+      if (pics.length) body += `<span class="thumbs">${pics.map((p) => photoBtn(d.n, p.src, p.name,
+        `<img src="${imgSmall(p.src)}" loading="lazy" alt="${esc(p.name)}">`)).join('')}</span>`;
       li.innerHTML = `<span class="kind">${KIND[it.kind]}</span><span class="body">${body}</span>`;
       li.addEventListener('mouseenter', () => hover(d.n, i, true, li));
       li.addEventListener('mouseleave', () => hover(d.n, i, false, li));
@@ -270,13 +327,18 @@
     if (on) hot.add(`${day}:${i}`); else hot.delete(`${day}:${i}`);
     if (ready) map.getSource('stops').setData(stopsGeo());
   }
+  function popupHtml(name, day) {
+    const ps = stopPhotos(day, name);
+    return (ps.length ? `<img class="pop" src="${imgSmall(ps[0])}" alt="${esc(name)}" data-photo="${ps[0]}" data-pday="${day}">` : '') +
+      `${esc(name)}<small>Day ${day}${ps.length > 1 ? ` · ${ps.length} photos` : ''}</small>`;
+  }
   function showStop(f) {
     if (!map) return;
     if (f.day !== active) goTo(f.day);
     if (popup) popup.remove();
     map.flyTo({ center: f.ll, zoom: Math.max(map.getZoom(), 14.5), duration: reduced ? 0 : 1000, essential: true });
     popup = new maplibregl.Popup({ closeButton: false, offset: 12 }).setLngLat(f.ll)
-      .setHTML(`${esc(f.name)}<small>Day ${f.day}</small>`).addTo(map);
+      .setHTML(popupHtml(f.name, f.day)).addTo(map);
   }
   box.addEventListener('click', (e) => {
     const b = e.target.closest('.stop');
@@ -337,7 +399,7 @@
         const p = e.features[0].properties;
         if (popup) popup.remove();
         popup = new maplibregl.Popup({ closeButton: false, offset: 12 }).setLngLat(e.lngLat)
-          .setHTML(`${esc(p.name)}<small>Day ${p.day}</small>`).addTo(map);
+          .setHTML(popupHtml(p.name, p.day)).addTo(map);
       });
       map.on('mouseenter', 'stops', () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', 'stops', () => { map.getCanvas().style.cursor = ''; });
