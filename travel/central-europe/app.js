@@ -19,14 +19,20 @@
   const walkKm = (n) => Object.values((R.days[n] || {}).walks || {}).reduce((a, w) => a + w.km, 0);
 
   /* ---------- filters ---------- */
+  // Stop tags are a space-separated string in the 4th slot: 'hl history'
+  const stags = (s) => (s[3] || '').split(' ');
+  const hasTag = (it, t) => (it.tags || []).includes(t) || (it.stops || []).some((s) => stags(s).includes(t));
+  // First group splits every item by kind (they add up to Everything); the second cuts across
   const FILTERS = [
-    ['all', 'Everything', () => true],
-    ['hl', 'Highlights', (it) => (it.tags || []).includes('hl') || !!it.best || (it.stops || []).some((s) => s[3] === 'hl')],
-    ['walk', 'City walks', (it) => it.kind === 'walk'],
-    ['food', 'Food & drink', (it) => it.kind === 'food'],
-    ['nature', 'Nature', (it) => (it.tags || []).includes('nature')],
-    ['tour', 'Tours & tickets', (it) => (it.tags || []).some((t) => t === 'tour' || t === 'book')],
-    ['miss', 'Missed', (it) => it.kind === 'miss']
+    ['all', 'Everything', () => true, 1],
+    ['walk', 'City walks', (it) => it.kind === 'walk', 1],
+    ['see', 'Sights', (it) => it.kind === 'see', 1],
+    ['food', 'Food & drink', (it) => it.kind === 'food', 1],
+    ['miss', 'Missed', (it) => it.kind === 'miss', 1],
+    ['hl', 'Highlights', (it) => hasTag(it, 'hl') || !!it.best, 2],
+    ['nature', 'Nature', (it) => hasTag(it, 'nature'), 2],
+    ['history', 'History', (it) => hasTag(it, 'history'), 2],
+    ['tour', 'Tours & tickets', (it) => hasTag(it, 'tour') || hasTag(it, 'book'), 2]
   ];
   let filter = 'all';
   const matches = (it) => FILTERS.find((f) => f[0] === filter)[2](it);
@@ -67,9 +73,10 @@
 
   /* ---------- filters UI ---------- */
   const fbox = $('#filters');
-  FILTERS.forEach(([key, label, fn]) => {
-    const n = key === 'all' ? null : days.reduce((a, d) => a + d.items.filter(fn).length, 0);
-    const b = el('button', null, `${label}${n != null ? `<small>${n}</small>` : ''}`);
+  FILTERS.forEach(([key, label, fn, group], k) => {
+    if (k && group !== FILTERS[k - 1][3]) fbox.appendChild(el('span', 'fsep'));
+    const n = days.reduce((a, d) => a + d.items.filter(fn).length, 0);
+    const b = el('button', null, `${label}<small>${n}</small>`);
     b.type = 'button';
     b.dataset.f = key;
     b.setAttribute('aria-pressed', key === filter);
@@ -89,11 +96,13 @@
   days.forEach((d) => {
     const g = [];
     if (PH.days[d.n]) g.push({ src: PH.days[d.n].src, cap: PH.days[d.n].cap });
-    d.items.forEach((it) => (it.stops || []).forEach((st) => stopPhotos(d.n, st[0]).forEach((src) => g.push({ src, cap: st[0] }))));
+    d.items.forEach((it) => (it.stops || []).forEach((st) => stopPhotos(d.n, st[0]).forEach((p) => g.push({ src: p.src, cap: st[0] }))));
     gallery[d.n] = g;
   });
-  const photoBtn = (day, src, label, inner) =>
-    `<button type="button" data-photo="${src}" data-pday="${day}" aria-label="View photo: ${esc(label)}">${inner}</button>`;
+  const photoBtn = (day, src, label, inner, style = '') =>
+    `<button type="button" data-photo="${src}" data-pday="${day}" aria-label="View photo: ${esc(label)}"${style ? ` style="${style}"` : ''}>${inner}</button>`;
+  // Box sized to the photo's own aspect ratio, so nothing is cropped
+  const fit = (p, maxW, maxH) => { const k = Math.min(maxW / p.w, maxH / p.h); return [Math.round(p.w * k), Math.round(p.h * k)]; };
 
   const lb = el('dialog', 'lightbox');
   lb.innerHTML = `<figure><img alt=""><figcaption></figcaption></figure>
@@ -129,7 +138,7 @@
   const MOSAIC = { 2: 'Prague', 7: 'Budapest', 12: 'Vintgar Gorge', 14: 'The Dolomites' };
   $('#mosaic').innerHTML = Object.entries(MOSAIC).filter(([n]) => PH.days[n]).map(([n, label]) =>
     `<button type="button" data-goto="${n}" aria-label="Go to day ${n}: ${label}"><img src="${imgSmall(PH.days[n].src)}" alt="${esc(PH.days[n].cap)}"><span>Day ${n} · ${label}</span></button>`).join('');
-  $('#mosaic').addEventListener('click', (e) => { const b = e.target.closest('[data-goto]'); if (b) goTo(+b.dataset.goto); });
+  document.addEventListener('click', (e) => { const b = e.target.closest('[data-goto]'); if (b) { e.preventDefault(); goTo(+b.dataset.goto); } });
   const box = $('#days');
   const ov = el('section', 'overview');
   ov.id = 'day-0';
@@ -137,7 +146,9 @@
   const nightsText = Object.entries(nights).map(([k, n]) => `${n} in ${C[k].name}`).join(', ');
   ov.innerHTML = `<p class="daynum">The route</p><h2>Prague to Venice by car</h2>
     <p>Fly into Prague, fly out of Venice, and drive in between. The cities are best on foot, so the days alternate: whole days walking in Prague, Krakow, Budapest and Vienna, and driving days that string together caves, castles and mountain passes.</p>
-    <p>Nights: ${nightsText}. Slovakia is on the way twice. Scroll, or pick a day above; the map follows.</p>`;
+    <p>Nights: ${nightsText}. Slovakia is on the way twice. Scroll, or pick a day above; the map follows.</p>
+    <ul class="bests">${days.flatMap((d) => d.items.filter((it) => it.best).map((it) =>
+      `<li><span class="badge best">★ ${esc(it.best)}</span> <a href="#day-${d.n}" data-goto="${d.n}">${esc((it.stops || []).length > 1 ? d.title : it.stops[0][0])}</a> <span class="when">Day ${d.n}</span></li>`)).join('')}</ul>`;
   box.appendChild(ov);
 
   const itemIndex = []; // {day, i, li}
@@ -155,7 +166,9 @@
     const col = C[d.country].color;
     const hero = PH.days[d.n];
     const heroHtml = hero ? `<figure class="dayphoto">${photoBtn(d.n, hero.src, hero.cap,
-      `<img src="${imgSmall(hero.src)}" srcset="${imgSmall(hero.src)} 900w, ${imgLarge(hero.src)} 1600w" sizes="(max-width: 900px) 100vw, 30rem" loading="lazy" alt="${esc(hero.cap)}">`)}<figcaption>${esc(hero.cap)}</figcaption></figure>` : '';
+      `<img src="${imgSmall(hero.src)}" srcset="${imgSmall(hero.src)} 900w, ${imgLarge(hero.src)} 1600w" sizes="(max-width: 900px) 100vw, 30rem" loading="lazy" alt="${esc(hero.cap)}" width="${hero.w}" height="${hero.h}">`,
+      // Portrait photos: full height within 60% of the screen, never cropped
+      `aspect-ratio: ${hero.w} / ${hero.h}; max-width: min(100%, calc(60vh * ${(hero.w / hero.h).toFixed(3)}))`)}<figcaption>${esc(hero.cap)}</figcaption></figure>` : '';
     s.innerHTML = heroHtml + `<p class="daynum"><i style="background:${segBg(d, di)}"></i>Day ${d.n}</p>
       <h2>${esc(d.title)}${d.note ? ` <span class="note">${esc(d.note)}</span>` : ''}</h2>
       <p class="meta">${meta.map((m) => `<span>${m}</span>`).join('')}</p>`;
@@ -164,7 +177,7 @@
       const li = el('li', [it.kind, (it.tags || []).includes('hl') ? 'hl' : ''].join(' ').trim());
       const stops = it.stops || [];
       const stopHtml = (s, j) => s.length >= 3
-        ? `<a href="#map" class="stop${s[3] === 'hl' ? ' hl' : ''}" data-day="${d.n}" data-i="${i}" data-j="${j}">${esc(s[0])}</a>`
+        ? `<a href="#map" class="stop${stags(s).includes('hl') ? ' hl' : ''}" data-day="${d.n}" data-i="${i}" data-j="${j}">${esc(s[0])}</a>`
         : esc(s[0]);
       let body;
       if (it.text) {
@@ -180,9 +193,12 @@
       if (w) body += ` <span class="wm">${w.km} km · ~${Math.max(5, Math.round(w.min / 5) * 5)} min</span>`;
       if (it.best) body += ` <span class="badge best">★ ${esc(it.best)}</span>`;
       if ((it.tags || []).includes('book')) body += ` <span class="badge book">Book ahead</span>`;
-      const pics = stops.flatMap((st) => stopPhotos(d.n, st[0]).map((src) => ({ src, name: st[0] })));
-      if (pics.length) body += `<span class="thumbs">${pics.map((p) => photoBtn(d.n, p.src, p.name,
-        `<img src="${imgSmall(p.src)}" loading="lazy" alt="${esc(p.name)}">`)).join('')}</span>`;
+      if (hasTag(it, 'history')) body += ` <span class="badge book">Learnt a lot of history</span>`;
+      const pics = stops.flatMap((st) => stopPhotos(d.n, st[0]).map((p) => ({ ...p, name: st[0] })));
+      if (pics.length) body += `<span class="thumbs">${pics.map((p) => {
+        const [w, h] = fit(p, 120, 72);
+        return photoBtn(d.n, p.src, p.name, `<img src="${imgSmall(p.src)}" loading="lazy" alt="${esc(p.name)}" width="${w}" height="${h}">`, `width:${w}px;height:${h}px`);
+      }).join('')}</span>`;
       li.innerHTML = `<span class="kind">${KIND[it.kind]}</span><span class="body">${body}</span>`;
       li.addEventListener('mouseenter', () => hover(d.n, i, true, li));
       li.addEventListener('mouseleave', () => hover(d.n, i, false, li));
@@ -269,7 +285,7 @@
   days.forEach((d) => d.items.forEach((it, i) => (it.stops || []).forEach((s, j) => {
     if (s.length < 3) return;
     features.push({ day: d.n, i, j, it, name: s[0], ll: [s[1], s[2]],
-      hl: (it.tags || []).includes('hl') || !!it.best || s[3] === 'hl', miss: it.kind === 'miss' });
+      hl: (it.tags || []).includes('hl') || !!it.best || stags(s).includes('hl'), miss: it.kind === 'miss' });
   })));
 
   function stopsGeo() {
@@ -329,7 +345,8 @@
   }
   function popupHtml(name, day) {
     const ps = stopPhotos(day, name);
-    return (ps.length ? `<img class="pop" src="${imgSmall(ps[0])}" alt="${esc(name)}" data-photo="${ps[0]}" data-pday="${day}">` : '') +
+    const [w, h] = ps.length ? fit(ps[0], 240, 200) : [0, 0];
+    return (ps.length ? `<img class="pop" src="${imgSmall(ps[0].src)}" alt="${esc(name)}" data-photo="${ps[0].src}" data-pday="${day}" width="${w}" height="${h}" style="width:${w}px;height:${h}px">` : '') +
       `${esc(name)}<small>Day ${day}${ps.length > 1 ? ` · ${ps.length} photos` : ''}</small>`;
   }
   function showStop(f) {
@@ -362,8 +379,10 @@
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
     map.on('load', () => {
       // Warm the basemap to match the page
-      map.setPaintProperty('background', 'background-color', '#f3f1ea');
-      map.setPaintProperty('water', 'fill-color', '#dfe4e3');
+      const tint = [['background', 'background-color', '#f5efe3'], ['landuse_residential', 'fill-color', '#f0e7d8'],
+        ['park', 'fill-color', '#e2ead0'], ['landcover_wood', 'fill-color', '#dde7c8'], ['water', 'fill-color', '#cde2e4'],
+        ['waterway', 'line-color', '#bcd9dd'], ['building', 'fill-color', '#e9dfcd']];
+      tint.forEach(([layer, prop, color]) => { try { map.setPaintProperty(layer, prop, color); } catch (e) { /* layer missing */ } });
       const before = 'waterway_line_label';
       map.addSource('routes', { type: 'geojson', data: routesGeo() });
       map.addSource('stops', { type: 'geojson', data: stopsGeo() });

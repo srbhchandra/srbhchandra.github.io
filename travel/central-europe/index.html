@@ -38,12 +38,17 @@
     .filters button:hover { color: var(--ink); border-color: var(--muted); }
     .filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
     .filters small { opacity: .7; margin-left: 4px; font-size: 12px; }
+    .fsep { flex: none; width: 1px; margin: 4px 4px; background: var(--rule); }
+    .bests { list-style: none; padding: 0; margin: 1rem 0 0; font-size: 16px; }
+    .bests li { padding: .45rem 0; border-top: 1px solid var(--rule); margin: 0; }
+    .bests .badge { margin: 0 6px 0 0; }
+    .bests .when { font: 400 13px/1 var(--sans); color: var(--muted); margin-left: 4px; }
     button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
     /* Scrollytelling: text left, map pinned right */
     .scrolly { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: 2.25rem; align-items: start; }
     .mapwrap { order: 2; position: sticky; top: calc(var(--barH) + 1rem); height: calc(100vh - var(--barH) - 2rem); margin-top: 1rem;
-      border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: #f1efe8; }
+      border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: #f5efe3; }
     #map { position: absolute; inset: 0; }
     .mapfail { position: absolute; inset: 0; display: grid; place-items: center; padding: 2rem; text-align: center; font: 400 14px/1.5 var(--sans); color: var(--muted); }
     .days { order: 1; padding-bottom: 40vh; }
@@ -95,15 +100,16 @@
     .mosaic button:hover img { transform: scale(1.04); }
     .mosaic span { position: absolute; left: 8px; bottom: 8px; font: 500 12px/1 var(--sans); background: rgba(250,249,245,.92); color: var(--ink); padding: 5px 9px; border-radius: 999px; white-space: nowrap; }
     .dayphoto { margin: 0 0 1.1rem; }
-    .dayphoto button { display: block; width: 100%; padding: 0; border: 0; border-radius: 10px; overflow: hidden; cursor: zoom-in; aspect-ratio: 3 / 2; background: var(--rule); }
+    .dayphoto button { display: block; width: 100%; padding: 0; border: 0; border-radius: 10px; overflow: hidden; cursor: zoom-in; background: var(--rule); }
     .dayphoto img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .dayphoto figcaption { font: 400 13px/1.4 var(--sans); color: var(--muted); margin-top: 6px; }
     .day.empty .dayphoto { display: none; }
     .thumbs { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
-    .thumbs button { padding: 0; border: 0; border-radius: 6px; overflow: hidden; cursor: zoom-in; width: 84px; height: 60px; background: var(--rule); }
+    .thumbs { align-items: flex-end; }
+    .thumbs button { padding: 0; border: 0; border-radius: 6px; overflow: hidden; cursor: zoom-in; background: var(--rule); flex: none; }
     .thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
     .thumbs button:hover img { transform: scale(1.06); }
-    .maplibregl-popup-content img.pop { display: block; width: 220px; height: 146px; object-fit: cover; border-radius: 6px; margin: 0 0 6px; cursor: zoom-in; }
+    .maplibregl-popup-content img.pop { display: block; border-radius: 6px; margin: 0 0 6px; cursor: zoom-in; }
     dialog.lightbox { border: 0; padding: 0; margin: 0; inset: 0; width: 100vw; height: 100vh; max-width: none; max-height: none; background: transparent; }
     dialog.lightbox::backdrop { background: rgba(24, 23, 20, .9); }
     .lightbox figure { margin: 0; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 3.5rem 4.5rem; }

@@ -1,10 +1,10 @@
 /* Central Europe itinerary: the single source for the page.
    Each day lists items; an item is one line of the itinerary.
      kind:  walk | see | food | miss        (drives come from `drive`)
-     stops: places on the map, [name, lon, lat]; a stop without
-            coordinates is listed but not pinned
-     tags:  hl (highlight), nature, tour (ticket or guided tour),
-            book (book ahead); best: label for a "best of the trip"
+     stops: places on the map, [name, lon, lat, tags?]; a stop without
+            coordinates is listed but not pinned; stop tags as a string, e.g. 'hl history'
+     tags:  hl (highlight), nature, history (learnt a lot), tour (ticket or
+            guided tour), book (book ahead); best: label for a "best of the trip"
    Day `drive` is the driving waypoints [lon, lat] for routes.json;
    `base` is where the night is spent. */
 window.TRIP = {
@@ -48,12 +48,12 @@ window.TRIP = {
       n: 2, title: 'Prague, then drive to Brno via Kutná Hora', place: 'Prague → Brno', base: 'Brno', country: 'CZ',
       drive: [[14.4206, 50.0870], [15.2886, 49.9620], [16.6068, 49.1951]],
       items: [
-        { kind: 'see', tags: ['hl', 'tour'], text: 'Klementinum (baroque library) – guided tour', stops: [['Klementinum', 14.4163, 50.0864]] },
         { kind: 'see', text: 'Prague main station', stops: [['Prague main station', 14.4353, 50.0831]] },
         { kind: 'see', text: 'Il Commendatore by Anna Chromý, by the Estates Theatre', stops: [['Il Commendatore', 14.4233, 50.0857]] },
-        { kind: 'see', tags: ['hl'], text: 'Strahov Monastery – museum, baroque library', stops: [['Strahov Monastery', 14.3893, 50.0863]] },
+        { kind: 'see', tags: ['hl', 'tour'], text: 'Klementinum (baroque library) – guided tour', stops: [['Klementinum', 14.4163, 50.0864]] },
+        { kind: 'see', text: 'Strahov Monastery – museum, baroque library', stops: [['Strahov Monastery', 14.3893, 50.0863]] },
         { kind: 'food', tags: ['hl'], best: 'Best food & beer', text: 'Lunch at Strahov Monastery – best beer and food of the entire trip. Beer: IPA + dark beer brewed by the monastery. Food: pork tenderloin, steak', stops: [['Strahov Monastery Brewery', 14.3897, 50.0861]] },
-        { kind: 'see', tags: ['hl'], text: 'Sedlec Ossuary, Kutná Hora (chapel adorned with human skeletons)', stops: [['Sedlec Ossuary', 15.2886, 49.9620]] },
+        { kind: 'see', text: 'Sedlec Ossuary, Kutná Hora (chapel adorned with human skeletons)', stops: [['Sedlec Ossuary', 15.2886, 49.9620]] },
         { kind: 'see', text: 'Ukraine war exhibit, Brno-střed', stops: [['Brno-střed', 16.6068, 49.1951]] },
         { kind: 'food', text: 'Fried grundle fish at Soul Bistro, Brno', stops: [['Soul Bistro']] }
       ]
@@ -62,9 +62,9 @@ window.TRIP = {
       n: 3, title: 'Drive to Krakow, Poland from Brno', place: 'Brno → Krakow', base: 'Krakow', country: 'PL',
       drive: [[16.6068, 49.1951], [16.7072, 49.3626], [19.2036, 50.0270], [19.9450, 50.0520]],
       items: [
-        { kind: 'see', tags: ['nature', 'tour', 'book'], text: 'Moravian Karst (labyrinth of underground caves and stunning rock formations) – guided tour', stops: [
+        { kind: 'see', tags: ['hl', 'nature', 'tour', 'book'], text: 'Moravian Karst (labyrinth of underground caves and stunning rock formations) – guided tour', stops: [
           ['Skalní mlýn', 16.7072, 49.3626], ['Punkva Caves', 16.7243, 49.3720], ['Macocha Abyss (take the funicular)', 16.7300, 49.3735] ] },
-        { kind: 'see', tags: ['tour', 'book'], text: 'Memorial and Museum Auschwitz-Birkenau', stops: [['Auschwitz-Birkenau Memorial', 19.2036, 50.0270]] },
+        { kind: 'see', tags: ['hl', 'history', 'tour', 'book'], text: 'Memorial and Museum Auschwitz-Birkenau', stops: [['Auschwitz-Birkenau Memorial', 19.2036, 50.0270]] },
         { kind: 'food', text: 'Dinner at Hamsa, Kazimierz Jewish Quarter', stops: [['Hamsa', 19.9467, 50.0520]] }
       ]
     },
@@ -73,7 +73,7 @@ window.TRIP = {
       items: [
         { kind: 'walk', label: 'Stare Miasto (historic center)', stops: [
           ["St. Florian's Gate", 19.9415, 50.0652], ['Main Market Square (Rynek Główny)', 19.9373, 50.0617],
-          ["St. Mary's Basilica", 19.9394, 50.0616], ['Rynek Underground Museum', 19.9370, 50.0619, 'hl'],
+          ["St. Mary's Basilica", 19.9394, 50.0616], ['Rynek Underground Museum', 19.9370, 50.0619, 'hl history'],
           ['The Cloth Hall', 19.9373, 50.0617], ['Basilica of St. Francis', 19.9353, 50.0581],
           ['Town Hall Tower (climb up)', 19.9362, 50.0614], ['Planty gardens', 19.9330, 50.0605] ] },
         { kind: 'walk', stops: [
@@ -114,12 +114,12 @@ window.TRIP = {
           ['Vienna Gate', 19.0305, 47.5047], ['Matthias Church (climb the tower)', 19.0344, 47.5019],
           ["Fisherman's Bastion", 19.0350, 47.5022], ['Buda Castle', 19.0396, 47.4962],
           ['Budapest History Museum / Castle Museum', 19.0395, 47.4955], ['Várkert Bazár', 19.0434, 47.4963] ] },
+        { kind: 'food', text: 'Desserts from Ruszwurm Confectionery, Castle district', stops: [['Ruszwurm', 19.0333, 47.5017]] },
         { kind: 'walk', stops: [
           ['Hungarian Parliament, from outside (the tour is on day 8)', 19.0457, 47.5071],
           ["St. Stephen's Basilica (climb the tower)", 19.0539, 47.5008],
           ['Vörösmarty tér – very happening', 19.0510, 47.4970] ] },
         { kind: 'see', tags: ['tour'], text: "Danube night cruise to admire the city's landmarks", stops: [['Danube cruise pier', 19.0480, 47.4960]] },
-        { kind: 'food', text: 'Desserts from Ruszwurm Confectionery, Castle district', stops: [['Ruszwurm', 19.0333, 47.5017]] },
         { kind: 'miss', text: 'Central Market Hall', stops: [['Central Market Hall', 19.0585, 47.4870]] }
       ]
     },
@@ -130,7 +130,7 @@ window.TRIP = {
         { kind: 'walk', stops: [
           ['Széchenyi Thermal Bath', 19.0819, 47.5186], ['Gatehouse Tower', 19.0815, 47.5155],
           ['Vajdahunyad Castle', 19.0820, 47.5150], ['Museum of Ethnography', 19.0759, 47.5193] ] },
-        { kind: 'see', tags: ['tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
+        { kind: 'see', tags: ['hl', 'tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
         { kind: 'food', text: 'A very beautiful café – Ohana, the coffee family, Budapest' },
         { kind: 'food', text: 'Etyeki Manor vineyard, Etyek', stops: [['Etyek', 18.7406, 47.4403]] },
         { kind: 'walk', label: 'Bratislava, Slovakia', stops: [['Bratislava Castle', 17.1000, 48.1421], ['Old Town', 17.1077, 48.1437]] }
@@ -141,15 +141,15 @@ window.TRIP = {
       items: [
         { kind: 'walk', label: 'Innere Stadt', stops: [
           ['Naschmarkt', 16.3623, 48.1983], ["St. Charles's Church", 16.3717, 48.1983],
-          ['Vienna State Opera', 16.3692, 48.2031],
-          ['Michaelerplatz', 16.3667, 48.2080], ['Austrian National Library', 16.3670, 48.2066],
-          ['Spanish Riding School', 16.3664, 48.2075], ['The Hofburg', 16.3653, 48.2066],
+          ['Vienna State Opera', 16.3692, 48.2031], ['Michaelerplatz', 16.3667, 48.2080] ] },
+        { kind: 'food', text: 'Late breakfast at Café Demel: Viennese coffee and pastries, such as Sachertorte and Apfelstrudel', stops: [['Café Demel', 16.3673, 48.2087]] },
+        { kind: 'walk', stops: [
+          ['Austrian National Library', 16.3670, 48.2066], ['Spanish Riding School', 16.3664, 48.2075], ['The Hofburg', 16.3653, 48.2066],
           ['Kunsthistorisches Museum', 16.3617, 48.2038], ['Parliament (no guided tour)', 16.3586, 48.2083],
           ['Rathausplatz', 16.3575, 48.2105] ] },
         { kind: 'see', text: 'Hundertwasser House and Village', stops: [['Hundertwasser House', 16.3944, 48.2072]] },
         { kind: 'walk', stops: [["St. Stephen's Cathedral (elevator up the tower)", 16.3731, 48.2085], ['Albertina', 16.3683, 48.2045]] },
-        { kind: 'see', tags: ['tour'], text: 'Watch the opera “Daphne” at the Vienna State Opera', stops: [['Vienna State Opera', 16.3692, 48.2031]] },
-        { kind: 'food', text: 'Viennese coffee and pastries, such as Sachertorte and Apfelstrudel, at Café Demel', stops: [['Café Demel', 16.3673, 48.2087]] }
+        { kind: 'see', tags: ['tour'], text: 'Watch the opera “Daphne” at the Vienna State Opera', stops: [['Vienna State Opera', 16.3692, 48.2031]] }
       ]
     },
     {
@@ -157,7 +157,7 @@ window.TRIP = {
       drive: [[16.3122, 48.1845], [16.8310, 47.8504], [13.7850, 46.4847]],
       items: [
         { kind: 'see', tags: ['tour'], text: 'Schönbrunn Palace (Habsburg architecture) – audio-guided tour', stops: [['Schönbrunn Palace', 16.3122, 48.1845]] },
-        { kind: 'food', text: 'Heuriger wine at Fabian Inh. Johann Sloboda, Podersdorf am See', stops: [['Podersdorf am See', 16.8310, 47.8504]] }
+        { kind: 'food', tags: ['hl'], text: 'Heuriger at Fabian Inh. Johann Sloboda, Podersdorf am See – a small family vineyard pouring its own wine; an amazing experience', stops: [['Podersdorf am See', 16.8310, 47.8504]] }
       ]
     },
     {
@@ -172,10 +172,11 @@ window.TRIP = {
       n: 12, title: 'Bled, then drive to the Dolomites, Italy', place: 'Bled → Dolomites', base: 'Colle Santa Lucia', country: 'IT',
       drive: [[13.7850, 46.4847], [14.0927, 46.3986], [14.0938, 46.3683], [14.1270, 45.8156], [12.0138, 46.4479]],
       items: [
-        { kind: 'walk', tags: ['hl', 'nature'], best: 'Best nature', text: 'Vintgar Gorge – the best nature of the trip: blue, green and yellow water in the gorge', stops: [['Vintgar Gorge', 14.0927, 46.3986]] },
-        { kind: 'see', tags: ['nature'], text: 'Lake Bled, with its island – did the mountain coaster', stops: [['Lake Bled', 14.0938, 46.3625]] },
-        { kind: 'see', text: 'Predjama Castle – seen from outside', stops: [['Predjama Castle', 14.1270, 45.8156]] },
+        { kind: 'see', tags: ['hl', 'nature'], best: 'Best nature', text: 'Vintgar Gorge – the best nature of the trip: blue, green and yellow water in the gorge', stops: [['Vintgar Gorge', 14.0927, 46.3986]] },
+        { kind: 'see', tags: ['nature'], text: 'Lake Bled, with its island', stops: [['Lake Bled', 14.0938, 46.3625]] },
         { kind: 'food', text: 'Bled cream cake', stops: [['Bled', 14.1100, 46.3680]] },
+        { kind: 'see', tags: ['hl'], text: 'Mountain coaster on Straža hill, Bled – super fun', stops: [['Mountain coaster, Straža', 14.1051, 46.3626]] },
+        { kind: 'see', text: 'Predjama Castle – seen from outside', stops: [['Predjama Castle', 14.1270, 45.8156]] },
         { kind: 'miss', text: 'Postojna Cave or Škocjan Caves', stops: [['Postojna Cave', 14.2034, 45.7826], ['Škocjan Caves', 13.9895, 45.6634]] }
       ]
     },
@@ -207,13 +208,14 @@ window.TRIP = {
     }
   ],
   takeaways: [
-    'There are 3 architectures – Baroque, Renaissance, Gothic. Add “Neo” to each to get neo-Baroque, etc.',
-    'Most roads are for walking first and driving is an afterthought – the exact opposite of the US',
-    'Buildings don’t have elevators – people, including old folks, walk and climb a lot and are very healthy',
-    'Milk and butter taste great',
-    'Water is expensive, maybe more than beer. Paid 23% tax on water in Krakow, Poland',
-    'Beer is mostly mild and pale – maybe to consume in bulk',
-    'Public toilets are paid',
-    'Toilets/bathrooms in houses almost always have a quirk'
+    'Most of what you’ll see is Gothic, Renaissance or Baroque, or a 19th-century “neo” revival of one of them. Learn those three and every old town starts to make sense.',
+    'Old towns are built for walking; cars are an afterthought. It’s the opposite of the US.',
+    'Many older buildings have no lift, so people of every age climb stairs every day, and it shows.',
+    'Milk and butter taste noticeably better than at home.',
+    'Water can cost more than beer. In Krakow it even carried 23% tax.',
+    'Beer is mostly mild and pale, made for drinking a lot of it.',
+    'Public toilets usually cost a coin or two; carry change.',
+    'Every bathroom in every apartment has its own quirk.',
+    'Parking is often extra at hotels and apartments. Check before booking if you’re driving.'
   ]
 };
