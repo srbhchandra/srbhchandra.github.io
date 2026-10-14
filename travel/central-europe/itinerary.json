@@ -1,0 +1,1379 @@
+{
+ "title": "Central Europe in 14 days",
+ "url": "https://srbhchandra.github.io/travel/central-europe/",
+ "author": {
+  "name": "Saurabh Bipin Chandra",
+  "url": "https://srbhchandra.github.io/"
+ },
+ "summary": "A 14-day road trip from Prague to Venice through Czechia, Poland, Slovakia, Hungary, Austria, Slovenia and Italy.",
+ "note": "Drive and walk times are routing estimates (OSRM, FOSSGIS foot router) for the stops in order, excluding time spent at them.",
+ "days": [
+  {
+   "day": 1,
+   "title": "Prague, Czechia",
+   "country": "Czechia",
+   "night": "Prague",
+   "via": [],
+   "drive": null,
+   "walk_km": 6.5,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Dancing House → Hanging Umbrella Man → Franz Kafka – Rotating Head → Man Hanging Out (Sigmund Freud) → Prague Jewish Quarter → Prašná brána (climb the tower)",
+     "tags": [],
+     "places": [
+      {
+       "name": "Dancing House",
+       "lat": 50.0755,
+       "lon": 14.4141
+      },
+      {
+       "name": "Hanging Umbrella Man"
+      },
+      {
+       "name": "Franz Kafka – Rotating Head",
+       "lat": 50.0819,
+       "lon": 14.4204
+      },
+      {
+       "name": "Man Hanging Out (Sigmund Freud)",
+       "lat": 50.0846,
+       "lon": 14.4187
+      },
+      {
+       "name": "Prague Jewish Quarter",
+       "lat": 50.09,
+       "lon": 14.4185
+      },
+      {
+       "name": "Prašná brána (climb the tower)",
+       "lat": 50.087,
+       "lon": 14.4278
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Old Town Square: Prague Astronomical Clock → Památník Jana Husa → Týn Church → St. Nicholas' Church",
+     "tags": [],
+     "places": [
+      {
+       "name": "Prague Astronomical Clock",
+       "lat": 50.087,
+       "lon": 14.4206
+      },
+      {
+       "name": "Památník Jana Husa",
+       "lat": 50.0876,
+       "lon": 14.4214
+      },
+      {
+       "name": "Týn Church",
+       "lat": 50.0875,
+       "lon": 14.4227
+      },
+      {
+       "name": "St. Nicholas' Church",
+       "lat": 50.0881,
+       "lon": 14.4183
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "St. Francis of Assisi Church → Charles Bridge on the Vltava → Prague Castle → St. Vitus Cathedral → The Golden Lane",
+     "tags": [],
+     "places": [
+      {
+       "name": "St. Francis of Assisi Church",
+       "lat": 50.0866,
+       "lon": 14.4143
+      },
+      {
+       "name": "Charles Bridge on the Vltava",
+       "lat": 50.0865,
+       "lon": 14.4114
+      },
+      {
+       "name": "Prague Castle",
+       "lat": 50.0905,
+       "lon": 14.4005
+      },
+      {
+       "name": "St. Vitus Cathedral",
+       "lat": 50.0909,
+       "lon": 14.4005
+      },
+      {
+       "name": "The Golden Lane",
+       "lat": 50.0921,
+       "lon": 14.404
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Trdelník (spit cake) from Old Town Square",
+     "tags": [],
+     "places": [
+      {
+       "name": "Old Town Square",
+       "lat": 50.0875,
+       "lon": 14.4213
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Beef goulash, salami at Lokál Dlouhááá",
+     "tags": [],
+     "places": [
+      {
+       "name": "Lokál Dlouhááá",
+       "lat": 50.0905,
+       "lon": 14.4262
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Cheap beer from the Scout Institute in Old Town Square",
+     "tags": [],
+     "places": [
+      {
+       "name": "Scout Institute",
+       "lat": 50.0874,
+       "lon": 14.4209
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "title": "Prague, then drive to Brno via Kutná Hora",
+   "country": "Czechia",
+   "night": "Brno",
+   "via": [],
+   "drive": {
+    "hours": 3.1,
+    "km": 233
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Il Commendatore by Anna Chromý, by the Estates Theatre",
+     "tags": [],
+     "places": [
+      {
+       "name": "Il Commendatore",
+       "lat": 50.0857,
+       "lon": 14.4233
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Klementinum (baroque library) – guided tour",
+     "tags": [
+      "hl",
+      "tour"
+     ],
+     "places": [
+      {
+       "name": "Klementinum",
+       "lat": 50.0864,
+       "lon": 14.4163
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Strahov Monastery – museum, baroque library",
+     "tags": [],
+     "places": [
+      {
+       "name": "Strahov Monastery",
+       "lat": 50.0863,
+       "lon": 14.3893
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Lunch at Strahov Monastery – best beer and food of the entire trip. Beer: IPA + dark beer brewed by the monastery. Food: pork tenderloin, steak",
+     "best": "Best food & beer",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Strahov Monastery Brewery",
+       "lat": 50.0861,
+       "lon": 14.3897
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Sedlec Ossuary, Kutná Hora (chapel adorned with human skeletons)",
+     "tags": [],
+     "places": [
+      {
+       "name": "Sedlec Ossuary",
+       "lat": 49.962,
+       "lon": 15.2886
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Ukraine war exhibit, Brno-střed",
+     "tags": [],
+     "places": [
+      {
+       "name": "Brno-střed",
+       "lat": 49.1951,
+       "lon": 16.6068
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Fried grundle fish at Soul Bistro, Brno",
+     "tags": [],
+     "places": [
+      {
+       "name": "Soul Bistro"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "title": "Drive to Krakow, Poland from Brno",
+   "country": "Poland",
+   "night": "Krakow",
+   "via": [],
+   "drive": {
+    "hours": 4.8,
+    "km": 372
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Moravian Karst (labyrinth of underground caves and stunning rock formations) – guided tour",
+     "tags": [
+      "hl",
+      "nature",
+      "tour",
+      "book"
+     ],
+     "places": [
+      {
+       "name": "Skalní mlýn",
+       "lat": 49.3626,
+       "lon": 16.7072
+      },
+      {
+       "name": "Punkva Caves",
+       "lat": 49.372,
+       "lon": 16.7243
+      },
+      {
+       "name": "Macocha Abyss (take the funicular)",
+       "lat": 49.3735,
+       "lon": 16.73
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Memorial and Museum Auschwitz-Birkenau",
+     "tags": [
+      "hl",
+      "history",
+      "tour",
+      "book"
+     ],
+     "places": [
+      {
+       "name": "Auschwitz-Birkenau Memorial",
+       "lat": 50.027,
+       "lon": 19.2036
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Dinner at Hamsa, Kazimierz Jewish Quarter",
+     "tags": [],
+     "places": [
+      {
+       "name": "Hamsa",
+       "lat": 50.052,
+       "lon": 19.9467
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "title": "Krakow, Poland",
+   "country": "Poland",
+   "night": "Krakow",
+   "via": [],
+   "drive": null,
+   "walk_km": 3,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Stare Miasto (historic center): St. Florian's Gate → Main Market Square (Rynek Główny) → St. Mary's Basilica → Rynek Underground Museum → The Cloth Hall → Basilica of St. Francis → Town Hall Tower (climb up) → Planty gardens",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "St. Florian's Gate",
+       "lat": 50.0652,
+       "lon": 19.9415
+      },
+      {
+       "name": "Main Market Square (Rynek Główny)",
+       "lat": 50.0617,
+       "lon": 19.9373
+      },
+      {
+       "name": "St. Mary's Basilica",
+       "lat": 50.0616,
+       "lon": 19.9394
+      },
+      {
+       "name": "Rynek Underground Museum",
+       "lat": 50.0619,
+       "lon": 19.937
+      },
+      {
+       "name": "The Cloth Hall",
+       "lat": 50.0617,
+       "lon": 19.9373
+      },
+      {
+       "name": "Basilica of St. Francis",
+       "lat": 50.0581,
+       "lon": 19.9353
+      },
+      {
+       "name": "Town Hall Tower (climb up)",
+       "lat": 50.0614,
+       "lon": 19.9362
+      },
+      {
+       "name": "Planty gardens",
+       "lat": 50.0605,
+       "lon": 19.933
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Wawel Royal Castle and cathedral → Wejście do Smoczej Jamy (cave under the castle) → Fire-breathing dragon statue → Vistula river",
+     "tags": [],
+     "places": [
+      {
+       "name": "Wawel Royal Castle and cathedral",
+       "lat": 50.054,
+       "lon": 19.9354
+      },
+      {
+       "name": "Wejście do Smoczej Jamy (cave under the castle)",
+       "lat": 50.0533,
+       "lon": 19.9334
+      },
+      {
+       "name": "Fire-breathing dragon statue",
+       "lat": 50.0532,
+       "lon": 19.933
+      },
+      {
+       "name": "Vistula river",
+       "lat": 50.0525,
+       "lon": 19.9325
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Kazimierz Jewish Quarter",
+     "tags": [],
+     "places": [
+      {
+       "name": "Kazimierz Jewish Quarter",
+       "lat": 50.051,
+       "lon": 19.9448
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Apple strudel, apple pie with ice cream around Stare Miasto",
+     "tags": [],
+     "places": []
+    },
+    {
+     "kind": "food",
+     "text": "Pierogi from Mirror Bistro – Pierogi Bystro, Kazimierz",
+     "tags": [],
+     "places": []
+    },
+    {
+     "kind": "food",
+     "text": "Sausage with onions from Bar & Grill Na Kazimierzu, Kazimierz",
+     "tags": [],
+     "places": []
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "title": "Wieliczka and Zakopane, Poland",
+   "country": "Poland",
+   "night": "Zakopane",
+   "via": [],
+   "drive": {
+    "hours": 2,
+    "km": 109
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Wieliczka Salt Mine, an underground marvel with intricate salt sculptures and chapels",
+     "tags": [
+      "hl",
+      "tour"
+     ],
+     "places": [
+      {
+       "name": "Wieliczka Salt Mine",
+       "lat": 49.9832,
+       "lon": 20.0558
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Zakopane – the Polish side of the Tatra Mountains: rugged peaks, glacial lakes and deep valleys",
+     "tags": [
+      "nature"
+     ],
+     "places": []
+    },
+    {
+     "kind": "sight",
+     "text": "Gubałówka – take the funicular up the hill, hike down; good views of the valley",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Gubałówka",
+       "lat": 49.3045,
+       "lon": 19.937
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Centrum Miasta (downtown)",
+     "tags": [],
+     "places": [
+      {
+       "name": "Centrum Miasta (downtown)",
+       "lat": 49.296,
+       "lon": 19.9502
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Smoked sheep cheese",
+     "tags": [],
+     "places": []
+    },
+    {
+     "kind": "food",
+     "text": "Mulled wine, hot mead from Gazdowo Kuźnia",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Gazdowo Kuźnia",
+       "lat": 49.2975,
+       "lon": 19.953
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "title": "Drive to Budapest, Hungary via Slovakia",
+   "country": "Hungary",
+   "night": "Budapest",
+   "via": [
+    "Slovakia"
+   ],
+   "drive": {
+    "hours": 5.3,
+    "km": 438
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "food",
+     "text": "Excellent breakfast at Restauracja Zakopiańska – tried bliny gryczane",
+     "tags": [],
+     "places": [
+      {
+       "name": "Restauracja Zakopiańska",
+       "lat": 49.2968,
+       "lon": 19.963
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Tatra National Park – hike up Sarnia Skała for views",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Sarnia Skała",
+       "lat": 49.2649,
+       "lon": 19.941
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "A very beautiful drive through Slovakia with views of the Tatras; stop at Ždiar for photos",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Ždiar",
+       "lat": 49.2737,
+       "lon": 20.2275
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "An extra day in the Tatras: stay on the Slovak side, and hike to Morskie Oko (on the Polish side)",
+     "tags": [],
+     "places": [
+      {
+       "name": "Morskie Oko",
+       "lat": 49.1974,
+       "lon": 20.0707
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "title": "Budapest, Hungary",
+   "country": "Hungary",
+   "night": "Budapest",
+   "via": [],
+   "drive": null,
+   "walk_km": 4.6,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Castle district: Vienna Gate → Matthias Church (climb the tower) → Fisherman's Bastion → Buda Castle → Budapest History Museum / Castle Museum → Várkert Bazár",
+     "best": "Best city walk",
+     "tags": [
+      "history",
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Vienna Gate",
+       "lat": 47.5047,
+       "lon": 19.0305
+      },
+      {
+       "name": "Matthias Church (climb the tower)",
+       "lat": 47.5019,
+       "lon": 19.0344
+      },
+      {
+       "name": "Fisherman's Bastion",
+       "lat": 47.5022,
+       "lon": 19.035
+      },
+      {
+       "name": "Buda Castle",
+       "lat": 47.4962,
+       "lon": 19.0396
+      },
+      {
+       "name": "Budapest History Museum / Castle Museum",
+       "lat": 47.4955,
+       "lon": 19.0395
+      },
+      {
+       "name": "Várkert Bazár",
+       "lat": 47.4963,
+       "lon": 19.0434
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Desserts from Ruszwurm Confectionery, Castle district",
+     "tags": [],
+     "places": [
+      {
+       "name": "Ruszwurm",
+       "lat": 47.5017,
+       "lon": 19.0333
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Hungarian Parliament, from outside (the tour is on day 8) → St. Stephen's Basilica (climb the tower) → Vörösmarty tér – very happening",
+     "tags": [],
+     "places": [
+      {
+       "name": "Hungarian Parliament, from outside (the tour is on day 8)",
+       "lat": 47.5071,
+       "lon": 19.0457
+      },
+      {
+       "name": "St. Stephen's Basilica (climb the tower)",
+       "lat": 47.5008,
+       "lon": 19.0539
+      },
+      {
+       "name": "Vörösmarty tér – very happening",
+       "lat": 47.497,
+       "lon": 19.051
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Danube night cruise to admire the city's landmarks",
+     "tags": [
+      "hl",
+      "tour"
+     ],
+     "places": [
+      {
+       "name": "Danube cruise pier",
+       "lat": 47.496,
+       "lon": 19.048
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Central Market Hall",
+     "tags": [],
+     "places": [
+      {
+       "name": "Central Market Hall",
+       "lat": 47.487,
+       "lon": 19.0585
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 8,
+   "title": "Budapest, then drive to Vienna, Austria via Slovakia",
+   "country": "Austria",
+   "night": "Vienna",
+   "via": [
+    "Slovakia"
+   ],
+   "drive": {
+    "hours": 3.6,
+    "km": 291
+   },
+   "walk_km": 3.1,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Széchenyi Thermal Bath → Gatehouse Tower → Vajdahunyad Castle → Museum of Ethnography",
+     "tags": [],
+     "places": [
+      {
+       "name": "Széchenyi Thermal Bath",
+       "lat": 47.5186,
+       "lon": 19.0819
+      },
+      {
+       "name": "Gatehouse Tower",
+       "lat": 47.5155,
+       "lon": 19.0815
+      },
+      {
+       "name": "Vajdahunyad Castle",
+       "lat": 47.515,
+       "lon": 19.082
+      },
+      {
+       "name": "Museum of Ethnography",
+       "lat": 47.5193,
+       "lon": 19.0759
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Hungarian Parliament Building – guided tour",
+     "tags": [
+      "tour"
+     ],
+     "places": [
+      {
+       "name": "Hungarian Parliament",
+       "lat": 47.5071,
+       "lon": 19.0457
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "A very beautiful café – Ohana, the coffee family, Budapest",
+     "tags": [],
+     "places": []
+    },
+    {
+     "kind": "food",
+     "text": "Etyeki Manor vineyard, Etyek",
+     "tags": [],
+     "places": [
+      {
+       "name": "Etyek",
+       "lat": 47.4403,
+       "lon": 18.7406
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Bratislava, Slovakia (nothing special; skippable): Bratislava Castle → Old Town",
+     "tags": [],
+     "places": [
+      {
+       "name": "Bratislava Castle",
+       "lat": 48.1421,
+       "lon": 17.1
+      },
+      {
+       "name": "Old Town",
+       "lat": 48.1437,
+       "lon": 17.1077
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 9,
+   "title": "Vienna, Austria",
+   "country": "Austria",
+   "night": "Vienna",
+   "via": [],
+   "drive": null,
+   "walk_km": 4.9,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Innere Stadt: Naschmarkt → St. Charles's Church → Vienna State Opera → Michaelerplatz",
+     "tags": [],
+     "places": [
+      {
+       "name": "Naschmarkt",
+       "lat": 48.1983,
+       "lon": 16.3623
+      },
+      {
+       "name": "St. Charles's Church",
+       "lat": 48.1983,
+       "lon": 16.3717
+      },
+      {
+       "name": "Vienna State Opera",
+       "lat": 48.2031,
+       "lon": 16.3692
+      },
+      {
+       "name": "Michaelerplatz",
+       "lat": 48.208,
+       "lon": 16.3667
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Late breakfast at Café Demel: Viennese coffee and pastries, such as Sachertorte and Apfelstrudel",
+     "tags": [],
+     "places": [
+      {
+       "name": "Café Demel",
+       "lat": 48.2087,
+       "lon": 16.3673
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Austrian National Library → Spanish Riding School → The Hofburg → Kunsthistorisches Museum → Parliament (no guided tour) → Rathausplatz",
+     "tags": [],
+     "places": [
+      {
+       "name": "Austrian National Library",
+       "lat": 48.2066,
+       "lon": 16.367
+      },
+      {
+       "name": "Spanish Riding School",
+       "lat": 48.2075,
+       "lon": 16.3664
+      },
+      {
+       "name": "The Hofburg",
+       "lat": 48.2066,
+       "lon": 16.3653
+      },
+      {
+       "name": "Kunsthistorisches Museum",
+       "lat": 48.2038,
+       "lon": 16.3617
+      },
+      {
+       "name": "Parliament (no guided tour)",
+       "lat": 48.2083,
+       "lon": 16.3586
+      },
+      {
+       "name": "Rathausplatz",
+       "lat": 48.2105,
+       "lon": 16.3575
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Hundertwasser House and Village",
+     "tags": [],
+     "places": [
+      {
+       "name": "Hundertwasser House",
+       "lat": 48.2072,
+       "lon": 16.3944
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "St. Stephen's Cathedral (elevator up the tower) → Albertina",
+     "tags": [],
+     "places": [
+      {
+       "name": "St. Stephen's Cathedral (elevator up the tower)",
+       "lat": 48.2085,
+       "lon": 16.3731
+      },
+      {
+       "name": "Albertina",
+       "lat": 48.2045,
+       "lon": 16.3683
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Watch the opera “Daphne” at the Vienna State Opera",
+     "tags": [
+      "tour"
+     ],
+     "places": [
+      {
+       "name": "Vienna State Opera",
+       "lat": 48.2031,
+       "lon": 16.3692
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "title": "Vienna, then drive to Slovenia",
+   "country": "Slovenia",
+   "night": "Kranjska Gora",
+   "via": [],
+   "drive": {
+    "hours": 5.9,
+    "km": 457
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Schönbrunn Palace (Habsburg architecture) – audio-guided tour",
+     "tags": [
+      "tour"
+     ],
+     "places": [
+      {
+       "name": "Schönbrunn Palace",
+       "lat": 48.1845,
+       "lon": 16.3122
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Heuriger at Fabian Inh. Johann Sloboda, Podersdorf am See – a small family vineyard pouring its own wine; an amazing experience",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Podersdorf am See",
+       "lat": 47.8504,
+       "lon": 16.831
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "title": "Kranjska Gora, Slovenia",
+   "country": "Slovenia",
+   "night": "Kranjska Gora",
+   "via": [],
+   "drive": {
+    "hours": 0.5,
+    "km": 25
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Lake Jasna",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Lake Jasna",
+       "lat": 46.4718,
+       "lon": 13.7841
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "A very beautiful drive through Triglav National Park up to the Vršič Pass and back",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Vršič Pass",
+       "lat": 46.4339,
+       "lon": 13.7436
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "title": "Bled, then drive to the Dolomites, Italy",
+   "country": "Italy",
+   "night": "Colle Santa Lucia",
+   "via": [],
+   "drive": {
+    "hours": 6.2,
+    "km": 415
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Vintgar Gorge – the best nature of the trip: blue, green and yellow water in the gorge",
+     "best": "Best nature",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Vintgar Gorge",
+       "lat": 46.3986,
+       "lon": 14.0927
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Lake Bled, with its island",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Lake Bled",
+       "lat": 46.3625,
+       "lon": 14.0938
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Bled cream cake",
+     "tags": [],
+     "places": [
+      {
+       "name": "Bled",
+       "lat": 46.368,
+       "lon": 14.11
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Mountain coaster on Straža hill, Bled – super fun",
+     "tags": [],
+     "places": [
+      {
+       "name": "Mountain coaster, Straža",
+       "lat": 46.3626,
+       "lon": 14.1051
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Predjama Castle – seen from outside",
+     "tags": [],
+     "places": [
+      {
+       "name": "Predjama Castle",
+       "lat": 45.8156,
+       "lon": 14.127
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Postojna Cave or Škocjan Caves",
+     "tags": [],
+     "places": [
+      {
+       "name": "Postojna Cave",
+       "lat": 45.7826,
+       "lon": 14.2034
+      },
+      {
+       "name": "Škocjan Caves",
+       "lat": 45.6634,
+       "lon": 13.9895
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 13,
+   "title": "The Dolomites, Italy",
+   "country": "Italy",
+   "night": "Colle Santa Lucia",
+   "via": [],
+   "drive": {
+    "hours": 1.5,
+    "km": 80
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "The best drive, with many hairpin bends",
+     "best": "Best nature & drive",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Passo Giau",
+       "lat": 46.4831,
+       "lon": 12.054
+      },
+      {
+       "name": "Cascate di Limedes"
+      },
+      {
+       "name": "Lagazuoi cable car (skipped: the top was in cloud)",
+       "lat": 46.5192,
+       "lon": 12.0084
+      },
+      {
+       "name": "Belvedere di Pocol",
+       "lat": 46.5258,
+       "lon": 12.1174
+      },
+      {
+       "name": "Punto Panoramico"
+      },
+      {
+       "name": "Parcheggio Belvedere"
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Cortina d'Ampezzo",
+     "tags": [],
+     "places": [
+      {
+       "name": "Cortina d'Ampezzo",
+       "lat": 46.5369,
+       "lon": 12.1357
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Hot chocolate from Pasticceria Panificio Alverà, Cortina",
+     "tags": [],
+     "places": [
+      {
+       "name": "Pasticceria Alverà",
+       "lat": 46.538,
+       "lon": 12.1365
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 14,
+   "title": "The Dolomites, then drive to Venice",
+   "country": "Italy",
+   "night": "Venice",
+   "via": [],
+   "drive": {
+    "hours": 3,
+    "km": 170
+   },
+   "walk_km": 4.2,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Lake Alleghe",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Lake Alleghe",
+       "lat": 46.4078,
+       "lon": 12.0215
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Dolomiti Bellunesi National Park",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Valle del Mis – stopped just for fun",
+       "lat": 46.221,
+       "lon": 11.9947
+      },
+      {
+       "name": "Cadini del Brenton",
+       "lat": 46.1878,
+       "lon": 12.0419
+      },
+      {
+       "name": "Lago del Mis",
+       "lat": 46.1657,
+       "lon": 12.0624
+      },
+      {
+       "name": "Sentiero Natura Val Falcina"
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Leave the car in Mestre and cross the causeway into Venice",
+     "tags": [],
+     "places": [
+      {
+       "name": "Mestre",
+       "lat": 45.4827,
+       "lon": 12.2334
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Venice, on foot and by boat: Venezia Santa Lucia station → Rialto Bridge (from the boat) → Basilica dei Frari → St. Mark's Square → Doge's Palace → St. Mark's Basilica → National Archaeological Museum",
+     "tags": [],
+     "places": [
+      {
+       "name": "Venezia Santa Lucia station",
+       "lat": 45.441,
+       "lon": 12.321
+      },
+      {
+       "name": "Rialto Bridge (from the boat)",
+       "lat": 45.438,
+       "lon": 12.3359
+      },
+      {
+       "name": "Basilica dei Frari",
+       "lat": 45.437,
+       "lon": 12.3263
+      },
+      {
+       "name": "St. Mark's Square",
+       "lat": 45.4341,
+       "lon": 12.3388
+      },
+      {
+       "name": "Doge's Palace",
+       "lat": 45.4337,
+       "lon": 12.3401
+      },
+      {
+       "name": "St. Mark's Basilica",
+       "lat": 45.4345,
+       "lon": 12.3397
+      },
+      {
+       "name": "National Archaeological Museum",
+       "lat": 45.4338,
+       "lon": 12.3383
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  "Most of what you’ll see is Gothic, Renaissance or Baroque, or a 19th-century “neo” revival of one of them. Learn those three and every old town starts to make sense.",
+  "Old towns are built for walking; cars are an afterthought. It’s the opposite of the US.",
+  "Many older buildings have no lift, so people of every age climb stairs every day, and it shows.",
+  "Milk and butter taste noticeably better than at home.",
+  "Water can cost more than beer. In Krakow it even carried 23% tax.",
+  "Beer is mostly mild and pale, made for drinking a lot of it.",
+  "Public toilets usually cost a coin or two; carry change.",
+  "Every bathroom in every apartment has its own quirk.",
+  "The churches everywhere are stunning, and most have a giant pipe organ."
+ ],
+ "notes": [
+  {
+   "title": "Where I learnt the most history",
+   "items": [
+    {
+     "point": "The Rynek Underground Museum in Krakow changed how I saw the map.",
+     "detail": "It sits under the main square. Its maps put Krakow at the centre of medieval Europe’s trade routes: a Europe-centred view of the world that was new to me."
+    },
+    {
+     "point": "Buda Castle is dense with history, especially the invasions.",
+     "detail": "The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier."
+    },
+    {
+     "point": "Auschwitz-Birkenau is sobering, and worth the time.",
+     "detail": "Book a slot well ahead."
+    }
+   ]
+  },
+  {
+   "title": "Driving and renting",
+   "items": [
+    {
+     "point": "One car for the whole trip, and the one-way fee was most of the cost.",
+     "detail": "We rented from Budget, picked up in Prague and dropped off in Venice. Picking up and dropping off in the same city is far cheaper, if your route allows it."
+    },
+    {
+     "point": "Tell the rental company every country you’ll drive through.",
+     "detail": "Crossing borders needs their permission and often a cross-border fee. Without it the insurance and breakdown cover can be void."
+    },
+    {
+     "point": "Buy an e-vignette before each country’s motorways.",
+     "detail": "Czechia, Slovakia, Hungary, Austria and Slovenia need one, tied to your number plate; we bought each online as we were about to cross the border. Poland and Italy charge tolls on some motorways instead. In Austria a digital vignette bought online only becomes valid 18 days after purchase, so buy it early or get a sticker at a petrol station."
+    },
+    {
+     "point": "Parking is often extra at hotels and apartments.",
+     "detail": "Check before you book if you’re driving."
+    },
+    {
+     "point": "The drives are part of the trip.",
+     "detail": "The most beautiful: the Dolomites passes on day 13, Zakopane to Budapest through the Slovak Tatras on day 6, and up to the Vršič Pass on day 11."
+    }
+   ]
+  },
+  {
+   "title": "Where we stayed",
+   "items": [
+    {
+     "point": "We stayed in a mix of Airbnbs and apartments from Booking.com.",
+     "detail": "Kitchens and showers were small by American standards almost everywhere, and not every place had laundry, so check the listing if you need it."
+    },
+    {
+     "point": "Check the stairs before you book.",
+     "detail": "Our Airbnb in Zakopane was in the attic and extremely cramped, and the one in Kranjska Gora had a very narrow, steep staircase. Many older houses have no lift, so with big bags, look for stairs and ceiling height in the listing photos."
+    }
+   ]
+  },
+  {
+   "title": "If you’re short on time",
+   "items": [
+    {
+     "point": "Venice was my least favourite place.",
+     "detail": "Overcrowded, dirty and scammy."
+    },
+    {
+     "point": "Vienna was next.",
+     "detail": "Dirty, and overhyped."
+    },
+    {
+     "point": "Bratislava can be dropped.",
+     "detail": "Nothing special."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+# Saurabh Bipin Chandra
+
+> Personal site of Saurabh Bipin Chandra, a machine learning scientist in Mountain View, California: projects, data experiments, and travel itineraries.
+
+## Travel
+
+- [Central Europe in 14 days](https://srbhchandra.github.io/travel/central-europe/): a road trip from Prague to Venice through Czechia, Poland, Slovakia, Hungary, Austria, Slovenia and Italy, day by day, with highlights, food, drive and walk times, and practical notes on driving, renting and staying.
+- [Central Europe itinerary as data](https://srbhchandra.github.io/travel/central-europe/itinerary.json): the same itinerary as JSON, with coordinates for every place.
+
+## Projects
+
+- [Manchester United in expected goals](https://srbhchandra.github.io/projects/man-utd-xg/): twelve seasons of chances created and conceded, against goals, points, managers and the rest of the Big Six.
+- [Football Tactics Board](https://srbhchandra.github.io/projects/football-tactics-board/): an interactive tactics board with formations, Premier League squads and image export.
+
+## About
+
+- [Résumé](https://srbhchandra.github.io/resume/)
+- [GitHub](https://github.com/srbhchandra)
+- [LinkedIn](https://www.linkedin.com/in/srbhchandra)

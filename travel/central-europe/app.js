@@ -140,6 +140,7 @@
     `<button type="button" data-goto="${n}" aria-label="Go to day ${n}: ${label}"><img src="${imgSmall(PH.days[n].src)}" alt="${esc(PH.days[n].cap)}"><span>Day ${n} · ${label}</span></button>`).join('');
   document.addEventListener('click', (e) => { const b = e.target.closest('[data-goto]'); if (b) { e.preventDefault(); goTo(+b.dataset.goto); } });
   const box = $('#days');
+  box.innerHTML = ''; // drop the static copy baked in by tools/build.js
   const ov = el('section', 'overview');
   ov.id = 'day-0';
   ov.dataset.day = 0;

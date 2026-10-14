@@ -1,0 +1,5 @@
+# Everyone is welcome: search engines, AI search and AI training crawlers alike.
+User-agent: *
+Allow: /
+
+Sitemap: https://srbhchandra.github.io/sitemap.xml
