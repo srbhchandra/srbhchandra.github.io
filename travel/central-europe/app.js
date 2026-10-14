@@ -193,7 +193,7 @@
       if (w) body += ` <span class="wm">${w.km} km · ~${Math.max(5, Math.round(w.min / 5) * 5)} min</span>`;
       if (it.best) body += ` <span class="badge best">★ ${esc(it.best)}</span>`;
       if ((it.tags || []).includes('book')) body += ` <span class="badge book">Book ahead</span>`;
-      if (hasTag(it, 'history')) body += ` <span class="badge book">Learnt a lot of history</span>`;
+      if (hasTag(it, 'history')) body += ` <span class="badge book">History</span>`;
       const pics = stops.flatMap((st) => stopPhotos(d.n, st[0]).map((p) => ({ ...p, name: st[0] })));
       if (pics.length) body += `<span class="thumbs">${pics.map((p) => {
         const [w, h] = fit(p, 120, 72);

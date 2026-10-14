@@ -48,7 +48,6 @@ window.TRIP = {
       n: 2, title: 'Prague, then drive to Brno via Kutná Hora', place: 'Prague → Brno', base: 'Brno', country: 'CZ',
       drive: [[14.4206, 50.0870], [15.2886, 49.9620], [16.6068, 49.1951]],
       items: [
-        { kind: 'see', text: 'Prague main station', stops: [['Prague main station', 14.4353, 50.0831]] },
         { kind: 'see', text: 'Il Commendatore by Anna Chromý, by the Estates Theatre', stops: [['Il Commendatore', 14.4233, 50.0857]] },
         { kind: 'see', tags: ['hl', 'tour'], text: 'Klementinum (baroque library) – guided tour', stops: [['Klementinum', 14.4163, 50.0864]] },
         { kind: 'see', text: 'Strahov Monastery – museum, baroque library', stops: [['Strahov Monastery', 14.3893, 50.0863]] },
@@ -103,14 +102,14 @@ window.TRIP = {
       items: [
         { kind: 'food', text: 'Excellent breakfast at Restauracja Zakopiańska – tried bliny gryczane', stops: [['Restauracja Zakopiańska', 19.9630, 49.2968]] },
         { kind: 'see', tags: ['nature'], text: 'Tatra National Park – hike up Sarnia Skała for views', stops: [['Sarnia Skała', 19.9410, 49.2649]] },
-        { kind: 'see', tags: ['hl', 'nature'], text: 'A very beautiful drive through Slovakia with views of the Tatras; stop at Ždiar for photos', stops: [['Ždiar', 20.2275, 49.2737]] },
+        { kind: 'see', tags: ['nature'], text: 'A very beautiful drive through Slovakia with views of the Tatras; stop at Ždiar for photos', stops: [['Ždiar', 20.2275, 49.2737]] },
         { kind: 'miss', text: 'An extra day in the Tatras: stay on the Slovak side, and hike to Morskie Oko (on the Polish side)', stops: [['Morskie Oko', 20.0707, 49.1974]] }
       ]
     },
     {
       n: 7, title: 'Budapest, Hungary', place: 'Budapest', base: 'Budapest', country: 'HU',
       items: [
-        { kind: 'walk', label: 'Castle district', stops: [
+        { kind: 'walk', best: 'Best city walk', label: 'Castle district', stops: [
           ['Vienna Gate', 19.0305, 47.5047], ['Matthias Church (climb the tower)', 19.0344, 47.5019],
           ["Fisherman's Bastion", 19.0350, 47.5022], ['Buda Castle', 19.0396, 47.4962, 'history'],
           ['Budapest History Museum / Castle Museum', 19.0395, 47.4955, 'hl history'], ['Várkert Bazár', 19.0434, 47.4963] ] },
@@ -130,7 +129,7 @@ window.TRIP = {
         { kind: 'walk', stops: [
           ['Széchenyi Thermal Bath', 19.0819, 47.5186], ['Gatehouse Tower', 19.0815, 47.5155],
           ['Vajdahunyad Castle', 19.0820, 47.5150], ['Museum of Ethnography', 19.0759, 47.5193] ] },
-        { kind: 'see', tags: ['hl', 'tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
+        { kind: 'see', tags: ['tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
         { kind: 'food', text: 'A very beautiful café – Ohana, the coffee family, Budapest' },
         { kind: 'food', text: 'Etyeki Manor vineyard, Etyek', stops: [['Etyek', 18.7406, 47.4403]] },
         { kind: 'walk', label: 'Bratislava, Slovakia (nothing special; skippable)', stops: [['Bratislava Castle', 17.1000, 48.1421], ['Old Town', 17.1077, 48.1437]] }
@@ -175,7 +174,7 @@ window.TRIP = {
         { kind: 'see', tags: ['hl', 'nature'], best: 'Best nature', text: 'Vintgar Gorge – the best nature of the trip: blue, green and yellow water in the gorge', stops: [['Vintgar Gorge', 14.0927, 46.3986]] },
         { kind: 'see', tags: ['nature'], text: 'Lake Bled, with its island', stops: [['Lake Bled', 14.0938, 46.3625]] },
         { kind: 'food', text: 'Bled cream cake', stops: [['Bled', 14.1100, 46.3680]] },
-        { kind: 'see', tags: ['hl'], text: 'Mountain coaster on Straža hill, Bled – super fun', stops: [['Mountain coaster, Straža', 14.1051, 46.3626]] },
+        { kind: 'see', text: 'Mountain coaster on Straža hill, Bled – super fun', stops: [['Mountain coaster, Straža', 14.1051, 46.3626]] },
         { kind: 'see', text: 'Predjama Castle – seen from outside', stops: [['Predjama Castle', 14.1270, 45.8156]] },
         { kind: 'miss', text: 'Postojna Cave or Škocjan Caves', stops: [['Postojna Cave', 14.2034, 45.7826], ['Škocjan Caves', 13.9895, 45.6634]] }
       ]
@@ -184,7 +183,7 @@ window.TRIP = {
       n: 13, title: 'The Dolomites, Italy', place: 'Dolomites', base: 'Colle Santa Lucia', country: 'IT',
       drive: [[12.0138, 46.4479], [12.0540, 46.4831], [12.0084, 46.5192], [12.1174, 46.5258], [12.1357, 46.5369], [12.0138, 46.4479]],
       items: [
-        { kind: 'see', tags: ['hl', 'nature'], best: 'Best drive', text: 'The best drive, with many hairpin bends', stops: [
+        { kind: 'see', tags: ['hl', 'nature'], best: 'Best nature & drive', text: 'The best drive, with many hairpin bends', stops: [
           ['Passo Giau', 12.0540, 46.4831], ['Cascate di Limedes'], ['Lagazuoi cable car (skipped: the top was in cloud)', 12.0084, 46.5192],
           ['Belvedere di Pocol', 12.1174, 46.5258], ['Punto Panoramico'], ['Parcheggio Belvedere'] ] },
         { kind: 'walk', stops: [["Cortina d'Ampezzo", 12.1357, 46.5369]] },
@@ -229,9 +228,7 @@ window.TRIP = {
         body: 'The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier.',
         photos: [['d07-roman-empire-map', 'The Roman Empire in the 2nd century AD, with Aquincum, Roman Budapest, on its edge. Budapest History Museum']] },
       { head: 'Auschwitz-Birkenau is sobering, and worth the time.',
-        body: 'Book a slot well ahead.' },
-      { head: 'The palaces surely taught me plenty too.',
-        body: 'Prague Castle, Wawel, the Hofburg, Schönbrunn and the Hungarian Parliament tour are all full of history; these three are the ones that stuck.' }
+        body: 'Book a slot well ahead.' }
     ] },
     { title: 'Driving and renting', items: [
       { head: 'One car for the whole trip, and the one-way fee was most of the cost.',
@@ -246,8 +243,8 @@ window.TRIP = {
         body: 'The most beautiful: the Dolomites passes on day 13, Zakopane to Budapest through the Slovak Tatras on day 6, and up to the Vršič Pass on day 11.' }
     ] },
     { title: 'Where we stayed', items: [
-      { head: 'Kitchens and showers are small by American standards.',
-        body: 'That held almost everywhere we stayed, a mix of Airbnbs and apartments from Booking.com. Not every place has laundry, so check the listing if you need it.' },
+      { head: 'We stayed in a mix of Airbnbs and apartments from Booking.com.',
+        body: 'Kitchens and showers were small by American standards almost everywhere, and not every place had laundry, so check the listing if you need it.' },
       { head: 'Check the stairs before you book.',
         body: 'Our Airbnb in Zakopane was in the attic and extremely cramped, and the one in Kranjska Gora had a very narrow, steep staircase. Many older houses have no lift, so with big bags, look for stairs and ceiling height in the listing photos.' }
     ] },
