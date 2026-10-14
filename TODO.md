@@ -22,8 +22,10 @@ This repo is public, so this file is too (srbhchandra.github.io/TODO.md).
       it into index.html; re-run after editing trip.js), itinerary.json, schema.org
       markup, link-preview tags, robots.txt, sitemap.xml (scripts/build-sitemap.py),
       llms.txt, cross-links between pages.
-- [ ] Saurabh: after pushing, add the site to Google Search Console and Bing
-      Webmaster Tools and submit https://srbhchandra.github.io/sitemap.xml.
+- [x] Site added to Google Search Console (verification file in the repo root; keep
+      it) and Bing Webmaster Tools; sitemap submitted.
+- [ ] Recheck the sitemap status in Search Console in a week ("Couldn't fetch" is
+      normal at first for github.io sites).
 - [ ] Football Tactics Board (its own repo): add a small "by Saurabh Bipin Chandra"
       link back to the site, and pick one main address (github.io or workers.dev)
       with a canonical tag on the other, since it's the same app twice.
