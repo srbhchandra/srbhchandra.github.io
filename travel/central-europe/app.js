@@ -250,12 +250,12 @@
   let ticking = false;
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; onScroll(); }); } }, { passive: true });
 
-  function goTo(n) {
+  function goTo(n, instant) {
     const s = document.getElementById(`day-${n}`);
     // Mobile: the sticky map covers the top of the text column
     const off = mobile() ? document.querySelector('.mapwrap').offsetHeight : 0;
     const y = s.getBoundingClientRect().top + scrollY - bar.offsetHeight - off - 8;
-    scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
+    scrollTo({ top: y, behavior: reduced || instant ? 'auto' : 'smooth' });
   }
 
   function setActive(n) {
@@ -269,8 +269,7 @@
     if (d) {
       const rd = R.days[n] || {};
       const bits = [`<b>Day ${n}</b> · ${esc(d.place)}`];
-      if (rd.drive) bits.push(`about ${fmtH(rd.drive.h)} driving`);
-      $('#caption').innerHTML = bits.join(' · ');
+      $('#caption').innerHTML = bits.join(' · ') + (rd.drive ? `<span class="capdrive"> · about ${fmtH(rd.drive.h)} driving</span>` : '');
     } else {
       $('#caption').innerHTML = `<b>14 days</b> · Prague → Venice`;
     }
@@ -360,7 +359,7 @@
   }
   function popupHtml(name, day) {
     const ps = stopPhotos(day, name);
-    const [w, h] = ps.length ? fit(ps[0], 240, 200) : [0, 0];
+    const [w, h] = ps.length ? (mobile() ? fit(ps[0], 180, 130) : fit(ps[0], 240, 200)) : [0, 0];
     return (ps.length ? `<img class="pop" src="${imgSmall(ps[0].src)}" alt="${esc(name)}" data-photo="${ps[0].src}" data-pday="${day}" width="${w}" height="${h}" style="width:${w}px;height:${h}px">` : '') +
       `${esc(name)}<small>Day ${day}${ps.length > 1 ? ` · ${ps.length} photos` : ''}</small>`;
   }
@@ -372,10 +371,27 @@
     popup = new maplibregl.Popup({ closeButton: false, offset: 12 }).setLngLat(f.ll)
       .setHTML(popupHtml(f.name, f.day)).addTo(map);
   }
+  /* ---------- phones: hide or show the map ---------- */
+  const mtog = $('#maptoggle');
+  function setMapHidden(hide) {
+    document.body.classList.toggle('nomap', hide);
+    mtog.setAttribute('aria-pressed', hide);
+    mtog.textContent = hide ? 'Show map' : 'Hide map';
+    try { localStorage.setItem('ce-nomap', hide ? '1' : '0'); } catch (e) { /* storage blocked */ }
+    if (!hide && map) { map.resize(); updateMap(true); }
+    // The map's space came or went: stay on the day being read
+    if (active > 0) goTo(active, true); else onScroll();
+  }
+  mtog.addEventListener('click', () => setMapHidden(!document.body.classList.contains('nomap')));
+  let startHidden = false;
+  try { startHidden = localStorage.getItem('ce-nomap') === '1'; } catch (e) { /* storage blocked */ }
+  if (startHidden) setMapHidden(true);
+
   box.addEventListener('click', (e) => {
     const b = e.target.closest('.stop');
     if (!b) return;
     e.preventDefault();
+    if (document.body.classList.contains('nomap')) setMapHidden(false); // a place was tapped: bring the map back
     const f = features.find((x) => x.day === +b.dataset.day && x.i === +b.dataset.i && x.j === +b.dataset.j);
     if (f) showStop(f);
   });
