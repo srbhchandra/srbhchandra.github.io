@@ -223,11 +223,11 @@ window.TRIP = {
   notes: [
     { title: 'Where I learnt the most history', items: [
       { head: 'The Rynek Underground Museum in Krakow changed how I saw the map.',
-        body: 'It sits under the main square and tells Europe’s story from Krakow: medieval merchants on trade routes that ran across the whole continent. It gave me a Europe-centred view of the world that I didn’t have, having grown up in India.',
-        photos: [['d04-rynek-trade-routes-map', 'Krakow’s merchants on the trade routes of medieval Europe, Rynek Underground Museum']] },
+        body: 'It sits under the main square. Its maps put Krakow at the centre of medieval Europe’s trade routes: a Europe-centred view of the world that was new to me.',
+        photos: [['d04-rynek-trade-routes-map', 'Krakow at the hub of medieval Europe’s trade routes. Rynek Underground Museum']] },
       { head: 'Buda Castle is dense with history, especially the invasions.',
         body: 'The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier.',
-        photos: [['d07-roman-empire-map', 'The Roman Empire in the 2nd century AD, Aquincum underlined. Budapest History Museum']] },
+        photos: [['d07-roman-empire-map', 'The Roman Empire in the 2nd century AD, with Aquincum, Roman Budapest, on its edge. Budapest History Museum']] },
       { head: 'Auschwitz-Birkenau is sobering, and worth the time.',
         body: 'Book a slot well ahead.' },
       { head: 'The palaces surely taught me plenty too.',
@@ -246,6 +246,8 @@ window.TRIP = {
         body: 'The most beautiful: the Dolomites passes on day 13, Zakopane to Budapest through the Slovak Tatras on day 6, and up to the Vršič Pass on day 11.' }
     ] },
     { title: 'Where we stayed', items: [
+      { head: 'Kitchens and showers are small by American standards.',
+        body: 'That held almost everywhere we stayed, a mix of Airbnbs and apartments from Booking.com. Not every place has laundry, so check the listing if you need it.' },
       { head: 'Check the stairs before you book.',
         body: 'Our Airbnb in Zakopane was in the attic and extremely cramped, and the one in Kranjska Gora had a very narrow, steep staircase. Many older houses have no lift, so with big bags, look for stairs and ceiling height in the listing photos.' }
     ] },
