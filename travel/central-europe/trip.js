@@ -103,7 +103,7 @@ window.TRIP = {
       items: [
         { kind: 'food', text: 'Excellent breakfast at Restauracja Zakopiańska – tried bliny gryczane', stops: [['Restauracja Zakopiańska', 19.9630, 49.2968]] },
         { kind: 'see', tags: ['nature'], text: 'Tatra National Park – hike up Sarnia Skała for views', stops: [['Sarnia Skała', 19.9410, 49.2649]] },
-        { kind: 'see', tags: ['nature'], text: 'Drive through Slovakia with views of the Tatras; stop at Ždiar for photos', stops: [['Ždiar', 20.2275, 49.2737]] },
+        { kind: 'see', tags: ['hl', 'nature'], text: 'A very beautiful drive through Slovakia with views of the Tatras; stop at Ždiar for photos', stops: [['Ždiar', 20.2275, 49.2737]] },
         { kind: 'miss', text: 'An extra day in the Tatras: stay on the Slovak side, and hike to Morskie Oko (on the Polish side)', stops: [['Morskie Oko', 20.0707, 49.1974]] }
       ]
     },
@@ -112,14 +112,14 @@ window.TRIP = {
       items: [
         { kind: 'walk', label: 'Castle district', stops: [
           ['Vienna Gate', 19.0305, 47.5047], ['Matthias Church (climb the tower)', 19.0344, 47.5019],
-          ["Fisherman's Bastion", 19.0350, 47.5022], ['Buda Castle', 19.0396, 47.4962],
-          ['Budapest History Museum / Castle Museum', 19.0395, 47.4955], ['Várkert Bazár', 19.0434, 47.4963] ] },
+          ["Fisherman's Bastion", 19.0350, 47.5022], ['Buda Castle', 19.0396, 47.4962, 'history'],
+          ['Budapest History Museum / Castle Museum', 19.0395, 47.4955, 'hl history'], ['Várkert Bazár', 19.0434, 47.4963] ] },
         { kind: 'food', text: 'Desserts from Ruszwurm Confectionery, Castle district', stops: [['Ruszwurm', 19.0333, 47.5017]] },
         { kind: 'walk', stops: [
           ['Hungarian Parliament, from outside (the tour is on day 8)', 19.0457, 47.5071],
           ["St. Stephen's Basilica (climb the tower)", 19.0539, 47.5008],
           ['Vörösmarty tér – very happening', 19.0510, 47.4970] ] },
-        { kind: 'see', tags: ['tour'], text: "Danube night cruise to admire the city's landmarks", stops: [['Danube cruise pier', 19.0480, 47.4960]] },
+        { kind: 'see', tags: ['hl', 'tour'], text: "Danube night cruise to admire the city's landmarks", stops: [['Danube cruise pier', 19.0480, 47.4960]] },
         { kind: 'miss', text: 'Central Market Hall', stops: [['Central Market Hall', 19.0585, 47.4870]] }
       ]
     },
@@ -133,7 +133,7 @@ window.TRIP = {
         { kind: 'see', tags: ['hl', 'tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
         { kind: 'food', text: 'A very beautiful café – Ohana, the coffee family, Budapest' },
         { kind: 'food', text: 'Etyeki Manor vineyard, Etyek', stops: [['Etyek', 18.7406, 47.4403]] },
-        { kind: 'walk', label: 'Bratislava, Slovakia', stops: [['Bratislava Castle', 17.1000, 48.1421], ['Old Town', 17.1077, 48.1437]] }
+        { kind: 'walk', label: 'Bratislava, Slovakia (nothing special; skippable)', stops: [['Bratislava Castle', 17.1000, 48.1421], ['Old Town', 17.1077, 48.1437]] }
       ]
     },
     {
@@ -165,7 +165,7 @@ window.TRIP = {
       drive: [[13.7850, 46.4847], [13.7841, 46.4718], [13.7436, 46.4339], [13.7850, 46.4847]],
       items: [
         { kind: 'see', tags: ['nature'], text: 'Lake Jasna', stops: [['Lake Jasna', 13.7841, 46.4718]] },
-        { kind: 'see', tags: ['nature'], text: 'Drive through Triglav National Park up to the Vršič Pass and back', stops: [['Vršič Pass', 13.7436, 46.4339]] }
+        { kind: 'see', tags: ['hl', 'nature'], text: 'A very beautiful drive through Triglav National Park up to the Vršič Pass and back', stops: [['Vršič Pass', 13.7436, 46.4339]] }
       ]
     },
     {
@@ -216,6 +216,46 @@ window.TRIP = {
     'Beer is mostly mild and pale, made for drinking a lot of it.',
     'Public toilets usually cost a coin or two; carry change.',
     'Every bathroom in every apartment has its own quirk.',
-    'Parking is often extra at hotels and apartments. Check before booking if you’re driving.'
+    'The churches everywhere are stunning, and most have a giant pipe organ.'
+  ],
+  /* Longer notes, shown as collapsible items under the itinerary.
+     photos: [src, caption] from photos/ (published copies, no metadata). */
+  notes: [
+    { title: 'Where I learnt the most history', items: [
+      { head: 'The Rynek Underground Museum in Krakow changed how I saw the map.',
+        body: 'It sits under the main square and tells Europe’s story from Krakow: medieval merchants on trade routes that ran across the whole continent. It gave me a Europe-centred view of the world that I didn’t have, having grown up in India.',
+        photos: [['d04-rynek-trade-routes-map', 'Krakow’s merchants on the trade routes of medieval Europe, Rynek Underground Museum']] },
+      { head: 'Buda Castle is dense with history, especially the invasions.',
+        body: 'The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier.',
+        photos: [['d07-roman-empire-map', 'The Roman Empire in the 2nd century AD, Aquincum underlined. Budapest History Museum']] },
+      { head: 'Auschwitz-Birkenau is sobering, and worth the time.',
+        body: 'Book a slot well ahead.' },
+      { head: 'The palaces surely taught me plenty too.',
+        body: 'Prague Castle, Wawel, the Hofburg, Schönbrunn and the Hungarian Parliament tour are all full of history; these three are the ones that stuck.' }
+    ] },
+    { title: 'Driving and renting', items: [
+      { head: 'One car for the whole trip, and the one-way fee was most of the cost.',
+        body: 'We rented from Budget, picked up in Prague and dropped off in Venice. Picking up and dropping off in the same city is far cheaper, if your route allows it.' },
+      { head: 'Tell the rental company every country you’ll drive through.',
+        body: 'Crossing borders needs their permission and often a cross-border fee. Without it the insurance and breakdown cover can be void.' },
+      { head: 'Buy an e-vignette before each country’s motorways.',
+        body: 'Czechia, Slovakia, Hungary, Austria and Slovenia need one, tied to your number plate; we bought each online as we were about to cross the border. Poland and Italy charge tolls on some motorways instead. In Austria a digital vignette bought online only becomes valid 18 days after purchase, so buy it early or get a sticker at a petrol station.' },
+      { head: 'Parking is often extra at hotels and apartments.',
+        body: 'Check before you book if you’re driving.' },
+      { head: 'The drives are part of the trip.',
+        body: 'The most beautiful: the Dolomites passes on day 13, Zakopane to Budapest through the Slovak Tatras on day 6, and up to the Vršič Pass on day 11.' }
+    ] },
+    { title: 'Where we stayed', items: [
+      { head: 'Check the stairs before you book.',
+        body: 'Our Airbnb in Zakopane was in the attic and extremely cramped, and the one in Kranjska Gora had a very narrow, steep staircase. Many older houses have no lift, so with big bags, look for stairs and ceiling height in the listing photos.' }
+    ] },
+    { title: 'If you’re short on time', items: [
+      { head: 'Venice was my least favourite place.',
+        body: 'Overcrowded, dirty and scammy.' },
+      { head: 'Vienna was next.',
+        body: 'Dirty, and overhyped.' },
+      { head: 'Bratislava can be dropped.',
+        body: 'Nothing special.' }
+    ] }
   ]
 };

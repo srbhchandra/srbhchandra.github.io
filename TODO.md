@@ -13,6 +13,7 @@ This repo is public, so this file is too (srbhchandra.github.io/TODO.md).
       (7–18) suggests what to cut or add; export the result as a file for Google
       My Maps, or as Google Maps links per day. Needs from Saurabh: the cut order
       for shorter trips and the add order for longer ones (candidates in
-      the "Eastern Europe" planning page in Notion).
+      the "Eastern Europe" planning page in Notion). Known so far: drop
+      Bratislava first; Venice and Vienna were the least liked.
 - [ ] Maybe (#4): drive profile per day (hours, elevation). Low priority; the
       walking was the fun part.

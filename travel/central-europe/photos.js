@@ -252,6 +252,11 @@ window.PHOTOS = {
   ],
   "4|Rynek Underground Museum": [
    {
+    "src": "d04-rynek-trade-routes-map",
+    "w": 1600,
+    "h": 1205
+   },
+   {
     "src": "d04-rynek-underground-museum",
     "w": 753,
     "h": 1000
@@ -344,6 +349,11 @@ window.PHOTOS = {
   ],
   "7|Matthias Church (climb the tower)": [
    {
+    "src": "d07-matthias-church-arch",
+    "w": 1600,
+    "h": 1205
+   },
+   {
     "src": "d07-matthias-church",
     "w": 1000,
     "h": 753
@@ -364,6 +374,11 @@ window.PHOTOS = {
    }
   ],
   "7|Budapest History Museum / Castle Museum": [
+   {
+    "src": "d07-roman-empire-map",
+    "w": 1600,
+    "h": 1205
+   },
    {
     "src": "d07-budapest-history-museum-castle-museu",
     "w": 1000,

@@ -211,6 +211,20 @@
 
   $('#takeaways').innerHTML = T.takeaways.map((t) => `<li>${esc(t)}</li>`).join('');
 
+  /* ---------- notes: collapsible observations ---------- */
+  const photoDay = {}, photoDims = {};
+  Object.entries(gallery).forEach(([n, g]) => g.forEach((p) => { photoDay[p.src] = photoDay[p.src] || +n; }));
+  Object.values(PH.stops).flat().forEach((p) => { photoDims[p.src] = p; });
+  $('#notes').innerHTML = (T.notes || []).map((sec) => `<h2>${esc(sec.title)}</h2><div class="obs">${sec.items.map((it) => {
+    const figs = (it.photos || []).filter(([src]) => photoDims[src] && photoDay[src]).map(([src, cap]) => {
+      const [w, h] = fit(photoDims[src], 560, 420);
+      return `<figure class="notephoto">${photoBtn(photoDay[src], src, cap,
+        `<img src="${imgSmall(src)}" srcset="${imgSmall(src)} 480w, ${imgLarge(src)} 1600w" sizes="${w}px" loading="lazy" alt="${esc(cap)}" width="${w}" height="${h}">`,
+        `aspect-ratio: ${w} / ${h}; max-width: ${w}px`)}<figcaption>${esc(cap)}</figcaption></figure>`;
+    }).join('');
+    return `<details><summary>${esc(it.head)}</summary><p>${esc(it.body)}</p>${figs}</details>`;
+  }).join('')}</div>`).join('');
+
   /* ---------- sticky offsets ---------- */
   const bar = $('#bar');
   const setBarH = () => document.documentElement.style.setProperty('--barH', bar.offsetHeight + 'px');
