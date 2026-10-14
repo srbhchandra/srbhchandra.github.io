@@ -7,7 +7,7 @@ import os, subprocess
 from xml.sax.saxutils import escape
 
 BASE = 'https://srbhchandra.github.io/'
-SKIP = {'blog/'}  # "posts coming soon"
+SKIP = set()  # e.g. {'drafts/'}
 
 pages = []
 for root, dirs, files in os.walk('.'):

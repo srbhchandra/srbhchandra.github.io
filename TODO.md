@@ -30,7 +30,14 @@ This repo is public, so this file is too (srbhchandra.github.io/TODO.md).
       link back to the site, and pick one main address (github.io or workers.dev)
       with a canonical tag on the other, since it's the same app twice.
 - [ ] Man Utd xG page (built by its own repo): add the same author footer.
-- [ ] Maybe: privacy-friendly visitor counts (Cloudflare Web Analytics or GoatCounter).
+- [x] Visitor counts: Cloudflare Web Analytics on every page this repo owns.
+- [ ] Add the same Cloudflare snippet in the repos that build their own pages
+      (football-performance-viz, football-tactics-board), and add the workers.dev
+      app as a second site in Cloudflare.
+- [ ] Man Utd page headline (built by football-performance-viz): "Manchester United's
+      lost decade, in expected goals" (the home card already uses it).
+- [ ] When "Money and the Cycle" (finance_dashboard) is published, add its card under
+      Data on the home page ("Live dashboard · …").
 - [ ] Maybe: a personal domain for the whole site (and the apps as subdomains).
 - [ ] Share the itinerary where trip planners ask (r/travel, r/solotravel, travel groups).
 

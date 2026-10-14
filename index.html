@@ -19,12 +19,10 @@
       <h1>Saurabh Bipin Chandra</h1>
       <p class="tagline">Machine learning scientist. I work on systems that have to be right.</p>
       <nav class="top">
-        <a href="#projects">Projects</a>
+        <a href="#data">Data</a>
+        <a href="#apps">Apps</a>
         <a href="#travel">Travel</a>
-        <a href="#writing">Writing</a>
         <a href="/resume/">Résumé</a>
-        <a href="https://github.com/srbhchandra">GitHub</a>
-        <a href="mailto:srbhchandra@gmail.com">Email</a>
       </nav>
     </div>
   </header>
@@ -53,22 +51,27 @@
       <p>
         I like staying close enough to the product to hear from the people using it.
         This site is where I collect public work and the occasional write-up.
+        Say hello at <a href="mailto:srbhchandra@gmail.com">srbhchandra@gmail.com</a>.
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="data">
+      <h2>Data</h2>
       <a class="card" href="/projects/man-utd-xg/">
-        <h3>Twelve seasons, seven managers: Manchester United in expected goals</h3>
+        <h3>Manchester United's lost decade, in expected goals</h3>
         <p>The chances United created and conceded since 2014, against goals, points,
            managers and the rest of the Big Six. Interactive.</p>
-        <div class="meta">Python · pandas · Chart.js · data from Understat</div>
+        <div class="meta">Data story · Python · pandas · Chart.js · data from Understat</div>
       </a>
+    </section>
+
+    <section id="apps">
+      <h2>Apps</h2>
       <a class="card" href="/projects/football-tactics-board/">
         <h3>Football Tactics Board</h3>
         <p>An interactive tactics board: pick a formation, drag positions and players
            around the pitch, load any Premier League squad, and export the board as an image.</p>
-        <div class="meta">React · Vite · Tailwind CSS · drag and drop · runs in the browser</div>
+        <div class="meta">App · React · Vite · Tailwind CSS · drag and drop · runs in the browser</div>
       </a>
     </section>
 
@@ -82,27 +85,17 @@
       </a>
     </section>
 
-    <section id="writing">
-      <h2>Writing</h2>
-      <p class="soon">Posts coming soon.</p>
-    </section>
-
-    <section id="links">
-      <h2>Elsewhere</h2>
-      <p>
-        <a href="/resume/">Résumé</a> ·
-        <a href="https://www.linkedin.com/in/srbhchandra">LinkedIn</a> ·
-        <a href="https://github.com/srbhchandra">GitHub</a> ·
-        <a href="mailto:srbhchandra@gmail.com">Email</a>
-      </p>
-    </section>
   </main>
 
   <footer class="site">
     <div class="wrap">
-      © <span id="yr"></span> Saurabh Bipin Chandra
+      <span>© <span id="yr"></span> Saurabh Bipin Chandra</span>
+      <a href="/resume/">Résumé</a>
+      <a href="https://github.com/srbhchandra">GitHub</a>
+      <a href="https://www.linkedin.com/in/srbhchandra">LinkedIn</a>
     </div>
   </footer>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "071006d2456f44e3b63b6d9eea89bab4"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

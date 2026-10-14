@@ -43,6 +43,7 @@ nav.top a { color: var(--muted); margin-right: 18px; text-decoration: none; }
 nav.top a:hover { color: var(--ink); }
 
 main { padding: 2.5rem 0 4rem; }
+main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; } /* .wrap's side padding would otherwise reset these */
 
 section { margin-bottom: 3rem; }
 section > h2 { font-weight: 600; font-size: 1.3rem; margin: 0 0 .9rem; }
@@ -67,6 +68,7 @@ footer.site {
   color: var(--muted); font: 400 15px/1.6 var(--sans);
 }
 footer.site a { color: var(--muted); margin-right: 16px; text-decoration: none; }
+footer.site .wrap > span { margin-right: 16px; }
 footer.site a:hover { color: var(--ink); }
 
 /* article / project pages */
