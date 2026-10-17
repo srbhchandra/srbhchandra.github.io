@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<style>
+.f{fill:#1f1e1b}.r{fill:none;stroke:#1f1e1b;stroke-width:7;stroke-linecap:round}.dk{display:none}
+@media (prefers-color-scheme: dark){.f{fill:#faf9f5}.r{stroke:#faf9f5}.lt{display:none}.dk{display:inline}}
+</style>
+<path class="f lt" d="M50,10 A20,20 0 0 0 50,50 A20,20 0 0 1 50,90 A40,40 0 0 0 50,10 Z"/>
+<path class="f dk" d="M50,10 A20,20 0 0 0 50,50 A20,20 0 0 1 50,90 A40,40 0 0 1 50,10 Z"/>
+<path class="r" d="M88.105,28 A44,44 0 1 0 88.105,72"/>
+</svg>
