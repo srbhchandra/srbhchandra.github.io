@@ -22,4 +22,10 @@ for(const d of T.days){const o={};
   const r=await route('https://routing.openstreetmap.de/routed-foot/route/v1/driving',uniq);
   o.walks[i]={km:+(r.distance/1000).toFixed(1),min:Math.round(r.duration/60),line:round(rdp(r.geometry.coordinates,0.00004))};await sleep(1200)}
  out.days[d.n]=o;console.error(d.n,o.drive?`${o.drive.km}km ${o.drive.h}h ${o.drive.line.length}pts`:'-',Object.entries(o.walks).map(([k,w])=>`walk${k}:${w.km}km/${w.min}m`).join(' '))}
+// Planned days ("Plan your version"): drives only; their walks reuse the original days'
+ out.plan={};
+ const P=T.plan||{};const pdays=[...(P.venice?P.venice.with:[]),...(P.cuts||[]).flatMap(c=>c.with),...Object.values(P.extras||{}).map(e=>e.day)];
+ for(const d of pdays){if(!d.drive)continue;const r=await route('https://router.project-osrm.org/route/v1/driving',d.drive);
+  out.plan[d.key]={drive:{km:Math.round(r.distance/1000),h:+(r.duration/3600).toFixed(2),line:round(rdp(r.geometry.coordinates,0.00025))}};
+  console.error('plan',d.key,out.plan[d.key].drive.km+'km',out.plan[d.key].drive.h+'h');await sleep(1200)}
 fs.writeFileSync(process.argv[3],JSON.stringify(out));})();

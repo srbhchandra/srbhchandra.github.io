@@ -206,6 +206,56 @@ window.TRIP = {
       ]
     }
   ],
+  /* "Plan your version": hand-written edits, never generated.
+     Shortening (in order): Venice goes with the first cut, then `cuts` one by one.
+     Lengthening: `extras`, the reader's interest first.
+     An edit replaces the days listed in `replace` (original day numbers) with
+     `with`. A planned day has a `key` (routes.json "plan" entry), `photo` (the
+     original day whose photo it borrows) and items that are either copies of
+     original items, { from: [day, index] }, or new items marked `added: true`. */
+  plan: {
+    min: 12, max: 16,
+    venice: { replace: [14], with: [
+      { key: 'no-venice', photo: 14, title: 'The Dolomites, then drive to Venice airport', place: 'Dolomites → Venice airport',
+        base: null, country: 'IT', change: 'Venice skipped: fly home in the evening',
+        drive: [[12.0138, 46.4479], [12.0215, 46.4078], [11.9947, 46.2210], [12.0419, 46.1878], [12.0624, 46.1657], [12.3519, 45.5053]],
+        items: [{ from: [14, 0] }, { from: [14, 1] },
+          { kind: 'see', added: true, text: 'Drop the car at Venice Marco Polo airport and fly home', stops: [['Venice Marco Polo airport', 12.3519, 45.5053]] }] }
+    ] },
+    cuts: [
+      { id: 'vienna', replace: [8, 9, 10], with: [
+        { key: 'vienna-a', photo: 8, title: 'Budapest, then drive to Vienna, Austria', place: 'Budapest → Vienna', base: 'Vienna', country: 'AT',
+          change: 'Shortened: Etyek and Bratislava skipped, to reach Vienna by mid-afternoon',
+          drive: [[19.0457, 47.5071], [16.3731, 48.2085]],
+          items: [{ from: [8, 0] }, { from: [8, 1] }, { from: [8, 2] }, { from: [9, 0] }, { from: [9, 4] }, { from: [9, 5] }] },
+        { key: 'vienna-b', photo: 10, title: 'Vienna, then drive to Slovenia', place: 'Vienna → Slovenia', base: 'Kranjska Gora', country: 'SI',
+          change: 'Shortened: one morning in Vienna instead of a full day',
+          drive: [[16.3673, 48.2087], [16.3122, 48.1845], [16.8310, 47.8504], [13.7850, 46.4847]],
+          items: [{ from: [9, 1] }, { from: [10, 0] }, { from: [10, 1] }] }
+      ] },
+      { id: 'slovenia', replace: [11, 12], with: [
+        { key: 'slovenia', photo: 12, title: 'Kranjska Gora, then drive to the Dolomites', place: 'Kranjska Gora → Dolomites', base: 'Colle Santa Lucia', country: 'IT',
+          change: 'Shortened: one night in Kranjska Gora; Lake Bled and Predjama Castle skipped',
+          drive: [[13.7850, 46.4847], [13.7841, 46.4718], [13.7436, 46.4339], [13.7850, 46.4847], [14.0927, 46.3986], [12.0138, 46.4479]],
+          items: [{ from: [11, 0] }, { from: [11, 1] }, { from: [12, 0] }] }
+      ] }
+    ],
+    extras: {
+      city: { label: 'Cities', after: 7, day:
+        { key: 'budapest-extra', photo: null, title: 'One more day in Budapest', place: 'Budapest', base: 'Budapest', country: 'HU',
+          change: 'Added: an extra day in Budapest, the best city of the trip',
+          items: [
+            { kind: 'see', added: true, text: 'Central Market Hall – the one we missed', stops: [['Central Market Hall', 19.0585, 47.4870]] },
+            { kind: 'see', added: true, text: 'Széchenyi Thermal Bath – we only walked past it; go in', stops: [['Széchenyi Thermal Bath', 19.0819, 47.5186]] }] } },
+      nature: { label: 'Nature', after: 13, day:
+        { key: 'dolomites-extra', photo: null, title: 'One more day in the Dolomites', place: 'Dolomites', base: 'Colle Santa Lucia', country: 'IT',
+          change: 'Added: an extra day in the Dolomites, the best drive of the trip',
+          drive: [[12.0138, 46.4479], [12.0540, 46.4831], [12.0084, 46.5192], [12.0138, 46.4479]],
+          items: [
+            { kind: 'see', added: true, tags: ['nature'], text: 'Lagazuoi cable car – we skipped it when the top was in cloud', stops: [['Lagazuoi cable car', 12.0084, 46.5192]] },
+            { kind: 'see', added: true, tags: ['nature'], text: 'The passes again, slowly, with more stops for the views', stops: [['Passo Giau', 12.0540, 46.4831]] }] } }
+    }
+  },
   takeaways: [
     'Most of what you’ll see is Gothic, Renaissance or Baroque, or a 19th-century “neo” revival of one of them. Learn those three and every old town starts to make sense.',
     'Old towns are built for walking; cars are an afterthought. It’s the opposite of the US.',

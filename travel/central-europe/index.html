@@ -39,6 +39,7 @@
     /* Sticky bar: day strip, caption, filters */
     .bar { position: sticky; top: 0; z-index: 6; background: var(--paper); padding: .6rem 0 .55rem; border-bottom: 1px solid var(--rule); }
     .strip { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 3px; }
+    .strip button.changed span:first-child { color: var(--focus); }
     .strip button { display: flex; flex-direction: column; gap: 4px; padding: 0; border: 0; background: none; cursor: pointer;
       font: 500 12px/1 var(--sans); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
     .strip .seg { display: block; height: 8px; border-radius: 2px; transition: height .2s; }
@@ -156,7 +157,53 @@
 
     .maptoggle { display: none; }
 
+    /* Plan your version */
+    .planner { border: 1px solid var(--rule); border-radius: 10px; padding: .7rem .9rem; margin: 0 0 1.25rem; font: 400 14px/1.45 var(--sans); }
+    .phead { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
+    .ptoggle { font: 500 14px/1 var(--sans); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; }
+    .ptoggle[aria-expanded="true"] { background: transparent; color: var(--ink); }
+    .ptoggle::after { content: ' ▾'; }
+    .ptoggle[aria-expanded="true"]::after { content: ' ▴'; }
+    .psum { color: var(--muted); }
+    .pexport { margin-left: auto; display: flex; flex-wrap: wrap; gap: 6px; }
+    .pexport button, .pmore button { font: 400 13px/1 var(--sans); padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
+    .pexport button:hover, .pmore button:hover { border-color: var(--muted); }
+    .pmore button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .pbody { padding-top: .8rem; }
+    .pdays { display: block; color: var(--ink); font-weight: 500; }
+    .prange { display: flex; align-items: center; gap: 12px; max-width: 30rem; margin: .3rem 0 .6rem; }
+    .prange input { flex: 1; accent-color: var(--ink); }
+    .prange output { font: 500 15px/1 var(--sans); min-width: 4.5em; }
+    .pmore { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 .6rem; color: var(--muted); }
+    .pmore[hidden] { display: none; }
+    .pchanges { margin: 0 0 .5rem; padding-left: 1.1rem; }
+    .pchanges li { margin: .15rem 0; }
+    .pnote { color: var(--muted); margin: .4rem 0 0; font-size: 13px; }
+    .changed { font: 400 14px/1.45 var(--sans); color: var(--focus); margin: 0 0 .4rem; }
+    .gmaps { font: 400 14px/1.5 var(--sans); }
+    .gmaps a { color: var(--focus); }
+    .badge.add { border: 1px dashed var(--focus); color: var(--focus); }
+    .items li.added .body { color: var(--ink); }
+
+    @media print {
+      .noprint, .bar, .mapwrap, .mosaic, .phead .ptoggle, .pexport, .prange, .pmore, .pdays, .maptoggle, .thumbs, .lightbox, .crumbs { display: none !important; }
+      .pbody { display: block !important; }
+      .planner { border: 0; padding: 0; }
+      .scrolly { display: block; }
+      .days { padding-bottom: 0; }
+      .day, .overview { padding: 1rem 0 .5rem; }
+      .day.empty { opacity: 1; }
+      .dayphoto img { max-height: 6cm; width: auto; }
+      .dayphoto button { width: auto; aspect-ratio: auto !important; max-width: 100% !important; }
+      .items li { break-inside: avoid; }
+      .obs details > *:not(summary) { display: block; }
+      .notephoto { display: none; }
+      a { text-decoration: none; }
+      body { background: #fff; }
+    }
+
     @media (max-width: 900px) {
+      .pexport { margin-left: 0; }
       .maptoggle { display: inline-block; flex: none; font: 400 13px/1 var(--sans); padding: 5px 10px; border: 1px solid var(--rule);
         border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; }
       .maptoggle[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -188,6 +235,29 @@
       <div class="stats" id="stats"></div>
     </div>
     <div class="mosaic" id="mosaic"></div>
+
+    <section class="planner" aria-label="Plan your version">
+      <div class="phead">
+        <button type="button" class="ptoggle" id="ptoggle" aria-expanded="false" aria-controls="pbody">Plan your version</button>
+        <span class="psum" id="psum">14 days, as we did it</span>
+        <span class="pexport">
+          <button type="button" id="xpdf">Save as PDF</button>
+          <button type="button" id="xkml">Google My Maps file</button>
+          <button type="button" id="xlink">Copy link</button>
+        </span>
+      </div>
+      <div class="pbody" id="pbody" hidden>
+        <label class="pdays" for="pslider">How many days do you have?</label>
+        <div class="prange"><input type="range" id="pslider" min="12" max="16" step="1" value="14"><output id="pout" for="pslider">14 days</output></div>
+        <div class="pmore" id="pmore" hidden>
+          <span>With an extra day, I'd spend it on</span>
+          <button type="button" data-more="nature" aria-pressed="true">Nature: the Dolomites</button>
+          <button type="button" data-more="city" aria-pressed="false">Cities: Budapest</button>
+        </div>
+        <ul class="pchanges" id="pchanges"></ul>
+        <p class="pnote">Shorter versions drop what I'd drop myself; longer ones add only what I'd go back for. Every day has a Google Maps link; the My Maps file has every place (import it at google.com/mymaps).</p>
+      </div>
+    </section>
 
     <div class="trip">
     <div class="bar" id="bar">
@@ -224,7 +294,7 @@
         <figure class="dayphoto"><img src="photos/day02-s.jpg" alt="Prague Castle from the Klementinum tower" width="1600" height="1205" loading="lazy"><figcaption>Prague Castle from the Klementinum tower</figcaption></figure>
         <p class="daynum">Day 2</p>
         <h2>Prague, then drive to Brno via Kutná Hora</h2>
-        <p class="meta">Driving about 3 h · 230 km · Night in Brno</p>
+        <p class="meta">Driving about 3 h · 240 km · Night in Brno</p>
         <ul class="items">
           <li><span class="kind">See</span> <span class="body">Il Commendatore by Anna Chromý, by the Estates Theatre</span></li>
           <li><span class="kind">See</span> <span class="body">Klementinum (baroque library) – guided tour</span></li>
