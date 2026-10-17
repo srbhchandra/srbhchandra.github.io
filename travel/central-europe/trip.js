@@ -237,7 +237,7 @@ window.TRIP = {
           drive: [[12.0138, 46.4479], [12.0540, 46.4831], [12.0084, 46.5192], [12.0138, 46.4479]],
           items: [
             { kind: 'see', added: true, tags: ['nature'], text: 'Lagazuoi cable car – we skipped it when the top was in cloud', stops: [['Lagazuoi cable car', 12.0084, 46.5192]] },
-            { kind: 'see', added: true, tags: ['nature'], text: 'The passes again, slowly, with more stops for the views', stops: [['Passo Giau', 12.0540, 46.4831]] }] } }
+            { kind: 'see', added: true, tags: ['nature'], text: 'A hike or two – the weather was too bad on our first Dolomites day to hike' }] } }
     }
   },
   takeaways: [
@@ -282,6 +282,10 @@ window.TRIP = {
         body: 'Kitchens and showers were small by American standards almost everywhere, and not every place had laundry, so check the listing if you need it.' },
       { head: 'Check the stairs before you book.',
         body: 'Our Airbnb in Zakopane was in the attic and extremely cramped, and the one in Kranjska Gora had a very narrow, steep staircase. Many older houses have no lift, so with big bags, look for stairs and ceiling height in the listing photos.' }
+    ] },
+    { title: 'Weather in the mountains', items: [
+      { head: 'Keep a spare day for the Dolomites if you can.',
+        body: 'Mountain weather changes fast. Our first full day there was so wet and cloudy that we couldn’t hike, and the Lagazuoi cable car disappeared into the cloud. A flexible day lets you wait for a clear one.' }
     ] },
     { title: 'If you’re short on time', items: [
       { head: 'Venice was my least favourite place.',
