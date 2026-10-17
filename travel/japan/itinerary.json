@@ -1,0 +1,1170 @@
+{
+ "title": "Japan in 12 days",
+ "url": "https://srbhchandra.github.io/travel/japan/",
+ "author": {
+  "name": "Saurabh Bipin Chandra",
+  "url": "https://srbhchandra.github.io/"
+ },
+ "summary": "Twelve days by train: Tokyo, a day in Nikko, a night under Mount Fuji, Kyoto and Nara, Osaka, Hiroshima and Miyajima, and back to Tokyo.",
+ "note": "Walk times are routing estimates (FOSSGIS foot router) for the stops in order, excluding time spent at them; train times are roughly what our trips took.",
+ "days": [
+  {
+   "day": 1,
+   "title": "Tokyo: Asakusa, Harajuku, Shibuya, Shinjuku",
+   "country": "Tokyo",
+   "night": "Tokyo (Akihabara)",
+   "via": [],
+   "travel": null,
+   "walk_km": 8.2,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Arriving late: Kanda Myōjin shrine, lit up at night near Akihabara",
+     "tags": [],
+     "places": [
+      {
+       "name": "Kanda Myōjin",
+       "lat": 35.7019,
+       "lon": 139.7679
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Asakusa: Kaminarimon (Thunder Gate) → Nakamise-dōri → Sensō-ji, Tokyo’s oldest temple",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Kaminarimon (Thunder Gate)",
+       "lat": 35.7111,
+       "lon": 139.7964
+      },
+      {
+       "name": "Nakamise-dōri",
+       "lat": 35.7125,
+       "lon": 139.7966
+      },
+      {
+       "name": "Sensō-ji, Tokyo’s oldest temple",
+       "lat": 35.7144,
+       "lon": 139.7967
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Harajuku: Tokyu Plaza’s mirrored entrance → Harajuku Station → Meiji Jingu shrine → Meiji Jingu inner garden",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Tokyu Plaza’s mirrored entrance",
+       "lat": 35.6686,
+       "lon": 139.7059
+      },
+      {
+       "name": "Harajuku Station",
+       "lat": 35.6707,
+       "lon": 139.7024
+      },
+      {
+       "name": "Meiji Jingu shrine",
+       "lat": 35.6746,
+       "lon": 139.7006
+      },
+      {
+       "name": "Meiji Jingu inner garden",
+       "lat": 35.6724,
+       "lon": 139.7005
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Street snack in Harajuku",
+     "tags": [],
+     "places": [
+      {
+       "name": "Harajuku",
+       "lat": 35.6696,
+       "lon": 139.7033
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Evening in Shibuya: Omotesandō → Shibuya Crossing → Shibuya Center Gai",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Omotesandō",
+       "lat": 35.6689,
+       "lon": 139.7057
+      },
+      {
+       "name": "Shibuya Crossing",
+       "lat": 35.6595,
+       "lon": 139.7006
+      },
+      {
+       "name": "Shibuya Center Gai",
+       "lat": 35.6605,
+       "lon": 139.6985
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Night in Shinjuku: Kabukichō → Golden Gai bars",
+     "tags": [],
+     "places": [
+      {
+       "name": "Kabukichō",
+       "lat": 35.6932,
+       "lon": 139.7012
+      },
+      {
+       "name": "Golden Gai bars",
+       "lat": 35.6941,
+       "lon": 139.7045
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Conveyor-belt sushi in Shibuya",
+     "tags": [],
+     "places": [
+      {
+       "name": "Shibuya",
+       "lat": 35.6605,
+       "lon": 139.6984
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "title": "Tokyo: Imperial Palace, Tsukiji, Ginza, Roppongi",
+   "country": "Tokyo",
+   "night": "Tokyo (Akihabara)",
+   "via": [],
+   "travel": null,
+   "walk_km": 2.5,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Imperial Palace: Nippon Budōkan and Kitanomaru Park → Kitahanebashi Gate and the moat → Imperial Palace East Gardens",
+     "tags": [
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Nippon Budōkan and Kitanomaru Park",
+       "lat": 35.6936,
+       "lon": 139.7494
+      },
+      {
+       "name": "Kitahanebashi Gate and the moat",
+       "lat": 35.6891,
+       "lon": 139.754
+      },
+      {
+       "name": "Imperial Palace East Gardens",
+       "lat": 35.6859,
+       "lon": 139.7598
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Tsukiji: Tsukiji Hongan-ji → Tsukiji Outer Market",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Tsukiji Hongan-ji",
+       "lat": 35.6665,
+       "lon": 139.7724
+      },
+      {
+       "name": "Tsukiji Outer Market",
+       "lat": 35.6656,
+       "lon": 139.7707
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Seafood bowl and street skewers at Tsukiji Outer Market",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Tsukiji Outer Market",
+       "lat": 35.6658,
+       "lon": 139.7707
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Yūrakuchō’s alleys under the railway → Ginza",
+     "tags": [],
+     "places": [
+      {
+       "name": "Yūrakuchō’s alleys under the railway",
+       "lat": 35.6725,
+       "lon": 139.7617
+      },
+      {
+       "name": "Ginza",
+       "lat": 35.6708,
+       "lon": 139.7644
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Chūō-dōri in Akihabara, closed to cars on Sundays",
+     "tags": [],
+     "places": [
+      {
+       "name": "Chūō-dōri, Akihabara",
+       "lat": 35.702,
+       "lon": 139.7717
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Tokyo City View at Roppongi Hills: the city and Tokyo Tower at night",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Roppongi Hills, Tokyo City View",
+       "lat": 35.6605,
+       "lon": 139.7292
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Dinner in Roppongi",
+     "tags": [],
+     "places": [
+      {
+       "name": "Roppongi",
+       "lat": 35.6615,
+       "lon": 139.7328
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "title": "Day trip to Nikko",
+   "country": "Tokyo",
+   "night": "Tokyo (Akihabara)",
+   "via": [],
+   "travel": {
+    "mode": "Tobu train from Asakusa, and back",
+    "hours": 2
+   },
+   "walk_km": 0.6,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Nikkō Tōshō-gū, the lavish shrine of the first Tokugawa shogun",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Nikkō Tōshō-gū",
+       "lat": 36.7576,
+       "lon": 139.5989
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Rinnō-ji’s Hall of Three Buddhas, and its garden in autumn colours",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Rinnō-ji Sanbutsu-dō",
+       "lat": 36.7552,
+       "lon": 139.6005
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Forest path down to the river → Shinkyō Bridge",
+     "tags": [
+      "nature",
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Forest path down to the river",
+       "lat": 36.7539,
+       "lon": 139.6037
+      },
+      {
+       "name": "Shinkyō Bridge",
+       "lat": 36.7538,
+       "lon": 139.6044
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Daiya River",
+       "lat": 36.7504,
+       "lon": 139.5933
+      },
+      {
+       "name": "Kanmangafuchi Abyss",
+       "lat": 36.7489,
+       "lon": 139.5886
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "title": "Tokyo to Mount Fuji",
+   "country": "Mount Fuji",
+   "night": "Fujikawaguchiko",
+   "via": [],
+   "travel": {
+    "mode": "Highway bus from Shinjuku",
+    "hours": 2
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Nishi-Shinjuku’s skyscrapers and the Tokyo Metropolitan Government Building",
+     "tags": [],
+     "places": [
+      {
+       "name": "Tokyo Metropolitan Government Building",
+       "lat": 35.6889,
+       "lon": 139.6924
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Saiko Iyashi-no-Sato Nenba, a village of thatched houses facing Mount Fuji",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Lake Saiko",
+       "lat": 35.5007,
+       "lon": 138.6646
+      },
+      {
+       "name": "Iyashi-no-Sato Nenba",
+       "lat": 35.5048,
+       "lon": 138.6619
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Kōyōdai viewpoint: Mount Fuji above the clouds",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Kōyōdai",
+       "lat": 35.484,
+       "lon": 138.6792
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Oishi Park on Lake Kawaguchi: red kochia bushes with Fuji behind",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Lake Kawaguchi",
+       "lat": 35.5127,
+       "lon": 138.7339
+      },
+      {
+       "name": "Oishi Park",
+       "lat": 35.522,
+       "lon": 138.7451
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "title": "Fuji sunrise, then Kyoto",
+   "country": "Kyoto",
+   "night": "Kyoto",
+   "via": [],
+   "travel": {
+    "mode": "Bus to Mishima, then the Shinkansen",
+    "hours": 4
+   },
+   "walk_km": 3.3,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Sunrise over Mount Fuji from where we stayed",
+     "best": "Best nature",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Fujikawaguchiko",
+       "lat": 35.5297,
+       "lon": 138.7654
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Mount Fuji from the Shinkansen, sitting on the right side",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Near Shin-Fuji",
+       "lat": 35.1554,
+       "lon": 138.7448
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Higashiyama: Kiyomizu-dera → Sannenzaka and Ninenzaka → Yasaka Pagoda → Nene-no-michi → Yasaka Shrine, lit up at dusk → Gion",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Kiyomizu-dera",
+       "lat": 34.9948,
+       "lon": 135.7846
+      },
+      {
+       "name": "Sannenzaka and Ninenzaka",
+       "lat": 34.9962,
+       "lon": 135.781
+      },
+      {
+       "name": "Yasaka Pagoda",
+       "lat": 34.9986,
+       "lon": 135.7798
+      },
+      {
+       "name": "Nene-no-michi",
+       "lat": 35.0009,
+       "lon": 135.78
+      },
+      {
+       "name": "Yasaka Shrine, lit up at dusk",
+       "lat": 35.0035,
+       "lon": 135.7783
+      },
+      {
+       "name": "Gion",
+       "lat": 35.0016,
+       "lon": 135.774
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Evening: Kamo River → Pontochō alley → Sanjō Bridge",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Kamo River",
+       "lat": 35.0027,
+       "lon": 135.7711
+      },
+      {
+       "name": "Pontochō alley",
+       "lat": 35.005,
+       "lon": 135.7711
+      },
+      {
+       "name": "Sanjō Bridge",
+       "lat": 35.0087,
+       "lon": 135.7717
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Heian Shrine’s giant red torii at night",
+     "tags": [],
+     "places": [
+      {
+       "name": "Heian Shrine torii",
+       "lat": 35.0109,
+       "lon": 135.7819
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "title": "Kyoto: Nijō Castle, Nishiki Market, Fushimi Inari",
+   "country": "Kyoto",
+   "night": "Kyoto",
+   "via": [],
+   "travel": null,
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Nijō Castle: the Ninomaru Palace, its gardens, and the view from the keep walls",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Nijō Castle",
+       "lat": 35.0138,
+       "lon": 135.7483
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Matcha and sweets at a tea house inside Nijō Castle",
+     "tags": [],
+     "places": [
+      {
+       "name": "Nijō Castle tea house",
+       "lat": 35.0151,
+       "lon": 135.7482
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Lunch by grazing Nishiki Market: tamagoyaki, sea urchin, seafood skewers",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Nishiki Market",
+       "lat": 35.0049,
+       "lon": 135.7633
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Teramachi and Shinkyōgoku covered shopping streets",
+     "tags": [],
+     "places": [
+      {
+       "name": "Teramachi",
+       "lat": 35.0052,
+       "lon": 135.7665
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Fushimi Inari Taisha at dusk: tunnels of red torii",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Fushimi Inari Taisha",
+       "lat": 34.9671,
+       "lon": 135.7738
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Tonkatsu dinner near Inari station",
+     "tags": [],
+     "places": [
+      {
+       "name": "Inari",
+       "lat": 34.9683,
+       "lon": 135.769
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "title": "Nara, then Osaka",
+   "country": "Osaka",
+   "night": "Osaka",
+   "via": [],
+   "travel": {
+    "mode": "Train to Nara, then on to Osaka",
+    "hours": 2
+   },
+   "walk_km": 2.2,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Kyoto Station’s giant atrium and Skyway",
+     "tags": [],
+     "places": [
+      {
+       "name": "Kyoto Station",
+       "lat": 34.986,
+       "lon": 135.7584
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Nara Park: Nara Park and its deer → Kasuga-taisha → Tōdai-ji Nandaimon gate → Tōdai-ji Great Buddha Hall → A Japanese garden next to Tōdai-ji",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Nara Park and its deer",
+       "lat": 34.6828,
+       "lon": 135.8366
+      },
+      {
+       "name": "Kasuga-taisha",
+       "lat": 34.6819,
+       "lon": 135.8394
+      },
+      {
+       "name": "Tōdai-ji Nandaimon gate",
+       "lat": 34.6857,
+       "lon": 135.84
+      },
+      {
+       "name": "Tōdai-ji Great Buddha Hall",
+       "lat": 34.6889,
+       "lon": 135.8398
+      },
+      {
+       "name": "A Japanese garden next to Tōdai-ji",
+       "lat": 34.6853,
+       "lon": 135.837
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Dōtonbori at night, along the canal",
+     "tags": [],
+     "places": [
+      {
+       "name": "Dōtonbori",
+       "lat": 34.669,
+       "lon": 135.5024
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 8,
+   "title": "Osaka in the rain",
+   "country": "Osaka",
+   "night": "Osaka",
+   "via": [],
+   "travel": null,
+   "walk_km": 2.1,
+   "items": [
+    {
+     "kind": "sight",
+     "text": "Osaka Castle: the moats, the park, and the view from the top floor",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Ōtemon Gate",
+       "lat": 34.6852,
+       "lon": 135.5227
+      },
+      {
+       "name": "Osaka Castle",
+       "lat": 34.6866,
+       "lon": 135.5259
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Ice cream at the castle",
+     "tags": [],
+     "places": [
+      {
+       "name": "Osaka Castle",
+       "lat": 34.6862,
+       "lon": 135.5263
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Shinsaibashi-suji arcade → Dōtonbori and the Glico sign → Namba",
+     "tags": [],
+     "places": [
+      {
+       "name": "Shinsaibashi-suji arcade",
+       "lat": 34.6749,
+       "lon": 135.5014
+      },
+      {
+       "name": "Dōtonbori and the Glico sign",
+       "lat": 34.6689,
+       "lon": 135.5014
+      },
+      {
+       "name": "Namba",
+       "lat": 34.6671,
+       "lon": 135.5035
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Street food around Dōtonbori",
+     "tags": [],
+     "places": [
+      {
+       "name": "Dōtonbori",
+       "lat": 34.6677,
+       "lon": 135.4999
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Shinsekai and Tsūtenkaku tower (our friends went)",
+     "tags": [],
+     "places": [
+      {
+       "name": "Shinsekai",
+       "lat": 34.6511,
+       "lon": 135.5058
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 9,
+   "title": "Osaka to Hiroshima",
+   "country": "Hiroshima",
+   "night": "Hiroshima",
+   "via": [],
+   "travel": {
+    "mode": "Shinkansen",
+    "hours": 1.5
+   },
+   "walk_km": 0.4,
+   "items": [
+    {
+     "kind": "food",
+     "text": "Hiroshima-style okonomiyaki for lunch",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Hiroshima",
+       "lat": 34.3903,
+       "lon": 132.4503
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Hiroshima Peace Memorial Museum",
+     "tags": [
+      "hl",
+      "history",
+      "tour"
+     ],
+     "places": [
+      {
+       "name": "Peace Memorial Museum",
+       "lat": 34.3918,
+       "lon": 132.4527
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Peace Memorial Park and the Cenotaph → Atomic Bomb Dome",
+     "tags": [
+      "history",
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Peace Memorial Park and the Cenotaph",
+       "lat": 34.3929,
+       "lon": 132.4529
+      },
+      {
+       "name": "Atomic Bomb Dome",
+       "lat": 34.3955,
+       "lon": 132.4534
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Hondōri shopping arcade",
+     "tags": [],
+     "places": [
+      {
+       "name": "Hondōri",
+       "lat": 34.3937,
+       "lon": 132.4569
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Dinner: kamameshi (rice cooked in an iron pot)",
+     "tags": [],
+     "places": [
+      {
+       "name": "Hiroshima",
+       "lat": 34.394,
+       "lon": 132.4559
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "title": "Miyajima",
+   "country": "Hiroshima",
+   "night": "Hiroshima",
+   "via": [],
+   "travel": {
+    "mode": "High-speed boat from Peace Park to Miyajima, and back",
+    "hours": 0.75
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Peace Memorial Park in the morning",
+     "tags": [],
+     "places": [
+      {
+       "name": "Peace Memorial Park",
+       "lat": 34.3925,
+       "lon": 132.4519
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Grilled oysters on Miyajima",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Miyajima",
+       "lat": 34.3004,
+       "lon": 132.3217
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Itsukushima Shrine and its torii standing in the sea",
+     "best": "Best sight",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Itsukushima Shrine",
+       "lat": 34.297,
+       "lon": 132.3197
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Momijidani Park",
+     "tags": [
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Momijidani Park",
+       "lat": 34.2937,
+       "lon": 132.3256
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Ropeway up Mount Misen, then a short hike to the views over the Inland Sea",
+     "tags": [
+      "hl",
+      "nature"
+     ],
+     "places": [
+      {
+       "name": "Miyajima Ropeway",
+       "lat": 34.2812,
+       "lon": 132.3277
+      },
+      {
+       "name": "Mount Misen",
+       "lat": 34.2791,
+       "lon": 132.3253
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "The torii again at sunset, then the boat back",
+     "tags": [],
+     "places": [
+      {
+       "name": "Miyajima pier",
+       "lat": 34.3034,
+       "lon": 132.3226
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Teppanyaki dinner in Hiroshima: wagyu, seafood and vegetables on the grill",
+     "best": "Best food",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Hiroshima",
+       "lat": 34.3941,
+       "lon": 132.4549
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "The Flame of Peace at night",
+     "tags": [],
+     "places": [
+      {
+       "name": "Flame of Peace",
+       "lat": 34.3921,
+       "lon": 132.4522
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "title": "Hiroshima back to Tokyo",
+   "country": "Tokyo",
+   "night": "Tokyo (Hamamatsuchō)",
+   "via": [],
+   "travel": {
+    "mode": "Shinkansen",
+    "hours": 4
+   },
+   "walk_km": 1.6,
+   "items": [
+    {
+     "kind": "food",
+     "text": "An ekiben (station bento) on the Shinkansen",
+     "tags": [],
+     "places": []
+    },
+    {
+     "kind": "food",
+     "text": "The food halls at Tokyo Station",
+     "tags": [],
+     "places": [
+      {
+       "name": "Tokyo Station",
+       "lat": 35.6817,
+       "lon": 139.7676
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Evening: Yaesu → Kyōbashi → Ginza at night",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Yaesu",
+       "lat": 35.6815,
+       "lon": 139.7711
+      },
+      {
+       "name": "Kyōbashi",
+       "lat": 35.6772,
+       "lon": 139.77
+      },
+      {
+       "name": "Ginza at night",
+       "lat": 35.6727,
+       "lon": 139.7633
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Tokyo Tower lit up, and Zōjō-ji below it, near midnight",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Tokyo Tower",
+       "lat": 35.6584,
+       "lon": 139.7469
+      },
+      {
+       "name": "Zōjō-ji",
+       "lat": 35.6575,
+       "lon": 139.7502
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "title": "Tokyo: Ueno, then home",
+   "country": "Tokyo",
+   "night": null,
+   "via": [],
+   "travel": {
+    "mode": "Train to Narita airport",
+    "hours": 1
+   },
+   "walk_km": null,
+   "items": [
+    {
+     "kind": "walk",
+     "text": "Ueno Park",
+     "tags": [],
+     "places": [
+      {
+       "name": "Ueno Park",
+       "lat": 35.7152,
+       "lon": 139.7753
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "Tokyo National Museum: samurai swords, Buddhist statues, lacquer and ceramics",
+     "tags": [
+      "hl",
+      "history"
+     ],
+     "places": [
+      {
+       "name": "Tokyo National Museum",
+       "lat": 35.7188,
+       "lon": 139.7769
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "Katsu curry in Akihabara",
+     "tags": [],
+     "places": [
+      {
+       "name": "Akihabara",
+       "lat": 35.6985,
+       "lon": 139.7757
+      }
+     ]
+    },
+    {
+     "kind": "walk",
+     "text": "Shiba Daimon gate and Hamamatsuchō",
+     "tags": [],
+     "places": [
+      {
+       "name": "Shiba Daimon",
+       "lat": 35.6567,
+       "lon": 139.7557
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaways": [],
+ "notes": []
+}
