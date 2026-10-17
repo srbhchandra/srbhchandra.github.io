@@ -26,37 +26,42 @@
   let more = qs.get('more') === 'city' ? 'city' : 'nature';
   let days = [];
 
-  // Build the list of days for nDays from the hand-written edits in trip.js
+  // Build the days for nDays from the hand-written versions in trip.js. Skipped days
+  // stay in the list (shown faded and collapsed); `days` holds only the kept ones.
+  let allDays = [];
   function resolveDays() {
-    const copy = (it, o) => ({ ...it, _o: o });
-    const base = (d) => ({ ...d, key: String(d.n), orig: d.n, photo: d.n, change: null,
+    const copy = (it, o, dropped) => ({ ...it, _o: o, dropped: !!dropped });
+    const base = (d) => ({ ...d, key: String(d.n), orig: d.n, photo: d.n, skipped: false, edited: false,
       items: d.items.map((it, i) => copy(it, [d.n, i])) });
-    const planned = (pd) => ({ ...pd, orig: null, via: pd.via || null,
-      items: pd.items.map((it) => (it.from ? copy(T.days[it.from[0] - 1].items[it.from[1]], it.from) : copy(it, null))) });
+    const planned = (pd, orig) => ({ ...pd, orig, via: pd.via || null, skipped: false, edited: true,
+      items: pd.items.map((it) => (it.from ? copy(T.days[it.from[0] - 1].items[it.from[1]], it.from, it.dropped) : copy(it, null))) });
     let list = T.days.map(base);
-    const swap = (edit) => {
-      const at = list.findIndex((d) => d.orig === edit.replace[0]);
-      if (at >= 0) list.splice(at, edit.replace.length, ...edit.with.map(planned));
-    };
-    if (nDays < BASE_DAYS) { swap(PL.venice); PL.cuts.slice(0, BASE_DAYS - nDays).forEach(swap); }
+    if (nDays < BASE_DAYS) {
+      const v = PL.versions[nDays];
+      (v.replace || []).forEach((r) => { const at = list.findIndex((d) => d.orig === r.day); list[at] = planned(r.with, r.day); });
+      v.skip.forEach((n) => { list.find((d) => d.orig === n).skipped = true; });
+    }
     if (nDays > BASE_DAYS) {
       const order = more === 'city' ? ['city', 'nature'] : ['nature', 'city'];
       order.slice(0, nDays - BASE_DAYS).forEach((k) => {
         const e = PL.extras[k], at = list.findIndex((d) => d.orig === e.after);
-        list.splice(at + 1, 0, planned(e.day));
+        list.splice(at + 1, 0, planned(e.day, null));
       });
     }
-    list.forEach((d, i) => {
-      d.n = i + 1;
-      const rd = d.orig ? (R.days[d.orig] || {}) : ((R.plan || {})[d.key] || {});
+    let n = 0;
+    list.forEach((d) => {
+      d.n = d.skipped ? null : ++n;
+      const rd = d.key && !/^\d+$/.test(d.key) ? ((R.plan || {})[d.key] || {}) : (R.days[d.orig] || {});
       d.drive = rd.drive || null;
       d.walks = {};
       d.items.forEach((it, j) => {
-        if (it.kind === 'walk' && it._o) { const w = ((R.days[it._o[0]] || {}).walks || {})[it._o[1]]; if (w) d.walks[j] = w; }
+        if (it.kind === 'walk' && it._o && !it.dropped) { const w = ((R.days[it._o[0]] || {}).walks || {})[it._o[1]]; if (w) d.walks[j] = w; }
       });
     });
-    return list;
+    allDays = list;
+    return list.filter((d) => !d.skipped);
   }
+  const live = (d) => d.items.filter((it) => !it.dropped);
 
   /* ---------- filters ---------- */
   // Stop tags are a space-separated string in the 4th slot: 'hl history'
@@ -135,7 +140,7 @@
   /* ---------- Google Maps links and the My Maps file ---------- */
   const mapped = (d) => {
     const pts = [];
-    d.items.forEach((it) => { if (it.kind === 'miss') return; (it.stops || []).forEach((s) => { if (s.length >= 3) pts.push({ name: s[0], lat: s[2], lon: s[1], it }); }); });
+    live(d).forEach((it) => { if (it.kind === 'miss') return; (it.stops || []).forEach((s) => { if (s.length >= 3) pts.push({ name: s[0], lat: s[2], lon: s[1], it }); }); });
     return pts.filter((p, i) => !i || p.lat !== pts[i - 1].lat || p.lon !== pts[i - 1].lon);
   };
   // Google allows 9 waypoints between origin and destination (3 in mobile browsers),
@@ -204,8 +209,9 @@
     const totKm = days.reduce((a, d) => a + (d.drive ? d.drive.km : 0), 0);
     const totH = days.reduce((a, d) => a + (d.drive ? d.drive.h : 0), 0);
     const totWalk = days.reduce((a, d) => a + walkKm(d), 0);
-    const nStops = days.reduce((a, d) => a + d.items.reduce((b, it) => b + (it.kind === 'miss' ? 0 : (it.stops || [it]).length), 0), 0);
-    const stats = [[`${N}`, 'days'], ['7', 'countries']];
+    const nStops = days.reduce((a, d) => a + live(d).reduce((b, it) => b + (it.kind === 'miss' ? 0 : (it.stops || [it]).length), 0), 0);
+    const visited = new Set(days.flatMap((d) => [d.country, ...(d.via || [])]));
+    const stats = [[`${N}`, 'days'], [`${visited.size}`, 'countries']];
     if (totKm) stats.push([(Math.round(totKm / 100) * 100).toLocaleString('en'), `km driven, about ${Math.round(totH)} h`]);
     if (totWalk) stats.push([`${Math.round(totWalk)} km`, 'of mapped city walks']);
     stats.push([`${nStops}`, 'stops']);
@@ -215,7 +221,7 @@
     strip.innerHTML = '';
     strip.style.gridTemplateColumns = `repeat(${N}, minmax(0, 1fr))`;
     days.forEach((d, i) => {
-      const b = el('button', d.change ? 'changed' : null);
+      const b = el('button', d.edited ? 'changed' : null);
       b.type = 'button';
       b.dataset.day = d.n;
       b.setAttribute('aria-label', `Day ${d.n}: ${d.place}`);
@@ -225,14 +231,14 @@
     });
     const nights = {};
     days.forEach((d) => { if (d.base) nights[d.country] = (nights[d.country] || 0) + 1; });
-    $('#legend').innerHTML = Object.entries(C).map(([k, c]) =>
+    $('#legend').innerHTML = Object.entries(C).filter(([k]) => visited.has(k)).map(([k, c]) =>
       `<span><i style="background:${c.color || NEUTRAL}"></i>${c.name}${nights[k] ? ' ' + nights[k] : ''}</span>`).join('');
 
     // Filters, with counts for this version
     fbox.innerHTML = '';
     FILTERS.forEach(([key, label, fn, group], k) => {
       if (k && group !== FILTERS[k - 1][3]) fbox.appendChild(el('span', 'fsep'));
-      const n = days.reduce((a, d) => a + d.items.filter(fn).length, 0);
+      const n = days.reduce((a, d) => a + live(d).filter(fn).length, 0);
       const b = el('button', null, `${label}<small>${n}</small>`);
       b.type = 'button';
       b.dataset.f = key;
@@ -246,7 +252,7 @@
     days.forEach((d) => {
       const g = [], hero = d.photo ? PH.days[d.photo] : null;
       if (hero) { g.push({ src: hero.src, cap: hero.cap }); caps[hero.src] = hero.cap; }
-      d.items.forEach((it) => (it.stops || []).forEach((st) => stopPhotos(it._o && it._o[0], st[0]).forEach((p) => { g.push({ src: p.src, cap: st[0] }); caps[p.src] = st[0]; })));
+      live(d).forEach((it) => (it.stops || []).forEach((st) => stopPhotos(it._o && it._o[0], st[0]).forEach((p) => { g.push({ src: p.src, cap: st[0] }); caps[p.src] = st[0]; })));
       gallery[d.n] = g;
     });
 
@@ -258,13 +264,19 @@
     const nightsText = Object.entries(nights).map(([k, n]) => `${n} in ${C[k].name}`).join(', ');
     ov.innerHTML = `<p class="daynum">The route</p><h2>Prague to Venice by car</h2>
       <p>Fly into Prague, fly out of Venice, and drive in between. The cities are best on foot, so the days alternate: whole days walking in Prague, Krakow, Budapest and Vienna, and driving days that string together caves, castles and mountain passes.</p>
-      <p>Nights: ${nightsText}. Slovakia is on the way ${days.some((d) => d.orig === 8) ? 'twice' : 'once'}.<span class="noprint"> Scroll, or pick a day above; the map follows.</span></p>
-      <ul class="bests">${days.flatMap((d) => d.items.filter((it) => it.best).map((it) =>
+      <p>Nights: ${nightsText}. Slovakia is on the way ${days.filter((d) => (d.via || []).includes('SK')).length === 2 ? 'twice' : 'once'}.<span class="noprint"> Scroll, or pick a day above; the map follows.</span></p>
+      <ul class="bests">${days.flatMap((d) => live(d).filter((it) => it.best).map((it) =>
         `<li><span class="badge best">★ ${esc(it.best)}</span> <a href="#day-${d.n}" data-goto="${d.n}">${esc((it.stops || []).length > 1 ? d.title : it.stops[0][0])}</a> <span class="when">Day ${d.n}</span></li>`)).join('')}</ul>`;
     box.appendChild(ov);
 
     // Days
     itemIndex = [];
+    allDays.forEach((d) => {
+      if (!d.skipped) return;
+      d._skipEl = el('section', 'day skipped');
+      d._skipEl.innerHTML = `<details><summary>Skipped in this version: ${esc(d.title)}</summary><ul class="items">${d.items.map((it) =>
+        `<li class="dropped"><span class="kind">${KIND[it.kind]}</span><span class="body">${esc(it.text || [it.label, (it.stops || []).map((st) => st[0]).join(', ')].filter(Boolean).join(': '))}</span></li>`).join('')}</ul></details>`;
+    });
     days.forEach((d, di) => {
       const s = el('section', 'day');
       s.id = `day-${d.n}`;
@@ -284,11 +296,10 @@
         `aspect-ratio: ${hero.w} / ${hero.h}; max-width: min(100%, calc(60vh * ${(hero.w / hero.h).toFixed(3)}))`)}<figcaption>${esc(hero.cap)}</figcaption></figure>` : '';
       s.innerHTML = heroHtml + `<p class="daynum"><i style="background:${segBg(d, di)}"></i>Day ${d.n}</p>
         <h2>${esc(d.title)}${d.note ? ` <span class="note">${esc(d.note)}</span>` : ''}</h2>
-        ${d.change ? `<p class="changed">${esc(d.change)}</p>` : ''}
         <p class="meta">${meta.map((m) => `<span>${m}</span>`).join('')}${gl}</p>`;
       const ul = el('ul', 'items');
       d.items.forEach((it, i) => {
-        const li = el('li', [it.kind, (it.tags || []).includes('hl') ? 'hl' : '', it.added ? 'added' : ''].join(' ').trim());
+        const li = el('li', [it.kind, (it.tags || []).includes('hl') ? 'hl' : '', it.added ? 'added' : '', it.dropped ? 'dropped' : ''].join(' ').trim());
         const stops = it.stops || [];
         const stopHtml = (st, j) => st.length >= 3
           ? `<a href="#map" class="stop${stags(st).includes('hl') ? ' hl' : ''}" data-day="${d.n}" data-i="${i}" data-j="${j}">${esc(st[0])}</a>`
@@ -303,13 +314,14 @@
           body = (it.label ? `<span class="lead">${esc(it.label)}:</span> ` : '') +
             stops.map(stopHtml).join(it.kind === 'walk' ? '<span class="sep"> → </span>' : '<span class="sep">, </span>');
         }
-        const w = d.walks[i];
+        const w = it.dropped ? null : d.walks[i];
         if (w) body += ` <span class="wm">${w.km} km · ~${Math.max(5, Math.round(w.min / 5) * 5)} min</span>`;
         if (it.best) body += ` <span class="badge best">★ ${esc(it.best)}</span>`;
         if (it.added) body += ` <span class="badge add">Suggested, not on our trip</span>`;
         if ((it.tags || []).includes('book')) body += ` <span class="badge book">Book ahead</span>`;
         if (hasTag(it, 'history')) body += ` <span class="badge book">History</span>`;
-        const pics = stops.flatMap((st) => stopPhotos(it._o && it._o[0], st[0]).map((p) => ({ ...p, name: st[0] })));
+        if (it.dropped) body = `<span class="lead">${esc(it.text || [it.label, stops.map((st) => st[0]).join(', ')].filter(Boolean).join(': '))}</span> <span class="badge drop">Skipped in this version</span>`;
+        const pics = it.dropped ? [] : stops.flatMap((st) => stopPhotos(it._o && it._o[0], st[0]).map((p) => ({ ...p, name: st[0] })));
         if (pics.length) body += `<span class="thumbs">${pics.map((p) => {
           const [pw, ph] = fit(p, 120, 72);
           return photoBtn(d.n, p.src, p.name, `<img src="${imgSmall(p.src)}" loading="lazy" alt="${esc(p.name)}" width="${pw}" height="${ph}">`, `width:${pw}px;height:${ph}px`);
@@ -318,21 +330,22 @@
         li.addEventListener('mouseenter', () => hover(d.n, i, true, li));
         li.addEventListener('mouseleave', () => hover(d.n, i, false, li));
         ul.appendChild(li);
-        itemIndex.push({ day: d.n, i, it, li });
+        if (!it.dropped) itemIndex.push({ day: d.n, i, it, li });
       });
       s.appendChild(ul);
-      box.appendChild(s);
+      d._el = s;
     });
+    allDays.forEach((d) => box.appendChild(d.skipped ? d._skipEl : d._el)); // trip order, skipped days in place
 
     // Map features
     features = [];
     days.forEach((d) => d.items.forEach((it, i) => (it.stops || []).forEach((st, j) => {
-      if (st.length < 3) return;
+      if (st.length < 3 || it.dropped) return;
       features.push({ day: d.n, pday: it._o ? it._o[0] : 0, i, j, it, name: st[0], ll: [st[1], st[2]],
         hl: (it.tags || []).includes('hl') || !!it.best || stags(st).includes('hl'), miss: it.kind === 'miss' });
     })));
 
-    sections = [...document.querySelectorAll('.overview, .day')];
+    sections = [...document.querySelectorAll('.overview, .day:not(.skipped)')];
     setBarH();
     setFilter(filter, true);
     active = -1;
@@ -391,7 +404,8 @@
       li.hidden = !ok;
       if (ok) seen[day] = true;
     });
-    document.querySelectorAll('.day').forEach((s) => s.classList.toggle('empty', !seen[s.dataset.day]));
+    document.querySelectorAll('.day:not(.skipped)').forEach((s) => s.classList.toggle('empty', !seen[s.dataset.day]));
+    document.querySelectorAll('.day.skipped').forEach((s) => { s.hidden = filter !== 'all'; });
     setBarH();
     if (quiet) return;
     updateMap(false);
@@ -506,8 +520,9 @@
       const on = N >= BASE_DAYS + 2 || b.dataset.more === more;
       b.setAttribute('aria-pressed', on);
     });
-    const changes = days.filter((d) => d.change).map((d) => `<li><a href="#day-${d.n}" data-goto="${d.n}">Day ${d.n}</a>: ${esc(d.change)}</li>`);
-    $('#pchanges').innerHTML = changes.length ? changes.join('') : '<li>No changes: this is the trip exactly as we did it.</li>';
+    const changes = N < BASE_DAYS ? PL.versions[N].summary
+      : N > BASE_DAYS ? (more === 'city' ? ['city', 'nature'] : ['nature', 'city']).slice(0, N - BASE_DAYS).map((k) => PL.extras[k].summary) : [];
+    $('#pchanges').innerHTML = changes.length ? changes.map((c) => `<li>${esc(c)}</li>`).join('') : '<li>No changes: this is the trip exactly as we did it.</li>';
     // Shareable address for this version
     const q = new URLSearchParams(location.search);
     if (N === BASE_DAYS) q.delete('days'); else q.set('days', N);

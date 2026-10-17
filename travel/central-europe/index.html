@@ -179,7 +179,12 @@
     .pchanges { margin: 0 0 .5rem; padding-left: 1.1rem; }
     .pchanges li { margin: .15rem 0; }
     .pnote { color: var(--muted); margin: .4rem 0 0; font-size: 13px; }
-    .changed { font: 400 14px/1.45 var(--sans); color: var(--focus); margin: 0 0 .4rem; }
+    .day.skipped { padding: .35rem 0; margin: 0; opacity: .6; }
+    .day.skipped summary { cursor: pointer; font: 500 14px/1.4 var(--sans); color: var(--muted); }
+    .day.skipped .items { margin-top: .5rem; }
+    .items li.dropped .body { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(107,103,95,.6); }
+    .items li.dropped .badge { text-decoration: none; }
+    .badge.drop { border: 1px solid var(--rule); color: var(--muted); }
     .gmaps { font: 400 14px/1.5 var(--sans); }
     .gmaps a { color: var(--focus); }
     .badge.add { border: 1px dashed var(--focus); color: var(--focus); }
@@ -248,14 +253,14 @@
       </div>
       <div class="pbody" id="pbody" hidden>
         <label class="pdays" for="pslider">How many days do you have?</label>
-        <div class="prange"><input type="range" id="pslider" min="12" max="16" step="1" value="14"><output id="pout" for="pslider">14 days</output></div>
+        <div class="prange"><input type="range" id="pslider" min="11" max="16" step="1" value="14"><output id="pout" for="pslider">14 days</output></div>
         <div class="pmore" id="pmore" hidden>
           <span>With an extra day, I'd spend it on</span>
           <button type="button" data-more="nature" aria-pressed="true">Nature: the Dolomites</button>
           <button type="button" data-more="city" aria-pressed="false">Cities: Budapest</button>
         </div>
         <ul class="pchanges" id="pchanges"></ul>
-        <p class="pnote">Shorter versions drop what I'd drop myself; longer ones add only what I'd go back for. Every day has a Google Maps link; the My Maps file has every place (import it at google.com/mymaps).</p>
+        <p class="pnote">Shorter versions skip whole days, the ones I'd skip myself; longer ones add only what I'd go back for. Every day has a Google Maps link; the My Maps file has every place (import it at google.com/mymaps).</p>
       </div>
     </section>
 
@@ -471,6 +476,7 @@
         <li>Public toilets usually cost a coin or two; carry change.</li>
         <li>Every bathroom in every apartment has its own quirk.</li>
         <li>The churches everywhere are stunning, and most have a giant pipe organ.</li>
+        <li>Leave slack in every city to wander, shop, eat and watch. Some of our best moments weren’t planned: we followed live music down an alleyway full of restaurants and ate there.</li>
 <!-- /build:takeaways -->
       </ul>
       <div id="notes">
