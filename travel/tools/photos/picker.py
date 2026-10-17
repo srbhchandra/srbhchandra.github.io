@@ -42,26 +42,44 @@ small{color:#6b675f}
 <script>
 const KEY='picks-'+location.pathname;
 let saved=null; try{saved=JSON.parse(localStorage.getItem(KEY))}catch(e){}
-const rowOf=(img)=>img.closest('.row');
-// Restore moves, then selections
-if(saved&&saved.moves){Object.entries(saved.moves).forEach(([f,to])=>{const img=document.querySelector(`img[data-f="${CSS.escape(f)}"]`),r=document.getElementById('r-'+to);if(img&&r){r.appendChild(img.closest('.t'));img.closest('.t').classList.add('moved');}});}
-const sel=new Set(saved?saved.selected||[]:[]);
-if(!saved){document.querySelectorAll('.row').forEach(r=>{const i=r.querySelector('img');if(i)sel.add(i.dataset.f)});}
-const moves=saved&&saved.moves?saved.moves:{};
-function paint(){document.querySelectorAll('img[data-f]').forEach(i=>i.classList.toggle('on',sel.has(i.dataset.f)));save();}
-document.addEventListener('click',e=>{const i=e.target.closest('img[data-f]');if(!i)return;const r=rowOf(i);
-  if(r.dataset.hero){r.querySelectorAll('img').forEach(x=>{if(x!==i)sel.delete(x.dataset.f)});}
-  sel.has(i.dataset.f)?sel.delete(i.dataset.f):sel.add(i.dataset.f);paint();});
+// A photo can appear in several rows (the day row and a place row), so every choice
+// is remembered per row: "<row>|<file>". Moves are keyed by "<original row>|<file>".
+const rowKey=(r)=>r.id.slice(2);
+const imgs=[...document.querySelectorAll('img[data-f]')];
+imgs.forEach(i=>{i.dataset.o=rowKey(i.closest('.row'));});
+const k=(i)=>rowKey(i.closest('.row'))+'|'+i.dataset.f;
+const ok=(i)=>i.dataset.o+'|'+i.dataset.f;
+const moves={}, sel=new Set();
+const place=(t,to)=>{const r=document.getElementById('r-'+to);if(r){r.appendChild(t);t.classList.add('moved');}};
+if(saved){
+  const v1=!(saved.selected||[]).some(x=>x.includes('|'))&&!Object.keys(saved.moves||{}).some(x=>x.includes('|'));
+  Object.entries(saved.moves||{}).forEach(([key,to])=>{
+    const i=v1?imgs.find(x=>x.dataset.f===key&&!x.closest('.row').dataset.hero)||imgs.find(x=>x.dataset.f===key):imgs.find(x=>ok(x)===key);
+    if(i){moves[ok(i)]=to;place(i.closest('.t'),to);}
+  });
+  (saved.selected||[]).forEach(x=>{
+    if(!v1){sel.add(x);return;}
+    // Older picks only stored the file: keep it in a place row if it's there, else the day row
+    const all=imgs.filter(i=>i.dataset.f===x), i=all.find(i=>!i.closest('.row').dataset.hero)||all[0];
+    if(i)sel.add(k(i));
+  });
+}else{document.querySelectorAll('.row').forEach(r=>{const i=r.querySelector('img');if(i)sel.add(k(i))});}
+function paint(){imgs.forEach(i=>i.classList.toggle('on',sel.has(k(i))));save();}
+document.addEventListener('click',e=>{const i=e.target.closest('img[data-f]');if(!i)return;const r=i.closest('.row');
+  if(r.dataset.hero)r.querySelectorAll('img').forEach(x=>{if(x!==i)sel.delete(k(x))});
+  sel.has(k(i))?sel.delete(k(i)):sel.add(k(i));paint();});
 document.addEventListener('dblclick',e=>{const i=e.target.closest('img[data-f]');if(i)open(i.src,'_blank');});
-document.addEventListener('change',e=>{const s=e.target.closest('.t select');if(!s||!s.value)return;const t=s.closest('.t'),r=document.getElementById('r-'+s.value);
-  if(r){r.appendChild(t);t.classList.add('moved');moves[t.querySelector('img').dataset.f]=s.value;sel.add(t.querySelector('img').dataset.f);
-    if(r.dataset.hero)r.querySelectorAll('img').forEach(x=>{if(x!==t.querySelector('img'))sel.delete(x.dataset.f)});}
+document.addEventListener('change',e=>{const s=e.target.closest('.t select');if(!s||!s.value)return;
+  const t=s.closest('.t'),i=t.querySelector('img'),r=document.getElementById('r-'+s.value);
+  if(r){sel.delete(k(i));place(t,s.value);moves[ok(i)]=s.value;
+    if(r.dataset.hero)r.querySelectorAll('img').forEach(x=>{if(x!==i)sel.delete(k(x))});
+    sel.add(k(i));}
   s.value='';paint();});
 function picks(){const o={days:{},stops:{}};
-  document.querySelectorAll('.row').forEach(r=>{const on=[...r.querySelectorAll('img')].map(i=>i.dataset.f).filter(f=>sel.has(f));
+  document.querySelectorAll('.row').forEach(r=>{const on=[...r.querySelectorAll('img')].filter(i=>sel.has(k(i))).map(i=>i.dataset.f);
     if(r.dataset.hero){o.days[r.dataset.hero]={hero:on[0]||null}} else if(on.length){o.stops[r.dataset.stop]={name:r.dataset.name,files:on}}});
   return o;}
-function save(){try{localStorage.setItem(KEY,JSON.stringify({selected:[...sel],moves}))}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({v:2,selected:[...sel],moves}))}catch(e){}
   const p=picks();document.getElementById('n').textContent=Object.values(p.days).filter(d=>d.hero).length+' day photos, '+Object.values(p.stops).reduce((a,s)=>a+s.files.length,0)+' place photos';}
 paint();
 document.getElementById('dl').onclick=()=>{const a=document.createElement('a');
