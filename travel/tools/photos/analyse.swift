@@ -55,7 +55,8 @@ for path in args.dropFirst(2) {
     let humans = VNDetectHumanRectanglesRequest()
     humans.upperBodyOnly = false
     let handler = VNImageRequestHandler(cgImage: thumb, options: [:])
-    var reqs: [VNRequest] = [faces, humans]
+    let classify = VNClassifyImageRequest()
+    var reqs: [VNRequest] = [faces, humans, classify]
     var aes: VNCalculateImageAestheticsScoresRequest? = nil
     if #available(macOS 15.0, *) { let a = VNCalculateImageAestheticsScoresRequest(); aes = a; reqs.append(a) }
     try? handler.perform(reqs)
@@ -66,6 +67,8 @@ for path in args.dropFirst(2) {
     if let a = aes, let r = a.results?.first {
       out["aes"] = Double(r.overallScore); out["utility"] = r.isUtility
     }
+    let labels = (classify.results ?? []).filter { $0.confidence > 0.15 }.prefix(6).map { "\($0.identifier):\(String(format: "%.2f", $0.confidence))" }
+    out["labels"] = Array(labels)
     emit(out)
   }
 }

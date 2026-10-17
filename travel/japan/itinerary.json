@@ -15,7 +15,7 @@
    "night": "Tokyo (Akihabara)",
    "via": [],
    "travel": null,
-   "walk_km": 8.2,
+   "walk_km": 3.9,
    "items": [
     {
      "kind": "sight",
@@ -450,19 +450,13 @@
    "items": [
     {
      "kind": "sight",
-     "text": "Sunrise over Mount Fuji from where we stayed",
+     "text": "Sunrise over Mount Fuji from where we stayed, near Lake Kawaguchi",
      "best": "Best nature",
      "tags": [
       "hl",
       "nature"
      ],
-     "places": [
-      {
-       "name": "Fujikawaguchiko",
-       "lat": 35.5297,
-       "lon": 138.7654
-      }
-     ]
+     "places": []
     },
     {
      "kind": "sight",

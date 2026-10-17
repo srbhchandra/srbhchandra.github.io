@@ -83,7 +83,7 @@ window.TRIP = {
       n: 5, title: 'Fuji sunrise, then Kyoto', place: 'Mount Fuji → Kyoto', base: 'Kyoto', country: 'KY',
       travel: { mode: 'Bus to Mishima, then the Shinkansen', h: 4, line: [[138.7645, 35.4984], [138.8492, 35.4258], [138.9112, 35.1272], [135.7584, 34.9863]] },
       items: [
-        { kind: 'see', tags: ['hl', 'nature'], best: 'Best nature', text: 'Sunrise over Mount Fuji from where we stayed', stops: [['Fujikawaguchiko', 138.7654, 35.5297]] },
+        { kind: 'see', tags: ['hl', 'nature'], best: 'Best nature', text: 'Sunrise over Mount Fuji from where we stayed, near Lake Kawaguchi' },
         { kind: 'see', tags: ['nature'], text: 'Mount Fuji from the Shinkansen, sitting on the right side', stops: [['Near Shin-Fuji', 138.7448, 35.1554]] },
         { kind: 'walk', label: 'Higashiyama', tags: ['hl'], stops: [
           ['Kiyomizu-dera', 135.7846, 34.9948, 'hl'], ['Sannenzaka and Ninenzaka', 135.7810, 34.9962],
