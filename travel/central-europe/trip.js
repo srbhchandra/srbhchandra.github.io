@@ -250,7 +250,7 @@ window.TRIP = {
     'Public toilets usually cost a coin or two; carry change.',
     'Every bathroom in every apartment has its own quirk.',
     'The churches everywhere are stunning, and most have a giant pipe organ.',
-    'Leave slack in every city to wander, shop, eat and watch. Some of our best moments weren’t planned: we followed live music down an alleyway full of restaurants and ate there.'
+    'Leave slack in every city to wander, shop, eat and watch. Some of our best moments weren’t planned.'
   ],
   /* Longer notes, shown as collapsible items under the itinerary.
      photos: [src, caption] from photos/ (published copies, no metadata). */
