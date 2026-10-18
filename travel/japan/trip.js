@@ -14,6 +14,7 @@ window.TRIP = {
     title: 'Japan', subtitle: 'Tokyo to Hiroshima by train',
     dek: 'Twelve days by train: Tokyo, a day in Nikko, a night under Mount Fuji, Kyoto and Nara, Osaka, Hiroshima and Miyajima. Probably the best trip of our lives, mostly because of the people.',
     mosaic: [[5, 'Mount Fuji'], [10, 'Miyajima'], [6, 'Fushimi Inari'], [3, 'Nikko']],
+    quote: { text: 'Life is like a long journey carrying a heavy burden. There is no need to rush.', by: 'Tokugawa Ieyasu, on a sign in the cedar forest at Nikkō Tōshō-gū', photo: 'd03-ieyasu-testament', caption: 'The opening line of the Testament of Ieyasu, Nikkō' },
     storyKicker: 'Why it was our best trip',
     storyTitle: 'It was the people',
     story: [
@@ -78,7 +79,8 @@ window.TRIP = {
         { kind: 'see', tags: ['nature', 'history'], text: 'Rinnō-ji’s Hall of Three Buddhas, and its garden in autumn colours', stops: [['Rinnō-ji Sanbutsu-dō', 139.6005, 36.7552]],
           aside: 'Three giant gilded statues stand side by side. It felt like a Hindu trinity; they are Buddhist forms of the gods of Nikko’s three sacred mountains.' },
         { kind: 'walk', tags: ['nature'], stops: [['Forest path down to the river', 139.6037, 36.7539], ['Shinkyō Bridge', 139.6044, 36.7538, 'hl']] },
-        { kind: 'walk', tags: ['hl', 'nature'], text: 'Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues', stops: [['Daiya River', 139.5933, 36.7504], ['Kanmangafuchi Abyss', 139.5886, 36.7489]] }
+        { kind: 'walk', tags: ['hl', 'nature'], text: 'Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues', stops: [['Daiya River', 139.5933, 36.7504], ['Kanmangafuchi Abyss', 139.5886, 36.7489]],
+          aside: 'Across the river, Sanskrit letters are carved into the rock: “kanman”, the last word of the mantra of Fudō Myōō (Acala in Sanskrit), which gives the abyss its name.' }
       ]
     },
     {
@@ -140,7 +142,7 @@ window.TRIP = {
       n: 8, title: 'Osaka in the rain', place: 'Osaka', base: 'Osaka', country: 'OS',
       items: [
         { kind: 'see', tags: ['hl', 'history'], text: 'Osaka Castle: the moats, the park, and the view from the top floor', stops: [['Ōtemon Gate', 135.5227, 34.6852], ['Osaka Castle', 135.5259, 34.6866]] },
-        { kind: 'food', tags: ['hl'], best: 'Best bite', text: 'Black wagyu sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream', stops: [['Osaka Castle food shops', 135.5263, 34.6862]] },
+        { kind: 'food', tags: ['hl'], best: 'Best bite', text: 'Black beef sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream', stops: [['Osaka Castle food shops', 135.5263, 34.6862]] },
         { kind: 'walk', stops: [
           ['Shinsaibashi-suji arcade', 135.5014, 34.6749], ['Dōtonbori and the Glico sign', 135.5014, 34.6689], ['Namba', 135.5035, 34.6671] ] },
         { kind: 'miss', text: 'Umeda Sky Building', stops: [['Umeda Sky Building', 135.4904, 34.7053]] },
@@ -177,6 +179,7 @@ window.TRIP = {
       n: 11, title: 'Hiroshima back to Tokyo', place: 'Hiroshima → Tokyo', base: 'Tokyo (Hamamatsuchō)', country: 'TK',
       travel: { mode: 'Shinkansen, in the Green Car (first class)', h: 4, line: [[132.4750, 34.3972], [139.7407, 35.6284]] },
       items: [
+        { kind: 'food', text: 'Fruit sandos from Be! Fruits Sandwich, a shop at Tokyo Station that sells nothing else', stops: [['Be! Fruits Sandwich, Tokyo Station', 139.7671, 35.6816]] },
         { kind: 'walk', label: 'Tokyo at night', stops: [['Yaesu', 139.7711, 35.6815], ['Kyōbashi', 139.7700, 35.6772], ['Ginza at night', 139.7633, 35.6727, 'hl']] },
         { kind: 'see', tags: ['hl'], text: 'Tokyo Tower lit up, and Zōjō-ji below it, near midnight', stops: [['Tokyo Tower', 139.7469, 35.6584], ['Zōjō-ji', 139.7502, 35.6575]] }
       ]
@@ -186,7 +189,9 @@ window.TRIP = {
       travel: { mode: 'Train to Narita airport', h: 1, line: [[139.7557, 35.6567], [140.3839, 35.7637]] },
       items: [
         { kind: 'walk', text: 'Ueno Park', stops: [['Ueno Park', 139.7753, 35.7152]] },
-        { kind: 'see', tags: ['hl', 'history'], text: 'Tokyo National Museum: samurai swords, Buddhist statues, lacquer and ceramics', stops: [['Tokyo National Museum', 139.7769, 35.7188]] },
+        { kind: 'see', tags: ['hl', 'history'], text: 'Tokyo National Museum: samurai swords, Buddhist statues, lacquer and ceramics', stops: [['Tokyo National Museum', 139.7769, 35.7188]],
+          aside: 'Here we found Taishakuten, a 10th-century guardian whose label says he may be based on Indra (or Brahma): one of many Hindu gods taken into Buddhism as its protectors.' },
+        { kind: 'food', text: 'A bottle of plain milk at the milk stand in Akihabara Station. Simple, and so good', stops: [['Milk stand, Akihabara Station', 139.7751, 35.6985]] },
         { kind: 'food', text: 'Katsu curry in Akihabara', stops: [['Akihabara', 139.7757, 35.6985]] },
         { kind: 'walk', text: 'Shiba Daimon gate and Hamamatsuchō', stops: [['Shiba Daimon', 139.7557, 35.6567]] }
       ]
@@ -209,7 +214,8 @@ window.TRIP = {
       { head: 'Shrines are Shinto, temples are Buddhist.',
         body: 'A shrine has a torii gate: bow twice, clap twice, pray, bow once more. A temple has a sanmon gate: bow and pray with your hands together, no clapping.' },
       { head: 'Hindu gods came to Japan with Buddhism.',
-        body: 'This surprised me most. Buddhism brought many Indian gods with it, renamed and recast as protectors of the Buddha: Bonten is Brahma, Taishakuten is Indra (the two often stand either side of a Buddha; Tōdai-ji has 8th-century statues of the pair), Benzaiten is Saraswati, Daikokuten comes from Mahākāla, a fierce form of Shiva, and Bishamonten or Tamonten is Vaiśravaṇa, the Kubera of Hindu tradition. Kannon, the Bodhisattva of compassion at Sensō-ji and Kiyomizu-dera, is Avalokiteśvara. There is no Brahma, Vishnu and Shiva trinity as such; the triad I saw at Nikko is Buddhist. Nara is where this first caught my attention, and it made me want to learn more.' },
+        body: 'This surprised me most. Buddhism brought many Indian gods with it, renamed and recast as protectors of the Buddha: Bonten is Brahma, Taishakuten is Indra (the two often stand either side of a Buddha; Tōdai-ji has 8th-century statues of the pair), Benzaiten is Saraswati, Daikokuten comes from Mahākāla, a fierce form of Shiva, and Bishamonten or Tamonten is Vaiśravaṇa, the Kubera of Hindu tradition. Kannon, the Bodhisattva of compassion at Sensō-ji and Kiyomizu-dera, is Avalokiteśvara. There is no Brahma, Vishnu and Shiva trinity as such; the triad I saw at Nikko is Buddhist. Nara is where this first caught my attention, and it made me want to learn more.',
+        photos: [['d12-taishakuten', 'Taishakuten, 10th century, perhaps based on Indra. Tokyo National Museum']] },
       { head: 'Nara, then Kyoto, then Tokyo.',
         body: 'Nara was Japan’s first permanent capital, from 710 to 784. After ten years at Nagaoka, the capital moved to Kyoto in 794 and stayed for over a thousand years. Real power often sat elsewhere, with the shoguns in Kamakura and then Edo, today’s Tokyo, which became the capital in 1868. Nikko was never a capital: it is where Tokugawa Ieyasu, founder of the Edo shogunate, is enshrined.' }
     ] },
@@ -242,12 +248,12 @@ window.TRIP = {
     { title: 'Eating', items: [
       { head: 'The best meal: teppanyaki in Hiroshima.',
         body: 'Wagyu, seafood and vegetables cooked on the grill in front of us.' },
-      { head: 'The best bite: black wagyu sushi inside Osaka Castle.',
+      { head: 'The best bite: black beef sushi inside Osaka Castle.',
         body: 'It was raining, so we ducked into the shops in the castle grounds. Who expects great food there? It was the best single bite of the trip.' },
       { head: 'Some of the best food was unplanned.',
-        body: 'A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a glass of plain milk at a milk stand in a railway station that we still talk about.' },
+        body: 'A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a bottle of plain milk at the milk stand in Akihabara Station that we still talk about.' },
       { head: 'Go to a convenience store every day.',
-        body: 'We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to a shop at Tokyo Station that sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks.' },
+        body: 'We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to Be! Fruits Sandwich at Tokyo Station, which sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks.' },
       { head: 'Look out for the fresh orange juice machines.',
         body: 'Cheap machines that squeeze oranges on the spot, in several places. After a long day walking in the heat and humidity, they were a lifesaver.' },
       { head: 'Meals there are long and slow.',

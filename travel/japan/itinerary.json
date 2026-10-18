@@ -804,7 +804,7 @@
     },
     {
      "kind": "food",
-     "text": "Black wagyu sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream",
+     "text": "Black beef sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream",
      "best": "Best bite",
      "tags": [
       "hl"
@@ -1081,6 +1081,18 @@
    "walk_km": 1.6,
    "items": [
     {
+     "kind": "food",
+     "text": "Fruit sandos from Be! Fruits Sandwich, a shop at Tokyo Station that sells nothing else",
+     "tags": [],
+     "places": [
+      {
+       "name": "Be! Fruits Sandwich, Tokyo Station",
+       "lat": 35.6816,
+       "lon": 139.7671
+      }
+     ]
+    },
+    {
      "kind": "walk",
      "text": "Tokyo at night: Yaesu → Kyōbashi → Ginza at night",
      "tags": [
@@ -1161,6 +1173,18 @@
        "name": "Tokyo National Museum",
        "lat": 35.7188,
        "lon": 139.7769
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "A bottle of plain milk at the milk stand in Akihabara Station. Simple, and so good",
+     "tags": [],
+     "places": [
+      {
+       "name": "Milk stand, Akihabara Station",
+       "lat": 35.6985,
+       "lon": 139.7751
       }
      ]
     },
@@ -1285,16 +1309,16 @@
      "detail": "Wagyu, seafood and vegetables cooked on the grill in front of us."
     },
     {
-     "point": "The best bite: black wagyu sushi inside Osaka Castle.",
+     "point": "The best bite: black beef sushi inside Osaka Castle.",
      "detail": "It was raining, so we ducked into the shops in the castle grounds. Who expects great food there? It was the best single bite of the trip."
     },
     {
      "point": "Some of the best food was unplanned.",
-     "detail": "A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a glass of plain milk at a milk stand in a railway station that we still talk about."
+     "detail": "A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a bottle of plain milk at the milk stand in Akihabara Station that we still talk about."
     },
     {
      "point": "Go to a convenience store every day.",
-     "detail": "We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to a shop at Tokyo Station that sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks."
+     "detail": "We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to Be! Fruits Sandwich at Tokyo Station, which sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks."
     },
     {
      "point": "Look out for the fresh orange juice machines.",

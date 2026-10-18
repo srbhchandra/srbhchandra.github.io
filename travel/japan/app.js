@@ -178,6 +178,15 @@
   new ResizeObserver(setBarH).observe(bar); // re-measure when web fonts land or the filters wrap
 
   $('#takeaways').innerHTML = T.takeaways.map((t) => `<li>${esc(t)}</li>`).join('');
+  if (M.quote) {
+    const q = M.quote, dims = (PH.extra || {})[q.photo];
+    caps[q.photo] = q.caption;
+    const fig = el('figure', 'quote');
+    fig.innerHTML = `<blockquote>${esc(q.text)}</blockquote><figcaption>${esc(q.by)}</figcaption>` +
+      (dims ? photoBtn(0, q.photo, q.caption, `<img src="${imgSmall(q.photo)}" loading="lazy" alt="${esc(q.caption)}" width="${dims.w}" height="${dims.h}">`) : '');
+    const h = $('#takeaways').previousElementSibling;
+    h.parentNode.insertBefore(fig, h);
+  }
   const photoDims = {};
   Object.values(PH.stops).flat().forEach((p) => { photoDims[p.src] = p; });
   $('#notes').innerHTML = (T.notes || []).map((sec) => `<h2>${esc(sec.title)}</h2><div class="obs">${sec.items.map((it) => {

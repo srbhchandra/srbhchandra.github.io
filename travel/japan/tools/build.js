@@ -104,6 +104,7 @@ T.days.forEach((d) => {
   });
   md.push('');
 });
+if (T.meta && T.meta.quote) md.push(`> ${T.meta.quote.text}`, `> (${T.meta.quote.by})`, '');
 if (T.takeaways && T.takeaways.length) md.push('## Take-aways', '', ...T.takeaways.map((t) => `- ${t}`), '');
 (T.notes || []).forEach((sec) => { md.push(`## ${sec.title}`, ''); sec.items.forEach((it) => md.push(`- **${it.head}** ${it.body}`)); md.push(''); });
 md.push('---', `From “${data.title}” by Saurabh Bipin Chandra, ${URL}. Please credit the author and link the page when quoting.`, '');

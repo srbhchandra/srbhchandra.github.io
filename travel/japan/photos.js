@@ -271,6 +271,11 @@ window.PHOTOS = {
     "src": "d03-kanmangafuchi-abyss",
     "w": 1000,
     "h": 752
+   },
+   {
+    "src": "d03-kanman-sanskrit",
+    "w": 1054,
+    "h": 1400
    }
   ],
   "4|Tokyo Metropolitan Government Building": [
@@ -810,6 +815,11 @@ window.PHOTOS = {
   ],
   "12|Tokyo National Museum": [
    {
+    "src": "d12-taishakuten",
+    "w": 1054,
+    "h": 1400
+   },
+   {
     "src": "d12-tokyo-national-museum",
     "w": 1000,
     "h": 750
@@ -897,6 +907,26 @@ window.PHOTOS = {
     "w": 1000,
     "h": 750
    }
+  ],
+  "11|Be! Fruits Sandwich, Tokyo Station": [
+   {
+    "src": "d11-fruit-sandos",
+    "w": 1400,
+    "h": 1050
+   }
+  ],
+  "12|Milk stand, Akihabara Station": [
+   {
+    "src": "d12-milk-stand",
+    "w": 656,
+    "h": 1400
+   }
   ]
+ },
+ "extra": {
+  "d03-ieyasu-testament": {
+   "w": 1400,
+   "h": 1054
+  }
  }
 };

@@ -50,6 +50,7 @@ Tobu train from Asakusa, and back, about 2 h. Night in Tokyo (Akihabara).
   - Three giant gilded statues stand side by side. It felt like a Hindu trinity; they are Buddhist forms of the gods of Nikko’s three sacred mountains.
 - Walk: Forest path down to the river → Shinkyō Bridge
 - Walk: Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues (Daiya River, Kanmangafuchi Abyss)
+  - Across the river, Sanskrit letters are carved into the rock: “kanman”, the last word of the mantra of Fudō Myōō (Acala in Sanskrit), which gives the abyss its name.
 
 ## Day 4: Tokyo to Mount Fuji
 
@@ -101,7 +102,7 @@ Train to Nara, then on to Osaka, about 2 h. Night in Osaka.
 Night in Osaka.
 
 - See: Osaka Castle: the moats, the park, and the view from the top floor (Ōtemon Gate, Osaka Castle)
-- Eat: Black wagyu sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream [Best bite]
+- Eat: Black beef sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream [Best bite]
 - Walk: Shinsaibashi-suji arcade → Dōtonbori and the Glico sign → Namba
 - Missed: Umeda Sky Building
 - Missed: Kuromon Market
@@ -133,6 +134,7 @@ High-speed boat from Peace Park to Miyajima, and back, about 1 h. Night in Hiros
 
 Shinkansen, in the Green Car (first class), about 4 h. Night in Tokyo (Hamamatsuchō).
 
+- Eat: Fruit sandos from Be! Fruits Sandwich, a shop at Tokyo Station that sells nothing else
 - Walk: Tokyo at night: Yaesu → Kyōbashi → Ginza at night
 - See: Tokyo Tower lit up, and Zōjō-ji below it, near midnight (Tokyo Tower, Zōjō-ji)
 
@@ -142,8 +144,13 @@ Train to Narita airport, about 1 h. Fly home.
 
 - Walk: Ueno Park
 - See: Tokyo National Museum: samurai swords, Buddhist statues, lacquer and ceramics
+  - Here we found Taishakuten, a 10th-century guardian whose label says he may be based on Indra (or Brahma): one of many Hindu gods taken into Buddhism as its protectors.
+- Eat: A bottle of plain milk at the milk stand in Akihabara Station. Simple, and so good
 - Eat: Katsu curry in Akihabara
 - Walk: Shiba Daimon gate and Hamamatsuchō
+
+> Life is like a long journey carrying a heavy burden. There is no need to rush.
+> (Tokugawa Ieyasu, on a sign in the cedar forest at Nikkō Tōshō-gū)
 
 ## Take-aways
 
@@ -183,9 +190,9 @@ Train to Narita airport, about 1 h. Fly home.
 ## Eating
 
 - **The best meal: teppanyaki in Hiroshima.** Wagyu, seafood and vegetables cooked on the grill in front of us.
-- **The best bite: black wagyu sushi inside Osaka Castle.** It was raining, so we ducked into the shops in the castle grounds. Who expects great food there? It was the best single bite of the trip.
-- **Some of the best food was unplanned.** A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a glass of plain milk at a milk stand in a railway station that we still talk about.
-- **Go to a convenience store every day.** We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to a shop at Tokyo Station that sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks.
+- **The best bite: black beef sushi inside Osaka Castle.** It was raining, so we ducked into the shops in the castle grounds. Who expects great food there? It was the best single bite of the trip.
+- **Some of the best food was unplanned.** A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a bottle of plain milk at the milk stand in Akihabara Station that we still talk about.
+- **Go to a convenience store every day.** We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to Be! Fruits Sandwich at Tokyo Station, which sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks.
 - **Look out for the fresh orange juice machines.** Cheap machines that squeeze oranges on the spot, in several places. After a long day walking in the heat and humidity, they were a lifesaver.
 - **Meals there are long and slow.** At izakaya-style places we would order a few dishes, eat, drink, order more, and keep going for three or four hours. It’s a different rhythm from the one-main-course dinners we’re used to elsewhere, and we loved it.
 - **The beer tasted different, and we can’t explain why.** Nothing fancy, just the everyday Asahi and the rest. They all say “dry” on the label, but they didn’t taste dry, and the same labels at home don’t taste the same. Our best guess is freshness: in Japan it’s brewed nearby and served fresh and very cold, often on draft, while abroad it has travelled for weeks or is brewed under licence elsewhere. We could have drunk a lot of it.
