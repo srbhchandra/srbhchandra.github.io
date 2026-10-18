@@ -39,9 +39,7 @@ window.TRIP = {
           ['Prague Castle', 14.4005, 50.0905],
           ['St. Vitus Cathedral', 14.4005, 50.0909],
           ['The Golden Lane', 14.4040, 50.0921] ] },
-        { kind: 'food', text: 'Trdelník (spit cake) from Old Town Square', stops: [['Old Town Square', 14.4213, 50.0875]] },
         { kind: 'food', text: 'Beef goulash, salami at Lokál Dlouhááá', stops: [['Lokál Dlouhááá', 14.4262, 50.0905]] },
-        { kind: 'food', text: 'Cheap beer from the Scout Institute in Old Town Square', stops: [['Scout Institute', 14.4209, 50.0874]] }
       ]
     },
     {
@@ -54,7 +52,6 @@ window.TRIP = {
         { kind: 'food', tags: ['hl'], best: 'Best food & beer', text: 'Lunch at Strahov Monastery – best beer and food of the entire trip. Beer: IPA + dark beer brewed by the monastery. Food: pork tenderloin, steak', stops: [['Strahov Monastery Brewery', 14.3897, 50.0861]] },
         { kind: 'see', text: 'Sedlec Ossuary, Kutná Hora (chapel adorned with human skeletons)', stops: [['Sedlec Ossuary', 15.2886, 49.9620]] },
         { kind: 'see', text: 'Ukraine war exhibit, Brno-střed', stops: [['Brno-střed', 16.6068, 49.1951]] },
-        { kind: 'food', text: 'Fried grundle fish at Soul Bistro, Brno', stops: [['Soul Bistro']] }
       ]
     },
     {
@@ -79,9 +76,6 @@ window.TRIP = {
           ['Wawel Royal Castle and cathedral', 19.9354, 50.0540], ['Wejście do Smoczej Jamy (cave under the castle)', 19.9334, 50.0533],
           ['Fire-breathing dragon statue', 19.9330, 50.0532], ['Vistula river', 19.9325, 50.0525] ] },
         { kind: 'walk', stops: [['Kazimierz Jewish Quarter', 19.9448, 50.0510]] },
-        { kind: 'food', text: 'Apple strudel, apple pie with ice cream around Stare Miasto' },
-        { kind: 'food', text: 'Pierogi from Mirror Bistro – Pierogi Bystro, Kazimierz' },
-        { kind: 'food', text: 'Sausage with onions from Bar & Grill Na Kazimierzu, Kazimierz' }
       ]
     },
     {
@@ -92,8 +86,6 @@ window.TRIP = {
         { kind: 'see', tags: ['nature'], text: 'Zakopane – the Polish side of the Tatra Mountains: rugged peaks, glacial lakes and deep valleys' },
         { kind: 'see', tags: ['nature'], text: 'Gubałówka – take the funicular up the hill, hike down; good views of the valley', stops: [['Gubałówka', 19.9370, 49.3045]] },
         { kind: 'walk', stops: [['Centrum Miasta (downtown)', 19.9502, 49.2960]] },
-        { kind: 'food', text: 'Smoked sheep cheese' },
-        { kind: 'food', tags: ['hl'], text: 'Mulled wine, hot mead from Gazdowo Kuźnia', stops: [['Gazdowo Kuźnia', 19.9530, 49.2975]] }
       ]
     },
     {
@@ -130,7 +122,6 @@ window.TRIP = {
           ['Széchenyi Thermal Bath', 19.0819, 47.5186], ['Gatehouse Tower', 19.0815, 47.5155],
           ['Vajdahunyad Castle', 19.0820, 47.5150], ['Museum of Ethnography', 19.0759, 47.5193] ] },
         { kind: 'see', tags: ['tour'], text: 'Hungarian Parliament Building – guided tour', stops: [['Hungarian Parliament', 19.0457, 47.5071]] },
-        { kind: 'food', text: 'A very beautiful café – Ohana, the coffee family, Budapest' },
         { kind: 'food', text: 'Etyeki Manor vineyard, Etyek', stops: [['Etyek', 18.7406, 47.4403]] },
         { kind: 'walk', label: 'Bratislava, Slovakia (nothing special; skippable)', stops: [['Bratislava Castle', 17.1000, 48.1421], ['Old Town', 17.1077, 48.1437]] }
       ]
@@ -173,7 +164,6 @@ window.TRIP = {
       items: [
         { kind: 'see', tags: ['hl', 'nature'], best: 'Best nature', text: 'Vintgar Gorge – the best nature of the trip: blue, green and yellow water in the gorge', stops: [['Vintgar Gorge', 14.0927, 46.3986]] },
         { kind: 'see', tags: ['nature'], text: 'Lake Bled, with its island', stops: [['Lake Bled', 14.0938, 46.3625]] },
-        { kind: 'food', text: 'Bled cream cake', stops: [['Bled', 14.1100, 46.3680]] },
         { kind: 'see', text: 'Mountain coaster on Straža hill, Bled – super fun', stops: [['Mountain coaster, Straža', 14.1051, 46.3626]] },
         { kind: 'see', text: 'Predjama Castle – seen from outside', stops: [['Predjama Castle', 14.1270, 45.8156]] },
         { kind: 'miss', text: 'Postojna Cave or Škocjan Caves', stops: [['Postojna Cave', 14.2034, 45.7826], ['Škocjan Caves', 13.9895, 45.6634]] }
@@ -224,7 +214,7 @@ window.TRIP = {
           { key: 'budapest-slovenia', photo: 8, title: 'Budapest, then drive to Slovenia', place: 'Budapest → Slovenia',
             base: 'Kranjska Gora', country: 'SI',
             drive: [[19.0457, 47.5071], [13.7850, 46.4847]],
-            items: [{ from: [8, 0] }, { from: [8, 1] }, { from: [8, 2] }, { from: [8, 3], dropped: true }, { from: [8, 4], dropped: true }] } }] }
+            items: [{ from: [8, 0] }, { from: [8, 1] }, { from: [8, 2], dropped: true }, { from: [8, 3], dropped: true }] } }] }
     },
     extras: {
       city: { label: 'Cities', after: 7, summary: 'Added: one more day in Budapest, the best city of the trip', day:
@@ -260,7 +250,7 @@ window.TRIP = {
         body: 'It sits under the main square. Its maps put Krakow at the centre of medieval Europe’s trade routes: a Europe-centred view of the world that was new to me.',
         photos: [['d04-rynek-trade-routes-map', 'Krakow at the hub of medieval Europe’s trade routes. Rynek Underground Museum']] },
       { head: 'Buda Castle is dense with history, especially the invasions.',
-        body: 'The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier. I had thought of Europe mostly as the coloniser. Seeing how much of its own past was war and invasion, I came away with more empathy, and some sense of why it became the conqueror it did.',
+        body: 'The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier. Buda itself was held by the Ottoman Turks for almost 150 years, from 1541 to 1686; for much of that time Bratislava served as Hungary’s capital, and Vienna twice held off Ottoman sieges, in 1529 and 1683. I had thought of Europe mostly as the coloniser. Seeing how much of its own past was war and invasion, I came away with more empathy, and some sense of why it became the conqueror it did.',
         photos: [['d07-roman-empire-map', 'The Roman Empire in the 2nd century AD, with Aquincum, Roman Budapest, on its edge. Budapest History Museum']] },
       { head: 'Auschwitz-Birkenau is sobering, and worth the time.',
         body: 'Book a slot well ahead.' }

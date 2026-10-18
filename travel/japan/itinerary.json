@@ -7,8 +7,8 @@
  },
  "summary": "Twelve days by train: Tokyo, a day in Nikko, a night under Mount Fuji, Kyoto and Nara, Osaka, Hiroshima and Miyajima. Probably the best trip of our lives, mostly because of the people.",
  "story": [
-  "We went for the temples, Mount Fuji and the food. What we remember most is the people.",
-  "On our first afternoon by Mount Fuji, the mountain hid behind clouds. We took a cab, half worried we were being taken for a ride. Our driver, talking to us through a translation app, worked out that we hadn’t seen Fuji yet. He kept watch for it and stopped the moment it appeared. He waited an hour or two, without asking for anything, while we explored a village of thatched houses. Then, unasked, he drove us up an unpaved road to a viewpoint run by an old couple, where we had Fuji to ourselves.",
+  "We went for the shrines and temples, Mount Fuji and the food. Japan felt like an intense mix of the future and the past: the neon glow of Akihabara one night, a centuries-old shrine in a cedar forest the next morning. But what we remember most is the people.",
+  "On our first afternoon by Mount Fuji, the mountain hid behind clouds. We took a cab, half worried we were being taken for a ride. Our driver, talking to us through a translation app, worked out that we hadn’t seen Fuji yet. He kept watch for it and stopped the moment it appeared. He waited an hour or two, without asking for anything, while we explored Nenba, a mountain village of thatched farmhouses rebuilt as an open-air museum after a typhoon wiped it out in 1966. Then, unasked, he drove us up an unpaved road to a viewpoint run by an old couple, where we had Fuji to ourselves.",
   "It kept happening. A train driver stepped off his train, minutes before it left, to walk us through a ticket machine. In Hiroshima, of all places, strangers stopped to help whenever we looked lost at a map. When our luggage hadn’t reached Kyoto, the hotel staff told us, calmly, “Nothing gets lost in Japan.” It arrived.",
   "We didn’t speak Japanese, and we should have prepared better. It hardly mattered. We came home grateful to the people we met, and for being lucky enough to see Japan this way."
  ],
@@ -21,7 +21,7 @@
    "night": "Tokyo (Akihabara)",
    "via": [],
    "travel": null,
-   "walk_km": 3.9,
+   "walk_km": 5.1,
    "items": [
     {
      "kind": "sight",
@@ -37,7 +37,7 @@
     },
     {
      "kind": "walk",
-     "text": "Asakusa: Kaminarimon (Thunder Gate) → Nakamise-dōri → Sensō-ji, Tokyo’s oldest temple",
+     "text": "Asakusa: Kaminarimon (Thunder Gate) → Nakamise-dōri and the shopping streets around it → Sensō-ji, Tokyo’s oldest temple",
      "tags": [
       "hl",
       "history"
@@ -49,7 +49,7 @@
        "lon": 139.7964
       },
       {
-       "name": "Nakamise-dōri",
+       "name": "Nakamise-dōri and the shopping streets around it",
        "lat": 35.7125,
        "lon": 139.7966
       },
@@ -62,13 +62,13 @@
     },
     {
      "kind": "walk",
-     "text": "Harajuku: Tokyu Plaza’s mirrored entrance → Harajuku Station → Meiji Jingu shrine → Meiji Jingu inner garden",
+     "text": "Omotesandō and Harajuku: Omotesandō → Harajuku Station → Meiji Jingu shrine → Meiji Jingu inner garden → Takeshita Street",
      "tags": [
       "hl"
      ],
      "places": [
       {
-       "name": "Tokyu Plaza’s mirrored entrance",
+       "name": "Omotesandō",
        "lat": 35.6686,
        "lon": 139.7059
       },
@@ -86,30 +86,23 @@
        "name": "Meiji Jingu inner garden",
        "lat": 35.6724,
        "lon": 139.7005
-      }
-     ]
-    },
-    {
-     "kind": "food",
-     "text": "Street snack in Harajuku",
-     "tags": [],
-     "places": [
+      },
       {
-       "name": "Harajuku",
-       "lat": 35.6696,
-       "lon": 139.7033
+       "name": "Takeshita Street",
+       "lat": 35.6716,
+       "lon": 139.7036
       }
      ]
     },
     {
      "kind": "walk",
-     "text": "Evening in Shibuya: Omotesandō → Shibuya Crossing → Shibuya Center Gai",
+     "text": "Evening in Shibuya: Omotesandō at night → Shibuya Crossing → Shibuya Center Gai",
      "tags": [
       "hl"
      ],
      "places": [
       {
-       "name": "Omotesandō",
+       "name": "Omotesandō at night",
        "lat": 35.6689,
        "lon": 139.7057
       },
@@ -139,18 +132,6 @@
        "name": "Golden Gai bars",
        "lat": 35.6941,
        "lon": 139.7045
-      }
-     ]
-    },
-    {
-     "kind": "food",
-     "text": "Ramen in Shibuya",
-     "tags": [],
-     "places": [
-      {
-       "name": "Shibuya",
-       "lat": 35.6605,
-       "lon": 139.6984
       }
      ]
     }
@@ -216,7 +197,7 @@
      ],
      "places": [
       {
-       "name": "Tsukiji Outer Market",
+       "name": "Tsukiji Outer Market stalls",
        "lat": 35.6658,
        "lon": 139.7707
       }
@@ -248,20 +229,6 @@
        "name": "Chūō-dōri, Akihabara",
        "lat": 35.702,
        "lon": 139.7717
-      }
-     ]
-    },
-    {
-     "kind": "food",
-     "text": "A Japanese drinks fair we stumbled into in Akihabara: buy coupons, taste everything. Totally unplanned, and one of the best evenings",
-     "tags": [
-      "hl"
-     ],
-     "places": [
-      {
-       "name": "Akihabara drinks fair",
-       "lat": 35.7,
-       "lon": 139.7713
       }
      ]
     },
@@ -324,7 +291,8 @@
      "kind": "sight",
      "text": "Rinnō-ji’s Hall of Three Buddhas, and its garden in autumn colours",
      "tags": [
-      "nature"
+      "nature",
+      "history"
      ],
      "places": [
       {
@@ -402,7 +370,7 @@
     },
     {
      "kind": "sight",
-     "text": "Saiko Iyashi-no-Sato Nenba, a village of thatched houses facing Mount Fuji. We got here by cab, and the driver made the day (see “It was the people”)",
+     "text": "Saiko Iyashi-no-Sato Nenba: a farming village of thatched houses with roofs shaped like a samurai helmet, destroyed by a typhoon landslide in 1966 and rebuilt as an open-air museum, facing Mount Fuji. We got here by cab, and the driver made the day (see “It was the people”)",
      "tags": [
       "hl",
       "history"
@@ -507,7 +475,7 @@
     },
     {
      "kind": "walk",
-     "text": "Higashiyama: Kiyomizu-dera → Sannenzaka and Ninenzaka → Yasaka Pagoda → Nene-no-michi → Yasaka Shrine, lit up at dusk → Gion",
+     "text": "Higashiyama, Kyoto: Kiyomizu-dera → Sannenzaka and Ninenzaka → Yasaka Pagoda → Nene-no-michi → Yasaka Shrine, lit up at dusk → Gion",
      "tags": [
       "hl"
      ],
@@ -546,7 +514,7 @@
     },
     {
      "kind": "walk",
-     "text": "Evening: Kamo River → Pontochō alley → Sanjō Bridge",
+     "text": "Evening in Kyoto: Kamo River → Pontochō alley → Sanjō Bridge",
      "tags": [
       "hl"
      ],
@@ -660,11 +628,13 @@
     },
     {
      "kind": "food",
-     "text": "Tonkatsu dinner near Inari station",
-     "tags": [],
+     "text": "Dinner at Gyukatsu Kyoto Katsugyu, near Fushimi Inari: crisp beef cutlet. Absolutely amazing",
+     "tags": [
+      "hl"
+     ],
      "places": [
       {
-       "name": "Inari",
+       "name": "Gyukatsu Kyoto Katsugyu",
        "lat": 34.9683,
        "lon": 135.769
       }
@@ -684,7 +654,7 @@
     },
     {
      "kind": "missed",
-     "text": "Arashiyama’s bamboo forest, Tenryū-ji and Adashino Nenbutsu-ji",
+     "text": "Arashiyama’s bamboo forest and Tenryū-ji: we skipped them because the bamboo forest is famously crowded. Quieter bamboo: Adashino Nenbutsu-ji nearby, or the small grove at Kōdai-ji in Higashiyama",
      "tags": [],
      "places": [
       {
@@ -725,18 +695,6 @@
        "name": "Gion",
        "lat": 35.0013,
        "lon": 135.7756
-      }
-     ]
-    },
-    {
-     "kind": "missed",
-     "text": "Kyoto Tower (our friends went up)",
-     "tags": [],
-     "places": [
-      {
-       "name": "Kyoto Tower",
-       "lat": 34.9875,
-       "lon": 135.7593
       }
      ]
     }
@@ -802,22 +760,8 @@
      ]
     },
     {
-     "kind": "food",
-     "text": "A food festival in Nara Park we happened upon: lots of great food",
-     "tags": [
-      "hl"
-     ],
-     "places": [
-      {
-       "name": "Nara food festival",
-       "lat": 34.684,
-       "lon": 135.8336
-      }
-     ]
-    },
-    {
      "kind": "walk",
-     "text": "Dōtonbori at night, along the canal: famous, but a disappointment (see the honest notes)",
+     "text": "Dōtonbori, Osaka, at night along the canal: famous, but a disappointment (see the honest notes)",
      "tags": [],
      "places": [
       {
@@ -867,7 +811,7 @@
      ],
      "places": [
       {
-       "name": "Osaka Castle",
+       "name": "Osaka Castle food shops",
        "lat": 34.6862,
        "lon": 135.5263
       }
@@ -894,24 +838,6 @@
        "lon": 135.5035
       }
      ]
-    },
-    {
-     "kind": "food",
-     "text": "Street food around Dōtonbori (so-so)",
-     "tags": [],
-     "places": [
-      {
-       "name": "Dōtonbori",
-       "lat": 34.6677,
-       "lon": 135.4999
-      }
-     ]
-    },
-    {
-     "kind": "sight",
-     "text": "A massage on the 11th floor of an ordinary building: in Osaka, shops and services stack up on every floor",
-     "tags": [],
-     "places": []
     },
     {
      "kind": "missed",
@@ -964,20 +890,6 @@
    "walk_km": 0.4,
    "items": [
     {
-     "kind": "food",
-     "text": "Hiroshima-style okonomiyaki for lunch",
-     "tags": [
-      "hl"
-     ],
-     "places": [
-      {
-       "name": "Hiroshima",
-       "lat": 34.3903,
-       "lon": 132.4503
-      }
-     ]
-    },
-    {
      "kind": "sight",
      "text": "Hiroshima Peace Memorial Museum",
      "tags": [
@@ -1022,18 +934,6 @@
        "name": "Hondōri",
        "lat": 34.3937,
        "lon": 132.4569
-      }
-     ]
-    },
-    {
-     "kind": "food",
-     "text": "Dinner near Hondōri",
-     "tags": [],
-     "places": [
-      {
-       "name": "Hiroshima",
-       "lat": 34.394,
-       "lon": 132.4559
       }
      ]
     }
@@ -1181,28 +1081,8 @@
    "walk_km": 1.6,
    "items": [
     {
-     "kind": "food",
-     "text": "Station bento (ekiben) in the Green Car: smooth, quiet, and excellent service",
-     "tags": [
-      "hl"
-     ],
-     "places": []
-    },
-    {
-     "kind": "food",
-     "text": "The food halls at Tokyo Station",
-     "tags": [],
-     "places": [
-      {
-       "name": "Tokyo Station",
-       "lat": 35.6817,
-       "lon": 139.7676
-      }
-     ]
-    },
-    {
      "kind": "walk",
-     "text": "Evening: Yaesu → Kyōbashi → Ginza at night",
+     "text": "Tokyo at night: Yaesu → Kyōbashi → Ginza at night",
      "tags": [
       "hl"
      ],
@@ -1312,7 +1192,7 @@
   }
  ],
  "takeaways": [
-  "The people make Japan. Meet their kindness with patience, and learn a few words of Japanese before you go; we wish we had.",
+  "The people make Japan.",
   "Nothing gets lost in Japan, so travel light: send your suitcases ahead and carry a backpack.",
   "You don’t need a car. Trains, a highway bus and the odd cab took us everywhere, and we never regretted it.",
   "Ride the Shinkansen at least once; for a long ride, the Green Car is worth it.",
@@ -1322,6 +1202,27 @@
   "Shops and services fill every floor of a building, not just the street level. Look up."
  ],
  "notes": [
+  {
+   "title": "A short history refresher",
+   "items": [
+    {
+     "point": "Two religions, intertwined: Shinto and Buddhism.",
+     "detail": "Shinto is Japan’s own faith, of kami (gods and spirits) in nature, ancestors and places. Buddhism arrived in the 6th century, from India by way of China and Korea. For over a thousand years the two blended: kami were seen as local forms of Buddhas, and shrines and temples often shared grounds. The government formally separated them in 1868, but you still see them side by side, as in Nikko."
+    },
+    {
+     "point": "Shrines are Shinto, temples are Buddhist.",
+     "detail": "A shrine has a torii gate: bow twice, clap twice, pray, bow once more. A temple has a sanmon gate: bow and pray with your hands together, no clapping."
+    },
+    {
+     "point": "Hindu gods came to Japan with Buddhism.",
+     "detail": "This surprised me most. Buddhism brought many Indian gods with it, renamed and recast as protectors of the Buddha: Bonten is Brahma, Taishakuten is Indra (the two often stand either side of a Buddha; Tōdai-ji has 8th-century statues of the pair), Benzaiten is Saraswati, Daikokuten comes from Mahākāla, a fierce form of Shiva, and Bishamonten or Tamonten is Vaiśravaṇa, the Kubera of Hindu tradition. Kannon, the Bodhisattva of compassion at Sensō-ji and Kiyomizu-dera, is Avalokiteśvara. There is no Brahma, Vishnu and Shiva trinity as such; the triad I saw at Nikko is Buddhist. Nara is where this first caught my attention, and it made me want to learn more."
+    },
+    {
+     "point": "Nara, then Kyoto, then Tokyo.",
+     "detail": "Nara was Japan’s first permanent capital, from 710 to 784. After ten years at Nagaoka, the capital moved to Kyoto in 794 and stayed for over a thousand years. Real power often sat elsewhere, with the shoguns in Kamakura and then Edo, today’s Tokyo, which became the capital in 1868. Nikko was never a capital: it is where Tokugawa Ieyasu, founder of the Edo shogunate, is enshrined."
+    }
+   ]
+  },
   {
    "title": "The people",
    "items": [
@@ -1389,11 +1290,11 @@
     },
     {
      "point": "Some of the best food was unplanned.",
-     "detail": "A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, a fried-dumpling place with endless dumplings and cold Japanese beer, and matcha beer in Tokyo."
+     "detail": "A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a glass of plain milk at a milk stand in a railway station that we still talk about."
     },
     {
      "point": "Go to a convenience store every day.",
-     "detail": "We did, for random desserts and fried chicken that was always juicy. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks."
+     "detail": "We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to a shop at Tokyo Station that sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks."
     },
     {
      "point": "Look out for the fresh orange juice machines.",
@@ -1401,15 +1302,15 @@
     },
     {
      "point": "Meals there are long and slow.",
-     "detail": "At izakaya-style places we would order a few dishes, eat, drink, order more, and keep going for three or four hours. It’s a different rhythm from the one-main-course dinners we’re used to in the US, and we loved it."
+     "detail": "At izakaya-style places we would order a few dishes, eat, drink, order more, and keep going for three or four hours. It’s a different rhythm from the one-main-course dinners we’re used to elsewhere, and we loved it."
     },
     {
      "point": "The beer tasted different, and we can’t explain why.",
-     "detail": "Nothing fancy, just the everyday Asahi and the rest. They all say “dry” on the label, but they didn’t taste dry, and the same labels at home don’t taste the same. We could have drunk a lot of it."
+     "detail": "Nothing fancy, just the everyday Asahi and the rest. They all say “dry” on the label, but they didn’t taste dry, and the same labels at home don’t taste the same. Our best guess is freshness: in Japan it’s brewed nearby and served fresh and very cold, often on draft, while abroad it has travelled for weeks or is brewed under licence elsewhere. We could have drunk a lot of it."
     },
     {
      "point": "Markets, and miles of covered streets.",
-     "detail": "Tsukiji, Nishiki, and the long covered shopping streets were highlights in themselves: you can walk for blocks under cover, or underground. The grilled oysters on Miyajima were stunning too."
+     "detail": "Tsukiji, Nishiki, and the long covered shopping streets were highlights in themselves: you can walk for blocks under cover, or underground. Try Hiroshima-style okonomiyaki in Hiroshima."
     }
    ]
   },
@@ -1417,15 +1318,15 @@
    "title": "Temples, shrines and crowds",
    "items": [
     {
-     "point": "Shrines are Shinto, temples are Buddhist.",
-     "detail": "A shrine has a torii gate: bow twice, clap twice, pray, bow once more. A temple has a sanmon gate: bow and pray with your hands together, no clapping."
+     "point": "Kyoto was crowded, but it is truly the cultural capital.",
+     "detail": "The famous spots were packed with people chasing the perfect photo, which took some of the joy out of them. Even so, nowhere else felt so full of history and culture. Go early, or pick the quieter temples."
     },
     {
      "point": "Go early, and look for the quiet places.",
      "detail": "The famous spots are crowded, and full of photographers with tripods. Early mornings, and places like Kōyōdai where we were alone, felt like the real Japan."
     },
     {
-     "point": "The days are short in October.",
+     "point": "The days are short in early autumn.",
      "detail": "It gets dark around 5 pm, and most sights close about then. Plan the important ones for the morning."
     },
     {

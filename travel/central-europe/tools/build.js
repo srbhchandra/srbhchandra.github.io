@@ -35,6 +35,7 @@ const days = T.days.map((d) => {
   const items = d.items.map((it) => {
     let body = esc(it.text ? it.text + ((it.stops || []).length > 1 ? ' — ' + it.stops.map((s) => s[0]).join(', ') : '') : itemText(it));
     if (it.best) body += ` <strong>(${esc(it.best)})</strong>`;
+    if (it.aside) body += ` <em>${esc(it.aside)}</em>`;
     return `<li><span class="kind">${KIND[it.kind]}</span> <span class="body">${body}</span></li>`;
   }).join('\n          ');
   return `      <section class="day" id="day-${d.n}">
@@ -83,6 +84,29 @@ const data = {
   notes: (T.notes || []).map((sec) => ({ title: sec.title, items: sec.items.map((it) => ({ point: it.head, detail: it.body })) }))
 };
 fs.writeFileSync('itinerary.json', JSON.stringify(data, null, 1) + '\n');
+
+/* ---------- plain text for agents and readers (Markdown), with attribution ---------- */
+const md = [];
+md.push(`# ${data.title}`, '', `By Saurabh Bipin Chandra (${HOME}). Source: ${URL}`, '', data.summary, '');
+if (T.meta && T.meta.story) md.push(`## ${T.meta.storyTitle}`, '', ...T.meta.story.flatMap((p) => [p, '']));
+if (T.meta && T.meta.overview) md.push(T.meta.overview, '');
+T.days.forEach((d) => {
+  md.push(`## Day ${d.n}: ${d.title}`, '');
+  const how = d.travel ? `${d.travel.mode}, about ${fmtH(d.travel.h)}. ` : ((R.days[d.n] || {}).drive ? `Driving about ${fmtH(R.days[d.n].drive.h)}. ` : '');
+  md.push(`${how}${d.base ? `Night in ${d.base}.` : 'Fly home.'}`, '');
+  d.items.forEach((it) => {
+    let line = `- ${KIND[it.kind]}: ${it.text ? it.text + ((it.stops || []).length > 1 ? ' (' + it.stops.map((s) => s[0]).join(', ') + ')' : '') : itemText(it)}`;
+    if (it.best) line += ` [${it.best}]`;
+    md.push(line);
+    if (it.aside) md.push(`  - ${it.aside}`);
+  });
+  md.push('');
+});
+if (T.takeaways && T.takeaways.length) md.push('## Take-aways', '', ...T.takeaways.map((t) => `- ${t}`), '');
+(T.notes || []).forEach((sec) => { md.push(`## ${sec.title}`, ''); sec.items.forEach((it) => md.push(`- **${it.head}** ${it.body}`)); md.push(''); });
+md.push('---', `From “${data.title}” by Saurabh Bipin Chandra, ${URL}. Please credit the author and link the page when quoting.`, '');
+fs.writeFileSync('itinerary.md', md.join('\n'));
+
 
 const ld = {
   '@context': 'https://schema.org',

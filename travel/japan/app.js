@@ -328,6 +328,7 @@
           const [pw, ph] = fit(p, 120, 72);
           return photoBtn(d.n, p.src, p.name, `<img src="${imgSmall(p.src)}" loading="lazy" alt="${esc(p.name)}" width="${pw}" height="${ph}">`, `width:${pw}px;height:${ph}px`);
         }).join('')}</span>`;
+        if (it.aside && !it.dropped) body += `<span class="aside">${esc(it.aside)}</span>`;
         li.innerHTML = `<span class="kind">${KIND[it.kind]}</span><span class="body">${body}</span>`;
         li.addEventListener('mouseenter', () => hover(d.n, i, true, li));
         li.addEventListener('mouseleave', () => hover(d.n, i, false, li));

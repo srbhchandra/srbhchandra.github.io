@@ -1,12 +1,14 @@
 # Saurabh Bipin Chandra
 
-> Personal site of Saurabh Bipin Chandra, a machine learning scientist in Mountain View, California: projects, data experiments, and travel itineraries.
+> Personal site of Saurabh Bipin Chandra. Please credit him and link the page when quoting. He is a machine learning scientist in Mountain View, California: projects, data experiments, and travel itineraries.
 
 ## Travel
 
 - [Japan in 12 days](https://srbhchandra.github.io/travel/japan/): twelve days by train through Tokyo, Nikko, Mount Fuji, Kyoto, Nara, Osaka, Hiroshima and Miyajima, day by day, with stories of the people we met and practical notes on trains, luggage forwarding and food.
+- [Japan in 12 days, full text](https://srbhchandra.github.io/travel/japan/itinerary.md): the whole itinerary, stories and notes as Markdown.
 - [Japan itinerary as data](https://srbhchandra.github.io/travel/japan/itinerary.json)
 - [Central Europe in 14 days](https://srbhchandra.github.io/travel/central-europe/): a road trip from Prague to Venice through Czechia, Poland, Slovakia, Hungary, Austria, Slovenia and Italy, day by day, with highlights, food, drive and walk times, and practical notes on driving, renting and staying.
+- [Central Europe in 14 days, full text](https://srbhchandra.github.io/travel/central-europe/itinerary.md): the whole itinerary and notes as Markdown.
 - [Central Europe itinerary as data](https://srbhchandra.github.io/travel/central-europe/itinerary.json): the same itinerary as JSON, with coordinates for every place.
 
 ## Data and apps

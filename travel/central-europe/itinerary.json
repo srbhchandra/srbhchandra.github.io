@@ -113,18 +113,6 @@
     },
     {
      "kind": "food",
-     "text": "Trdelník (spit cake) from Old Town Square",
-     "tags": [],
-     "places": [
-      {
-       "name": "Old Town Square",
-       "lat": 50.0875,
-       "lon": 14.4213
-      }
-     ]
-    },
-    {
-     "kind": "food",
      "text": "Beef goulash, salami at Lokál Dlouhááá",
      "tags": [],
      "places": [
@@ -132,18 +120,6 @@
        "name": "Lokál Dlouhááá",
        "lat": 50.0905,
        "lon": 14.4262
-      }
-     ]
-    },
-    {
-     "kind": "food",
-     "text": "Cheap beer from the Scout Institute in Old Town Square",
-     "tags": [],
-     "places": [
-      {
-       "name": "Scout Institute",
-       "lat": 50.0874,
-       "lon": 14.4209
       }
      ]
     }
@@ -236,16 +212,6 @@
        "name": "Brno-střed",
        "lat": 49.1951,
        "lon": 16.6068
-      }
-     ]
-    },
-    {
-     "kind": "food",
-     "text": "Fried grundle fish at Soul Bistro, Brno",
-     "tags": [],
-     "places": [
-      {
-       "name": "Soul Bistro"
       }
      ]
     }
@@ -418,24 +384,6 @@
        "lon": 19.9448
       }
      ]
-    },
-    {
-     "kind": "food",
-     "text": "Apple strudel, apple pie with ice cream around Stare Miasto",
-     "tags": [],
-     "places": []
-    },
-    {
-     "kind": "food",
-     "text": "Pierogi from Mirror Bistro – Pierogi Bystro, Kazimierz",
-     "tags": [],
-     "places": []
-    },
-    {
-     "kind": "food",
-     "text": "Sausage with onions from Bar & Grill Na Kazimierzu, Kazimierz",
-     "tags": [],
-     "places": []
     }
    ]
   },
@@ -497,26 +445,6 @@
        "name": "Centrum Miasta (downtown)",
        "lat": 49.296,
        "lon": 19.9502
-      }
-     ]
-    },
-    {
-     "kind": "food",
-     "text": "Smoked sheep cheese",
-     "tags": [],
-     "places": []
-    },
-    {
-     "kind": "food",
-     "text": "Mulled wine, hot mead from Gazdowo Kuźnia",
-     "tags": [
-      "hl"
-     ],
-     "places": [
-      {
-       "name": "Gazdowo Kuźnia",
-       "lat": 49.2975,
-       "lon": 19.953
       }
      ]
     }
@@ -757,12 +685,6 @@
        "lon": 19.0457
       }
      ]
-    },
-    {
-     "kind": "food",
-     "text": "A very beautiful café – Ohana, the coffee family, Budapest",
-     "tags": [],
-     "places": []
     },
     {
      "kind": "food",
@@ -1053,18 +975,6 @@
      ]
     },
     {
-     "kind": "food",
-     "text": "Bled cream cake",
-     "tags": [],
-     "places": [
-      {
-       "name": "Bled",
-       "lat": 46.368,
-       "lon": 14.11
-      }
-     ]
-    },
-    {
      "kind": "sight",
      "text": "Mountain coaster on Straža hill, Bled – super fun",
      "tags": [],
@@ -1313,7 +1223,7 @@
     },
     {
      "point": "Buda Castle is dense with history, especially the invasions.",
-     "detail": "The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier. I had thought of Europe mostly as the coloniser. Seeing how much of its own past was war and invasion, I came away with more empathy, and some sense of why it became the conqueror it did."
+     "detail": "The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier. Buda itself was held by the Ottoman Turks for almost 150 years, from 1541 to 1686; for much of that time Bratislava served as Hungary’s capital, and Vienna twice held off Ottoman sieges, in 1529 and 1683. I had thought of Europe mostly as the coloniser. Seeing how much of its own past was war and invasion, I came away with more empathy, and some sense of why it became the conqueror it did."
     },
     {
      "point": "Auschwitz-Birkenau is sobering, and worth the time.",

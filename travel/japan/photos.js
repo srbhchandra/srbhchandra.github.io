@@ -107,13 +107,6 @@ window.PHOTOS = {
     "h": 750
    }
   ],
-  "1|Tokyu Plaza’s mirrored entrance": [
-   {
-    "src": "d01-tokyu-plazas-mirrored-entrance",
-    "w": 752,
-    "h": 1000
-   }
-  ],
   "1|Meiji Jingu shrine": [
    {
     "src": "d01-meiji-jingu-shrine",
@@ -129,13 +122,6 @@ window.PHOTOS = {
    },
    {
     "src": "d01-meiji-jingu-inner-garden-2",
-    "w": 1000,
-    "h": 750
-   }
-  ],
-  "1|Omotesandō": [
-   {
-    "src": "d01-omotesando",
     "w": 1000,
     "h": 750
    }
@@ -185,13 +171,6 @@ window.PHOTOS = {
     "src": "d02-tsukiji-hongan-ji",
     "w": 1000,
     "h": 750
-   }
-  ],
-  "2|Tsukiji Outer Market": [
-   {
-    "src": "d02-tsukiji-outer-market-2",
-    "w": 750,
-    "h": 1000
    }
   ],
   "2|Yūrakuchō’s alleys under the railway": [
@@ -539,13 +518,6 @@ window.PHOTOS = {
     "h": 1000
    }
   ],
-  "6|Inari": [
-   {
-    "src": "d06-inari",
-    "w": 1000,
-    "h": 750
-   }
-  ],
   "7|Kyoto Station": [
    {
     "src": "d07-kyoto-station",
@@ -640,18 +612,6 @@ window.PHOTOS = {
     "src": "d08-otemon-gate",
     "w": 1000,
     "h": 750
-   }
-  ],
-  "8|Osaka Castle": [
-   {
-    "src": "d08-osaka-castle-2",
-    "w": 750,
-    "h": 1000
-   },
-   {
-    "src": "d08-osaka-castle-3",
-    "w": 750,
-    "h": 1000
    }
   ],
   "8|Shinsaibashi-suji arcade": [
@@ -882,6 +842,60 @@ window.PHOTOS = {
     "src": "d12-shiba-daimon-2",
     "w": 750,
     "h": 1000
+   }
+  ],
+  "2|Tsukiji Outer Market stalls": [
+   {
+    "src": "d02-tsukiji-outer-market-2",
+    "w": 750,
+    "h": 1000
+   }
+  ],
+  "2|Tsukiji Outer Market": [
+   {
+    "src": "d02-tsukiji-outer-market",
+    "w": 1000,
+    "h": 750
+   }
+  ],
+  "8|Osaka Castle food shops": [
+   {
+    "src": "d08-osaka-castle-2",
+    "w": 750,
+    "h": 1000
+   },
+   {
+    "src": "d08-osaka-castle-3",
+    "w": 750,
+    "h": 1000
+   }
+  ],
+  "8|Osaka Castle": [
+   {
+    "src": "d08-osaka-castle",
+    "w": 750,
+    "h": 1000
+   }
+  ],
+  "1|Omotesandō at night": [
+   {
+    "src": "d01-omotesando",
+    "w": 1000,
+    "h": 750
+   }
+  ],
+  "1|Omotesandō": [
+   {
+    "src": "d01-tokyu-plazas-mirrored-entrance",
+    "w": 752,
+    "h": 1000
+   }
+  ],
+  "6|Gyukatsu Kyoto Katsugyu": [
+   {
+    "src": "d06-inari",
+    "w": 1000,
+    "h": 750
    }
   ]
  }
