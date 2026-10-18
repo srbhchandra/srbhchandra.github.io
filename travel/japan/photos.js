@@ -696,18 +696,6 @@ window.PHOTOS = {
     "h": 750
    }
   ],
-  "10|Peace Memorial Park": [
-   {
-    "src": "d10-peace-memorial-park",
-    "w": 1000,
-    "h": 750
-   },
-   {
-    "src": "d10-peace-memorial-park-2",
-    "w": 750,
-    "h": 1000
-   }
-  ],
   "10|Miyajima": [
    {
     "src": "d10-miyajima",
@@ -920,6 +908,18 @@ window.PHOTOS = {
     "src": "d12-milk-stand",
     "w": 656,
     "h": 1400
+   }
+  ],
+  "10|Flame of Peace": [
+   {
+    "src": "d10-peace-memorial-park",
+    "w": 1000,
+    "h": 750
+   },
+   {
+    "src": "d10-peace-memorial-park-2",
+    "w": 750,
+    "h": 1000
    }
   ]
  },

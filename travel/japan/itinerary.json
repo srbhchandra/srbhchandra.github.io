@@ -170,9 +170,7 @@
     {
      "kind": "walk",
      "text": "Tsukiji: Tsukiji Hongan-ji → Tsukiji Outer Market",
-     "tags": [
-      "hl"
-     ],
+     "tags": [],
      "places": [
       {
        "name": "Tsukiji Hongan-ji",
@@ -189,9 +187,7 @@
     {
      "kind": "food",
      "text": "Seafood bowl and street skewers at Tsukiji Outer Market",
-     "tags": [
-      "hl"
-     ],
+     "tags": [],
      "places": [
       {
        "name": "Tsukiji Outer Market stalls",
@@ -220,7 +216,9 @@
     {
      "kind": "walk",
      "text": "Chūō-dōri in Akihabara, closed to cars on Sundays",
-     "tags": [],
+     "tags": [
+      "hl"
+     ],
      "places": [
       {
        "name": "Chūō-dōri, Akihabara",
@@ -232,9 +230,7 @@
     {
      "kind": "sight",
      "text": "Tokyo City View at Roppongi Hills: the city and Tokyo Tower at night",
-     "tags": [
-      "hl"
-     ],
+     "tags": [],
      "places": [
       {
        "name": "Roppongi Hills, Tokyo City View",
@@ -303,8 +299,7 @@
      "kind": "walk",
      "text": "Forest path down to the river → Shinkyō Bridge",
      "tags": [
-      "nature",
-      "hl"
+      "nature"
      ],
      "places": [
       {
@@ -369,7 +364,6 @@
      "kind": "sight",
      "text": "Saiko Iyashi-no-Sato Nenba: a farming village of thatched houses with roofs shaped like a samurai helmet, destroyed by a typhoon landslide in 1966 and rebuilt as an open-air museum, facing Mount Fuji. We got here by cab, and the driver made the day (see “It was the people”)",
      "tags": [
-      "hl",
       "history"
      ],
      "places": [
@@ -404,7 +398,6 @@
      "kind": "sight",
      "text": "Oishi Park on Lake Kawaguchi: red kochia bushes with Fuji behind",
      "tags": [
-      "hl",
       "nature"
      ],
      "places": [
@@ -586,9 +579,7 @@
     {
      "kind": "food",
      "text": "Lunch by grazing Nishiki Market: tamagoyaki, sea urchin, seafood skewers",
-     "tags": [
-      "hl"
-     ],
+     "tags": [],
      "places": [
       {
        "name": "Nishiki Market",
@@ -1116,9 +1107,7 @@
     {
      "kind": "sight",
      "text": "Tokyo Tower lit up, and Zōjō-ji below it, near midnight",
-     "tags": [
-      "hl"
-     ],
+     "tags": [],
      "places": [
       {
        "name": "Tokyo Tower",
