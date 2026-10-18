@@ -48,7 +48,8 @@ const days = T.days.map((d) => {
       </section>`;
 }).join('\n');
 const staticDays = `<section class="overview" id="day-0">
-        <h2>${esc(T.meta.overviewTitle)}</h2>
+        ${T.meta.story ? `<h2>${esc(T.meta.storyTitle)}</h2>${T.meta.story.map((p) => `<p>${esc(p)}</p>`).join('')}` : ''}
+        <h3>${esc(T.meta.overviewTitle)}</h3>
         <p>${esc(T.meta.overview)}</p>
       </section>
 ${days}`;
@@ -62,6 +63,7 @@ const data = {
   url: URL,
   author: { name: 'Saurabh Bipin Chandra', url: HOME },
   summary: T.meta.dek,
+  story: T.meta.story,
   note: 'Walk times are routing estimates (FOSSGIS foot router) for the stops in order, excluding time spent at them; train times are roughly what our trips took.',
   days: T.days.map((d) => {
     const rd = R.days[d.n] || {};

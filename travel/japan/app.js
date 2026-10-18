@@ -126,8 +126,8 @@
   });
 
   // Mosaic under the title: four days that sell the trip (original day numbers)
-  const MOSAIC = M.mosaic || {};
-  $('#mosaic').innerHTML = Object.entries(MOSAIC).filter(([n]) => PH.days[n]).map(([n, label]) =>
+  const MOSAIC = M.mosaic || []; // [[original day, label], ...], first one large
+  $('#mosaic').innerHTML = MOSAIC.filter(([n]) => PH.days[n]).map(([n, label]) =>
     `<button type="button" data-goto-orig="${n}" aria-label="Go to ${label}"><img src="${imgSmall(PH.days[n].src)}" alt="${esc(PH.days[n].cap)}"><span>${label}</span></button>`).join('');
   document.addEventListener('click', (e) => {
     const b = e.target.closest('[data-goto], [data-goto-orig]');
@@ -262,11 +262,13 @@
     ov.id = 'day-0';
     ov.dataset.day = 0;
     const nightsText = Object.entries(nights).map(([k, n]) => `${n} in ${C[k].name}`).join(', ');
-    ov.innerHTML = `<p class="daynum">The route</p><h2>${esc(M.overviewTitle)}</h2>
+    ov.innerHTML = (M.story ? `<p class="daynum">${esc(M.storyKicker)}</p><h2>${esc(M.storyTitle)}</h2>
+      <div class="story">${M.story.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
+      <p class="daynum route-k">The route</p><h3>${esc(M.overviewTitle)}</h3>` : `<p class="daynum">The route</p><h2>${esc(M.overviewTitle)}</h2>`) + `
       <p>${esc(M.overview)}</p>
       <p>Nights: ${nightsText}.<span class="noprint"> Scroll, or pick a day above; the map follows.</span></p>
       <ul class="bests">${days.flatMap((d) => live(d).filter((it) => it.best).map((it) =>
-        `<li><span class="badge best">★ ${esc(it.best)}</span> <a href="#day-${d.n}" data-goto="${d.n}">${esc((it.stops || []).length > 1 ? d.title : it.stops[0][0])}</a> <span class="when">Day ${d.n}</span></li>`)).join('')}</ul>`;
+        `<li><span class="badge best">★ ${esc(it.best)}</span> <a href="#day-${d.n}" data-goto="${d.n}">${esc((it.stops || []).length === 1 ? it.stops[0][0] : d.title)}</a> <span class="when">Day ${d.n}</span></li>`)).join('')}</ul>`;
     box.appendChild(ov);
 
     // Days

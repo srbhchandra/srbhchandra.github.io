@@ -5,7 +5,13 @@
   "name": "Saurabh Bipin Chandra",
   "url": "https://srbhchandra.github.io/"
  },
- "summary": "Twelve days by train: Tokyo, a day in Nikko, a night under Mount Fuji, Kyoto and Nara, Osaka, Hiroshima and Miyajima, and back to Tokyo.",
+ "summary": "Twelve days by train: Tokyo, a day in Nikko, a night under Mount Fuji, Kyoto and Nara, Osaka, Hiroshima and Miyajima. Probably the best trip of our lives, mostly because of the people.",
+ "story": [
+  "We went for the temples, Mount Fuji and the food. What we remember most is the people.",
+  "On our first afternoon by Mount Fuji, the mountain hid behind clouds. We took a cab, half worried we were being taken for a ride. Our driver, talking to us through a translation app, worked out that we hadn’t seen Fuji yet. He kept watch for it and stopped the moment it appeared. He waited an hour or two, without asking for anything, while we explored a village of thatched houses. Then, unasked, he drove us up an unpaved road to a viewpoint run by an old couple, where we had Fuji to ourselves.",
+  "It kept happening. A train driver stepped off his train, minutes before it left, to walk us through a ticket machine. In Hiroshima, of all places, strangers stopped to help whenever we looked lost at a map. When our luggage hadn’t reached Kyoto, the hotel staff told us, calmly, “Nothing gets lost in Japan.” It arrived.",
+  "We didn’t speak Japanese, and we should have prepared better. It hardly mattered. We came home grateful to the people we met, and for being lucky enough to see Japan this way."
+ ],
  "note": "Walk times are routing estimates (FOSSGIS foot router) for the stops in order, excluding time spent at them; train times are roughly what our trips took.",
  "days": [
   {
@@ -138,7 +144,7 @@
     },
     {
      "kind": "food",
-     "text": "Conveyor-belt sushi in Shibuya",
+     "text": "Ramen in Shibuya",
      "tags": [],
      "places": [
       {
@@ -242,6 +248,20 @@
        "name": "Chūō-dōri, Akihabara",
        "lat": 35.702,
        "lon": 139.7717
+      }
+     ]
+    },
+    {
+     "kind": "food",
+     "text": "A Japanese drinks fair we stumbled into in Akihabara: buy coupons, taste everything. Totally unplanned, and one of the best evenings",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Akihabara drinks fair",
+       "lat": 35.7,
+       "lon": 139.7713
       }
      ]
     },
@@ -370,7 +390,7 @@
    "items": [
     {
      "kind": "walk",
-     "text": "Nishi-Shinjuku’s skyscrapers and the Tokyo Metropolitan Government Building",
+     "text": "Nishi-Shinjuku’s skyscrapers and the Tokyo Metropolitan Government Building (the queue for its free observation deck was too long)",
      "tags": [],
      "places": [
       {
@@ -382,7 +402,7 @@
     },
     {
      "kind": "sight",
-     "text": "Saiko Iyashi-no-Sato Nenba, a village of thatched houses facing Mount Fuji",
+     "text": "Saiko Iyashi-no-Sato Nenba, a village of thatched houses facing Mount Fuji. We got here by cab, and the driver made the day (see “It was the people”)",
      "tags": [
       "hl",
       "history"
@@ -402,8 +422,9 @@
     },
     {
      "kind": "sight",
-     "text": "Kōyōdai viewpoint: Mount Fuji above the clouds",
+     "text": "Kōyōdai: up an unpaved road to a viewpoint run by an old couple. The best view of Fuji, and no one else there",
      "tags": [
+      "hl",
       "nature"
      ],
      "places": [
@@ -431,6 +452,18 @@
        "name": "Oishi Park",
        "lat": 35.522,
        "lon": 138.7451
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Oshino Hakkai, the spring-fed ponds with Fuji views",
+     "tags": [],
+     "places": [
+      {
+       "name": "Oshino Hakkai",
+       "lat": 35.4606,
+       "lon": 138.8338
       }
      ]
     }
@@ -636,6 +669,76 @@
        "lon": 135.769
       }
      ]
+    },
+    {
+     "kind": "missed",
+     "text": "Kinkaku-ji, the Golden Pavilion",
+     "tags": [],
+     "places": [
+      {
+       "name": "Kinkaku-ji",
+       "lat": 35.0394,
+       "lon": 135.7292
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Arashiyama’s bamboo forest, Tenryū-ji and Adashino Nenbutsu-ji",
+     "tags": [],
+     "places": [
+      {
+       "name": "Arashiyama bamboo forest",
+       "lat": 35.017,
+       "lon": 135.6717
+      },
+      {
+       "name": "Tenryū-ji",
+       "lat": 35.0157,
+       "lon": 135.6737
+      },
+      {
+       "name": "Adashino Nenbutsu-ji",
+       "lat": 35.027,
+       "lon": 135.6672
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Sanjūsangen-dō, with its 1,001 statues of Kannon",
+     "tags": [],
+     "places": [
+      {
+       "name": "Sanjūsangen-dō",
+       "lat": 34.9879,
+       "lon": 135.7718
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "A geisha dance performance in Gion",
+     "tags": [],
+     "places": [
+      {
+       "name": "Gion",
+       "lat": 35.0013,
+       "lon": 135.7756
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Kyoto Tower (our friends went up)",
+     "tags": [],
+     "places": [
+      {
+       "name": "Kyoto Tower",
+       "lat": 34.9875,
+       "lon": 135.7593
+      }
+     ]
     }
    ]
   },
@@ -665,7 +768,7 @@
     },
     {
      "kind": "walk",
-     "text": "Nara Park: Nara Park and its deer → Kasuga-taisha → Tōdai-ji Nandaimon gate → Tōdai-ji Great Buddha Hall → A Japanese garden next to Tōdai-ji",
+     "text": "Nara Park: Nara Park and its deer → Kasuga-taisha → Tōdai-ji Nandaimon gate → Tōdai-ji Great Buddha Hall → Isuien Garden and the Neiraku Museum",
      "tags": [
       "hl",
       "history"
@@ -692,15 +795,29 @@
        "lon": 135.8398
       },
       {
-       "name": "A Japanese garden next to Tōdai-ji",
+       "name": "Isuien Garden and the Neiraku Museum",
        "lat": 34.6853,
        "lon": 135.837
       }
      ]
     },
     {
+     "kind": "food",
+     "text": "A food festival in Nara Park we happened upon: lots of great food",
+     "tags": [
+      "hl"
+     ],
+     "places": [
+      {
+       "name": "Nara food festival",
+       "lat": 34.684,
+       "lon": 135.8336
+      }
+     ]
+    },
+    {
      "kind": "walk",
-     "text": "Dōtonbori at night, along the canal",
+     "text": "Dōtonbori at night, along the canal: famous, but a disappointment (see the honest notes)",
      "tags": [],
      "places": [
       {
@@ -743,8 +860,11 @@
     },
     {
      "kind": "food",
-     "text": "Ice cream at the castle",
-     "tags": [],
+     "text": "Black wagyu sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream",
+     "best": "Best bite",
+     "tags": [
+      "hl"
+     ],
      "places": [
       {
        "name": "Osaka Castle",
@@ -777,13 +897,43 @@
     },
     {
      "kind": "food",
-     "text": "Street food around Dōtonbori",
+     "text": "Street food around Dōtonbori (so-so)",
      "tags": [],
      "places": [
       {
        "name": "Dōtonbori",
        "lat": 34.6677,
        "lon": 135.4999
+      }
+     ]
+    },
+    {
+     "kind": "sight",
+     "text": "A massage on the 11th floor of an ordinary building: in Osaka, shops and services stack up on every floor",
+     "tags": [],
+     "places": []
+    },
+    {
+     "kind": "missed",
+     "text": "Umeda Sky Building",
+     "tags": [],
+     "places": [
+      {
+       "name": "Umeda Sky Building",
+       "lat": 34.7053,
+       "lon": 135.4904
+      }
+     ]
+    },
+    {
+     "kind": "missed",
+     "text": "Kuromon Market",
+     "tags": [],
+     "places": [
+      {
+       "name": "Kuromon Market",
+       "lat": 34.6656,
+       "lon": 135.5065
       }
      ]
     },
@@ -877,7 +1027,7 @@
     },
     {
      "kind": "food",
-     "text": "Dinner: kamameshi (rice cooked in an iron pot)",
+     "text": "Dinner near Hondōri",
      "tags": [],
      "places": [
       {
@@ -979,7 +1129,7 @@
     },
     {
      "kind": "sight",
-     "text": "The torii again at sunset, then the boat back",
+     "text": "The torii again at sunset, then a dash for the last boat back: we only just made it after hiking down",
      "tags": [],
      "places": [
       {
@@ -1159,6 +1309,120 @@
    ]
   }
  ],
- "takeaways": [],
- "notes": []
+ "takeaways": [
+  "The people make Japan. Meet their kindness with patience, and learn a few words of Japanese before you go; we wish we had.",
+  "Nothing gets lost in Japan, so travel light: send your suitcases ahead and carry a backpack.",
+  "You don’t need a car. Trains, a highway bus and the odd cab took us everywhere, and we never regretted it.",
+  "Go early, or go where the tripods aren’t. The quiet places felt like heaven.",
+  "Leave room for the unplanned: a drinks fair, a food festival, sushi in a castle. They were the best moments.",
+  "Covered shopping streets and markets run for blocks, some underground. A rainy day can be spent entirely under them.",
+  "Shops and services fill every floor of a building, not just the street level. Look up."
+ ],
+ "notes": [
+  {
+   "title": "The people",
+   "items": [
+    {
+     "point": "Our cab driver at Mount Fuji made the trip.",
+     "detail": "Fuji was hidden when we arrived, so we took a cab to Iyashi-no-Sato Nenba, a little sceptical and talking only through a translation app. He worked out that we hadn’t seen Fuji yet, watched for it, and stopped as soon as it appeared. At Nenba he offered to wait, and waited an hour or two without asking for anything. On the way back he asked if we’d like to see a local favourite: he drove up an unpaved road, hard on his car (we briefly wondered if this was a kidnapping), to Kōyōdai, a viewpoint run by an old couple. Best view of Fuji of the trip, and no one else there. Then he took us to Oishi Park."
+    },
+    {
+     "point": "Tipping is frowned on, so we asked first.",
+     "detail": "We wanted to thank him properly. We put the money in an envelope and asked, politely, whether he’d mind if we gave him more than the agreed fare. He hesitated, then accepted."
+    },
+    {
+     "point": "A train driver got off his train to help us buy tickets.",
+     "detail": "We thought our pass was enough; it wasn’t, and the train was minutes from leaving. The driver stepped down, walked us to the ticket machine, watched us fumble, took over, worked out the fare, waited calmly while we fumbled with the cash, and then got back into his cab."
+    },
+    {
+     "point": "In Hiroshima, strangers kept stopping to help.",
+     "detail": "Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in the city that has suffered more than any other."
+    },
+    {
+     "point": "Pride in the work, even in small things.",
+     "detail": "An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable."
+    }
+   ]
+  },
+  {
+   "title": "Getting around without a car",
+   "items": [
+    {
+     "point": "Public transport everywhere, and no regrets.",
+     "detail": "Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus one highway bus to Mount Fuji, a boat to Miyajima, and the odd cab."
+    },
+    {
+     "point": "Send your luggage ahead, and skip a stop.",
+     "detail": "Most hotels will forward your suitcase to your next hotel for a small fee, with handwritten forms and no computer system in sight. It always arrived on time. Our trick: send it two stops ahead (Tokyo straight to Kyoto, say) and carry a backpack for the night in between. When ours hadn’t reached Kyoto yet, the hotel staff said, “Nothing gets lost in Japan.” They were right."
+    },
+    {
+     "point": "Get a Suica or Pasmo card.",
+     "detail": "One card works on most city trains and metros, and in convenience stores. The Shinkansen (bullet train) is ticketed separately. Check whether your pass covers each train before you board."
+    },
+    {
+     "point": "Your phone does the rest.",
+     "detail": "An eSIM before you land, Google Maps for train routes and platforms, and a camera translation app (Google Translate, Papago) for menus and signs."
+    }
+   ]
+  },
+  {
+   "title": "Eating",
+   "items": [
+    {
+     "point": "The best meal: teppanyaki in Hiroshima.",
+     "detail": "Wagyu, seafood and vegetables cooked on the grill in front of us."
+    },
+    {
+     "point": "The best bite: black wagyu sushi inside Osaka Castle.",
+     "detail": "It was raining, so we ducked into the shops in the castle grounds. Who expects great food there? It was the best single bite of the trip."
+    },
+    {
+     "point": "Some of the best food was unplanned.",
+     "detail": "A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, a fried-dumpling place with endless dumplings and cold Japanese beer, and matcha beer in Tokyo."
+    },
+    {
+     "point": "Go to a convenience store every day.",
+     "detail": "We did, for random desserts and fried chicken that was always juicy. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts."
+    },
+    {
+     "point": "Markets, and miles of covered streets.",
+     "detail": "Tsukiji, Nishiki, and the long covered shopping streets were highlights in themselves: you can walk for blocks under cover, or underground. The grilled oysters on Miyajima were stunning too."
+    }
+   ]
+  },
+  {
+   "title": "Temples, shrines and crowds",
+   "items": [
+    {
+     "point": "Shrines are Shinto, temples are Buddhist.",
+     "detail": "A shrine has a torii gate: bow twice, clap twice, pray, bow once more. A temple has a sanmon gate: bow and pray with your hands together, no clapping."
+    },
+    {
+     "point": "Go early, and look for the quiet places.",
+     "detail": "The famous spots are crowded, and full of photographers with tripods. Early mornings, and places like Kōyōdai where we were alone, felt like the real Japan."
+    },
+    {
+     "point": "The days are short in October.",
+     "detail": "It gets dark around 5 pm, and most sights close about then. Plan the important ones for the morning."
+    },
+    {
+     "point": "Bring comfortable shoes.",
+     "detail": "We walked so much that our feet hurt."
+    }
+   ]
+  },
+  {
+   "title": "Honest notes",
+   "items": [
+    {
+     "point": "Dōtonbori was a disappointment.",
+     "detail": "The food was so-so, and it was the least clean place we saw in Japan; we even saw rats near the restaurants."
+    },
+    {
+     "point": "Akihabara after midnight shows another side.",
+     "detail": "Our first night, we walked out after midnight and found women in anime costumes handing out flyers for “girlfriend” bars, where men pay for company and conversation. Harmless, but it felt strange next to everything else we saw."
+    }
+   ]
+  }
+ ]
 }
