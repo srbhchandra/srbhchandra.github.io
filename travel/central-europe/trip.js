@@ -260,7 +260,7 @@ window.TRIP = {
         body: 'It sits under the main square. Its maps put Krakow at the centre of medieval Europe’s trade routes: a Europe-centred view of the world that was new to me.',
         photos: [['d04-rynek-trade-routes-map', 'Krakow at the hub of medieval Europe’s trade routes. Rynek Underground Museum']] },
       { head: 'Buda Castle is dense with history, especially the invasions.',
-        body: 'The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier.',
+        body: 'The Budapest History Museum inside the castle walks through the armies that came through Hungary, starting with the Romans, when Budapest was Aquincum on the empire’s frontier. I had thought of Europe mostly as the coloniser. Seeing how much of its own past was war and invasion, I came away with more empathy, and some sense of why it became the conqueror it did.',
         photos: [['d07-roman-empire-map', 'The Roman Empire in the 2nd century AD, with Aquincum, Roman Budapest, on its edge. Budapest History Museum']] },
       { head: 'Auschwitz-Birkenau is sobering, and worth the time.',
         body: 'Book a slot well ahead.' }
