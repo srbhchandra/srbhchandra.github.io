@@ -230,7 +230,9 @@
     {
      "kind": "sight",
      "text": "Tokyo City View at Roppongi Hills: the city and Tokyo Tower at night",
-     "tags": [],
+     "tags": [
+      "tour"
+     ],
      "places": [
       {
        "name": "Roppongi Hills, Tokyo City View",
@@ -263,12 +265,13 @@
     "mode": "Tobu train from Asakusa, and back",
     "hours": 2
    },
-   "walk_km": 0.6,
+   "walk_km": null,
    "items": [
     {
      "kind": "sight",
      "text": "Nikkō Tōshō-gū, the lavish shrine of the first Tokugawa shogun",
      "tags": [
+      "tour",
       "hl",
       "history"
      ],
@@ -284,6 +287,7 @@
      "kind": "sight",
      "text": "Rinnō-ji’s Hall of Three Buddhas, and its garden in autumn colours",
      "tags": [
+      "tour",
       "nature",
       "history"
      ],
@@ -296,8 +300,8 @@
      ]
     },
     {
-     "kind": "walk",
-     "text": "Forest path down to the river → Shinkyō Bridge",
+     "kind": "sight",
+     "text": "A forest path down to the river and the red Shinkyō Bridge",
      "tags": [
       "nature"
      ],
@@ -315,11 +319,12 @@
      ]
     },
     {
-     "kind": "walk",
+     "kind": "sight",
      "text": "Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues",
      "tags": [
       "hl",
-      "nature"
+      "nature",
+      "history"
      ],
      "places": [
       {
@@ -467,7 +472,8 @@
      "kind": "walk",
      "text": "Higashiyama, Kyoto: Kiyomizu-dera → Sannenzaka and Ninenzaka → Yasaka Pagoda → Nene-no-michi → Yasaka Shrine, lit up at dusk → Gion",
      "tags": [
-      "hl"
+      "hl",
+      "history"
      ],
      "places": [
       {
@@ -553,6 +559,7 @@
      "kind": "sight",
      "text": "Nijō Castle: the Ninomaru Palace, its gardens, and the view from the keep walls",
      "tags": [
+      "tour",
       "hl",
       "history"
      ],
@@ -717,7 +724,8 @@
      "text": "Nara Park: Nara Park and its deer → Kasuga-taisha → Tōdai-ji Nandaimon gate → Tōdai-ji Great Buddha Hall → Isuien Garden and the Neiraku Museum",
      "tags": [
       "hl",
-      "history"
+      "history",
+      "tour"
      ],
      "places": [
       {
@@ -774,6 +782,7 @@
      "kind": "sight",
      "text": "Osaka Castle: the moats, the park, and the view from the top floor",
      "tags": [
+      "tour",
       "hl",
       "history"
      ],
@@ -982,8 +991,8 @@
      ]
     },
     {
-     "kind": "walk",
-     "text": "Momijidani Park",
+     "kind": "sight",
+     "text": "Momijidani Park, a maple valley at the foot of Mount Misen",
      "tags": [
       "nature"
      ],
@@ -999,6 +1008,7 @@
      "kind": "sight",
      "text": "Ropeway up Mount Misen, then a short hike to the views over the Inland Sea",
      "tags": [
+      "tour",
       "hl",
       "nature"
      ],
@@ -1151,6 +1161,7 @@
      "kind": "sight",
      "text": "Tokyo National Museum: samurai swords, Buddhist statues, lacquer and ceramics",
      "tags": [
+      "tour",
       "hl",
       "history"
      ],
@@ -1250,11 +1261,11 @@
     },
     {
      "point": "In Hiroshima, strangers kept stopping to help.",
-     "detail": "Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in the city that has suffered more than any other."
+     "detail": "Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in a city that has suffered so much."
     },
     {
      "point": "Pride in the work, even in small things.",
-     "detail": "An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector bowed and treated every passenger with the same quiet respect."
+     "detail": "An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector was unfailingly courteous and respectful."
     },
     {
      "point": "We didn’t speak Japanese, and it hardly mattered.",
@@ -1271,7 +1282,7 @@
    "items": [
     {
      "point": "Public transport everywhere, and no regrets.",
-     "detail": "Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus one highway bus to Mount Fuji, a boat to Miyajima, and the odd cab."
+     "detail": "Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus a highway bus to Mount Fuji and a local bus back down to the Shinkansen, a boat to Miyajima, and the odd cab."
     },
     {
      "point": "Take the Shinkansen, and treat yourself to the Green Car.",
@@ -1313,6 +1324,10 @@
     {
      "point": "Look out for the fresh orange juice machines.",
      "detail": "Cheap machines that squeeze oranges on the spot, in several places. After a long day walking in the heat and humidity, they were a lifesaver."
+    },
+    {
+     "point": "Book the popular restaurants, or expect a long wait.",
+     "detail": "Some popular restaurants only take bookings through Japanese reservation apps such as Tabelog or TableCheck, which now work in English. Without one, expect long queues at the famous places in Tokyo and Kyoto."
     },
     {
      "point": "Meals there are long and slow.",

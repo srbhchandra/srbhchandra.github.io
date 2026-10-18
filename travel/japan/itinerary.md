@@ -8,7 +8,7 @@ Twelve days by train: Tokyo, a day in Nikko, a night under Mount Fuji, Kyoto and
 
 We went for the shrines and temples, Mount Fuji and the food. Japan felt like an intense mix of the future and the past: the neon glow of Akihabara one night, a centuries-old shrine in a cedar forest the next morning. But what we remember most is the people: a cab driver who went out of his way to show us Fuji, a train driver who stepped off his train to help us buy tickets, strangers who stopped whenever we looked lost. We came home grateful. Read more in The people, at the end.
 
-Fly into Tokyo and out of Tokyo, and go everywhere else by train, with one highway bus to Mount Fuji. Cities are best on foot; the days swing between neon cities, old shrines and temples, and two of the most beautiful nature days of the trip: Mount Fuji at sunrise and the view from Mount Misen. It’s an ideal first trip to Japan: the classic sights, in a sensible order. If you’ve been before, skip the most crowded famous spots (Kyoto’s especially) and look for quiet places like the ones we stumbled on.
+Fly into Tokyo and out of Tokyo, and go everywhere else by train, with a couple of buses around Mount Fuji. Cities are best on foot; the days swing between neon cities, old shrines and temples, and two of the most beautiful nature days of the trip: Mount Fuji at sunrise and the view from Mount Misen. It’s an ideal first trip to Japan: the classic sights, in a sensible order. If you’ve been before, skip the most crowded famous spots (Kyoto’s especially) and look for quiet places like the ones we stumbled on.
 
 ## Day 1: Tokyo: Asakusa, Harajuku, Shibuya, Shinjuku
 
@@ -42,8 +42,8 @@ Tobu train from Asakusa, and back, about 2 h. Night in Tokyo (Akihabara).
   - Nikko’s two shrines (Tōshō-gū and Futarasan) and one temple (Rinnō-ji) are a UNESCO World Heritage site together.
 - See: Rinnō-ji’s Hall of Three Buddhas, and its garden in autumn colours
   - Three giant gilded statues stand side by side. It felt like a Hindu trinity; they are Buddhist forms of the gods of Nikko’s three sacred mountains.
-- Walk: Forest path down to the river → Shinkyō Bridge
-- Walk: Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues (Daiya River, Kanmangafuchi Abyss)
+- See: A forest path down to the river and the red Shinkyō Bridge (Forest path down to the river, Shinkyō Bridge)
+- See: Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues (Daiya River, Kanmangafuchi Abyss)
   - Across the river, Sanskrit letters are carved into the rock: “kanman”, the last word of the mantra of Fudō Myōō (Acala in Sanskrit), which gives the abyss its name.
 
 ## Day 4: Tokyo to Mount Fuji
@@ -118,7 +118,7 @@ High-speed boat from Peace Park to Miyajima, and back, about 1 h. Night in Hiros
 - Eat: Grilled oysters on Miyajima
 - See: Itsukushima Shrine and its torii standing in the sea [Best sight]
   - For centuries the shrine’s goddess was identified with Benzaiten, who is Saraswati of Hindu tradition. When Shinto and Buddhism were separated in 1868, Benzaiten moved next door to Daigan-ji, one of Japan’s three great Benzaiten temples.
-- Walk: Momijidani Park
+- See: Momijidani Park, a maple valley at the foot of Mount Misen
 - See: Ropeway up Mount Misen, then a short hike to the views over the Inland Sea (Miyajima Ropeway, Mount Misen)
 - See: The torii again at sunset, then a dash for the last boat back: we only just made it after hiking down
 - Eat: Teppanyaki dinner in Hiroshima: wagyu, seafood and vegetables on the grill [Best food]
@@ -169,14 +169,14 @@ Train to Narita airport, about 1 h. Fly home.
 - **Our cab driver at Mount Fuji made the trip.** Fuji was hidden when we arrived, so we took a cab to Iyashi-no-Sato Nenba, a little sceptical and talking only through a translation app. He worked out that we hadn’t seen Fuji yet, watched for it, and stopped as soon as it appeared. At Nenba he offered to wait, and waited an hour or two without asking for anything. On the way back he asked if we’d like to see a local favourite: he drove up an unpaved road, hard on his car (we briefly wondered if this was a kidnapping), to Kōyōdai, a viewpoint run by an old couple. Best view of Fuji of the trip, and no one else there. Then he took us to Oishi Park.
 - **Tipping is frowned on, so we asked first.** We wanted to thank him properly. We put the money in an envelope and asked, politely, whether he’d mind if we gave him more than the agreed fare. He hesitated, then accepted.
 - **A train driver got off his train to help us buy tickets.** We thought our pass was enough; it wasn’t, and the train was minutes from leaving. The driver stepped down, walked us to the ticket machine, watched us fumble, took over, worked out the fare, waited calmly while we fumbled with the cash, and then got back into his cab.
-- **In Hiroshima, strangers kept stopping to help.** Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in the city that has suffered more than any other.
-- **Pride in the work, even in small things.** An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector bowed and treated every passenger with the same quiet respect.
+- **In Hiroshima, strangers kept stopping to help.** Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in a city that has suffered so much.
+- **Pride in the work, even in small things.** An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector was unfailingly courteous and respectful.
 - **We didn’t speak Japanese, and it hardly mattered.** We should have prepared better, and communication was a struggle. Yet everywhere we went, people found a way to help. We came home grateful to the people we met, and for being lucky enough to see Japan this way.
 - **We felt completely safe, at any hour.** We walked around late at night without a worry. Bright streets and shops open late made the cities feel alive rather than empty.
 
 ## Getting around without a car
 
-- **Public transport everywhere, and no regrets.** Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus one highway bus to Mount Fuji, a boat to Miyajima, and the odd cab.
+- **Public transport everywhere, and no regrets.** Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus a highway bus to Mount Fuji and a local bus back down to the Shinkansen, a boat to Miyajima, and the odd cab.
 - **Take the Shinkansen, and treat yourself to the Green Car.** We took three bullet trains: from near Mount Fuji to Kyoto, Osaka to Hiroshima, and Hiroshima back to Tokyo. Smooth, comfortable and fast; we loved every ride. For the long one back to Tokyo we upgraded to the Green Car (first class), and the service was excellent. Pick up a bento at the station before you board.
 - **Send your luggage ahead, and skip a stop.** Most hotels will forward your suitcase to your next hotel for a small fee, with handwritten forms and no computer system in sight. It always arrived on time. Our trick: send it two stops ahead (Tokyo straight to Kyoto, say) and carry a backpack for the night in between. When ours hadn’t reached Kyoto yet, the hotel staff said, “Nothing gets lost in Japan.” They were right.
 - **Get a Suica or Pasmo card.** One card works on most city trains and metros, and in convenience stores. The Shinkansen (bullet train) is ticketed separately. Check whether your pass covers each train before you board.
@@ -189,6 +189,7 @@ Train to Narita airport, about 1 h. Fly home.
 - **Some of the best food was unplanned.** A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, grilled oysters on Miyajima, a fried-dumpling place with endless dumplings and cold Japanese beer, matcha beer in Tokyo, and a bottle of plain milk at the milk stand in Akihabara Station that we still talk about.
 - **Go to a convenience store every day.** We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to Be! Fruits Sandwich at Tokyo Station, which sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks.
 - **Look out for the fresh orange juice machines.** Cheap machines that squeeze oranges on the spot, in several places. After a long day walking in the heat and humidity, they were a lifesaver.
+- **Book the popular restaurants, or expect a long wait.** Some popular restaurants only take bookings through Japanese reservation apps such as Tabelog or TableCheck, which now work in English. Without one, expect long queues at the famous places in Tokyo and Kyoto.
 - **Meals there are long and slow.** At izakaya-style places we would order a few dishes, eat, drink, order more, and keep going for three or four hours. It’s a different rhythm from the one-main-course dinners we’re used to elsewhere, and we loved it.
 - **The beer tasted different, and we can’t explain why.** Nothing fancy, just the everyday Asahi and the rest. They all say “dry” on the label, but they didn’t taste dry, and the same labels at home don’t taste the same. Our best guess is freshness: in Japan it’s brewed nearby and served fresh and very cold, often on draft, while abroad it has travelled for weeks or is brewed under licence elsewhere. We could have drunk a lot of it.
 - **Markets, and miles of covered streets.** Tsukiji, Nishiki, and the long covered shopping streets were highlights in themselves: you can walk for blocks under cover, or underground. Try Hiroshima-style okonomiyaki in Hiroshima.

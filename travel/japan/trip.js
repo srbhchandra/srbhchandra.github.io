@@ -8,7 +8,7 @@
    Day `travel` is how we got between bases: { mode, h, line: [[lon, lat], ...] }
    (stations in order; drawn as straight segments). `base` is where the night
    is spent; `country` here is the base region, for the colours.
-   Coordinates come from where our photos were taken. Draft: see private/japan-review.md. */
+   Coordinates come from where our photos were taken. */
 window.TRIP = {
   meta: {
     title: 'Japan', subtitle: 'Tokyo to Hiroshima by train',
@@ -21,7 +21,7 @@ window.TRIP = {
       'We went for the shrines and temples, Mount Fuji and the food. Japan felt like an intense mix of the future and the past: the neon glow of Akihabara one night, a centuries-old shrine in a cedar forest the next morning. But what we remember most is the people: a cab driver who went out of his way to show us Fuji, a train driver who stepped off his train to help us buy tickets, strangers who stopped whenever we looked lost. We came home grateful. Read more in <a href="#notes-the-people">The people</a>, at the end.'
     ],
     overviewTitle: 'Tokyo, Fuji, Kyoto, Osaka, Hiroshima',
-    overview: 'Fly into Tokyo and out of Tokyo, and go everywhere else by train, with one highway bus to Mount Fuji. Cities are best on foot; the days swing between neon cities, old shrines and temples, and two of the most beautiful nature days of the trip: Mount Fuji at sunrise and the view from Mount Misen. It’s an ideal first trip to Japan: the classic sights, in a sensible order. If you’ve been before, skip the most crowded famous spots (Kyoto’s especially) and look for quiet places like the ones we stumbled on.'
+    overview: 'Fly into Tokyo and out of Tokyo, and go everywhere else by train, with a couple of buses around Mount Fuji. Cities are best on foot; the days swing between neon cities, old shrines and temples, and two of the most beautiful nature days of the trip: Mount Fuji at sunrise and the view from Mount Misen. It’s an ideal first trip to Japan: the classic sights, in a sensible order. If you’ve been before, skip the most crowded famous spots (Kyoto’s especially) and look for quiet places like the ones we stumbled on.'
   },
   countries: {
     TK: { name: 'Tokyo', color: '#2a78d6' },
@@ -63,7 +63,7 @@ window.TRIP = {
         { kind: 'walk', stops: [
           ['Yūrakuchō’s alleys under the railway', 139.7617, 35.6725], ['Ginza', 139.7644, 35.6708] ] },
         { kind: 'walk', tags: ['hl'], text: 'Chūō-dōri in Akihabara, closed to cars on Sundays', stops: [['Chūō-dōri, Akihabara', 139.7717, 35.7020]] },
-        { kind: 'see', text: 'Tokyo City View at Roppongi Hills: the city and Tokyo Tower at night', stops: [['Roppongi Hills, Tokyo City View', 139.7292, 35.6605]] },
+        { kind: 'see', tags: ['tour'], text: 'Tokyo City View at Roppongi Hills: the city and Tokyo Tower at night', stops: [['Roppongi Hills, Tokyo City View', 139.7292, 35.6605]] },
         { kind: 'food', text: 'Dinner in Roppongi', stops: [['Roppongi', 139.7328, 35.6615]] }
       ]
     },
@@ -71,12 +71,12 @@ window.TRIP = {
       n: 3, title: 'Day trip to Nikko', place: 'Nikko', base: 'Tokyo (Akihabara)', country: 'TK',
       travel: { mode: 'Tobu train from Asakusa, and back', h: 2, line: [[139.7980, 35.7110], [139.6197, 36.7476], [139.5991, 36.7550]] },
       items: [
-        { kind: 'see', tags: ['hl', 'history'], text: 'Nikkō Tōshō-gū, the lavish shrine of the first Tokugawa shogun', stops: [['Nikkō Tōshō-gū', 139.5989, 36.7576]],
+        { kind: 'see', tags: ['tour', 'hl', 'history'], text: 'Nikkō Tōshō-gū, the lavish shrine of the first Tokugawa shogun', stops: [['Nikkō Tōshō-gū', 139.5989, 36.7576]],
           aside: 'Nikko’s two shrines (Tōshō-gū and Futarasan) and one temple (Rinnō-ji) are a UNESCO World Heritage site together.' },
-        { kind: 'see', tags: ['nature', 'history'], text: 'Rinnō-ji’s Hall of Three Buddhas, and its garden in autumn colours', stops: [['Rinnō-ji Sanbutsu-dō', 139.6005, 36.7552]],
+        { kind: 'see', tags: ['tour', 'nature', 'history'], text: 'Rinnō-ji’s Hall of Three Buddhas, and its garden in autumn colours', stops: [['Rinnō-ji Sanbutsu-dō', 139.6005, 36.7552]],
           aside: 'Three giant gilded statues stand side by side. It felt like a Hindu trinity; they are Buddhist forms of the gods of Nikko’s three sacred mountains.' },
-        { kind: 'walk', tags: ['nature'], stops: [['Forest path down to the river', 139.6037, 36.7539], ['Shinkyō Bridge', 139.6044, 36.7538]] },
-        { kind: 'walk', tags: ['hl', 'nature'], text: 'Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues', stops: [['Daiya River', 139.5933, 36.7504], ['Kanmangafuchi Abyss', 139.5886, 36.7489]],
+        { kind: 'see', tags: ['nature'], text: 'A forest path down to the river and the red Shinkyō Bridge', stops: [['Forest path down to the river', 139.6037, 36.7539], ['Shinkyō Bridge', 139.6044, 36.7538]] },
+        { kind: 'see', tags: ['hl', 'nature', 'history'], text: 'Kanmangafuchi Abyss: a riverside walk past rows of stone Jizō statues', stops: [['Daiya River', 139.5933, 36.7504], ['Kanmangafuchi Abyss', 139.5886, 36.7489]],
           aside: 'Across the river, Sanskrit letters are carved into the rock: “kanman”, the last word of the mantra of Fudō Myōō (Acala in Sanskrit), which gives the abyss its name.' }
       ]
     },
@@ -97,7 +97,7 @@ window.TRIP = {
       items: [
         { kind: 'see', tags: ['hl', 'nature'], best: 'Best nature', text: 'Sunrise over Mount Fuji from where we stayed, near Lake Kawaguchi' },
         { kind: 'see', tags: ['nature'], text: 'Mount Fuji from the Shinkansen, sitting on the right side', stops: [['Near Shin-Fuji', 138.7448, 35.1554]] },
-        { kind: 'walk', label: 'Higashiyama, Kyoto', tags: ['hl'], stops: [
+        { kind: 'walk', label: 'Higashiyama, Kyoto', tags: ['hl', 'history'], stops: [
           ['Kiyomizu-dera', 135.7846, 34.9948, 'hl'], ['Sannenzaka and Ninenzaka', 135.7810, 34.9962],
           ['Yasaka Pagoda', 135.7798, 34.9986], ['Nene-no-michi', 135.7800, 35.0009],
           ['Yasaka Shrine, lit up at dusk', 135.7783, 35.0035, 'hl'], ['Gion', 135.7740, 35.0016] ],
@@ -110,7 +110,7 @@ window.TRIP = {
     {
       n: 6, title: 'Kyoto: Nijō Castle, Nishiki Market, Fushimi Inari', place: 'Kyoto', base: 'Kyoto', country: 'KY',
       items: [
-        { kind: 'see', tags: ['hl', 'history'], text: 'Nijō Castle: the Ninomaru Palace, its gardens, and the view from the keep walls', stops: [['Nijō Castle', 135.7483, 35.0138]] },
+        { kind: 'see', tags: ['tour', 'hl', 'history'], text: 'Nijō Castle: the Ninomaru Palace, its gardens, and the view from the keep walls', stops: [['Nijō Castle', 135.7483, 35.0138]] },
         { kind: 'food', text: 'Matcha and sweets at a tea house inside Nijō Castle', stops: [['Nijō Castle tea house', 135.7482, 35.0151]] },
         { kind: 'food', text: 'Lunch by grazing Nishiki Market: tamagoyaki, sea urchin, seafood skewers', stops: [['Nishiki Market', 135.7633, 35.0049]] },
         { kind: 'walk', text: 'Teramachi and Shinkyōgoku covered shopping streets', stops: [['Teramachi', 135.7665, 35.0052]] },
@@ -127,7 +127,7 @@ window.TRIP = {
       travel: { mode: 'Train to Nara, then on to Osaka', h: 2, line: [[135.7584, 34.9860], [135.8279, 34.6842], [135.5063, 34.6771]] },
       items: [
         { kind: 'see', text: 'Kyoto Station’s giant atrium and Skyway', stops: [['Kyoto Station', 135.7584, 34.9860]] },
-        { kind: 'walk', label: 'Nara Park', tags: ['hl', 'history'], stops: [
+        { kind: 'walk', label: 'Nara Park', tags: ['hl', 'history', 'tour'], stops: [
           ['Nara Park and its deer', 135.8366, 34.6828, 'hl'], ['Kasuga-taisha', 135.8394, 34.6819],
           ['Tōdai-ji Nandaimon gate', 135.8400, 34.6857], ['Tōdai-ji Great Buddha Hall', 135.8398, 34.6889, 'hl'],
           ['Isuien Garden and the Neiraku Museum', 135.8370, 34.6853] ],
@@ -138,7 +138,7 @@ window.TRIP = {
     {
       n: 8, title: 'Osaka in the rain', place: 'Osaka', base: 'Osaka', country: 'OS',
       items: [
-        { kind: 'see', tags: ['hl', 'history'], text: 'Osaka Castle: the moats, the park, and the view from the top floor', stops: [['Ōtemon Gate', 135.5227, 34.6852], ['Osaka Castle', 135.5259, 34.6866]] },
+        { kind: 'see', tags: ['tour', 'hl', 'history'], text: 'Osaka Castle: the moats, the park, and the view from the top floor', stops: [['Ōtemon Gate', 135.5227, 34.6852], ['Osaka Castle', 135.5259, 34.6866]] },
         { kind: 'food', tags: ['hl'], best: 'Best bite', text: 'Black beef sushi from a shop inside the castle grounds, where the rain drove us. Then ice cream', stops: [['Osaka Castle food shops', 135.5263, 34.6862]] },
         { kind: 'walk', stops: [
           ['Shinsaibashi-suji arcade', 135.5014, 34.6749], ['Dōtonbori and the Glico sign', 135.5014, 34.6689], ['Namba', 135.5035, 34.6671] ] },
@@ -165,8 +165,8 @@ window.TRIP = {
         { kind: 'food', tags: ['hl'], text: 'Grilled oysters on Miyajima', stops: [['Miyajima', 132.3217, 34.3004]] },
         { kind: 'see', tags: ['hl', 'history'], best: 'Best sight', text: 'Itsukushima Shrine and its torii standing in the sea', stops: [['Itsukushima Shrine', 132.3197, 34.2970]],
           aside: 'For centuries the shrine’s goddess was identified with Benzaiten, who is Saraswati of Hindu tradition. When Shinto and Buddhism were separated in 1868, Benzaiten moved next door to Daigan-ji, one of Japan’s three great Benzaiten temples.' },
-        { kind: 'walk', tags: ['nature'], text: 'Momijidani Park', stops: [['Momijidani Park', 132.3256, 34.2937]] },
-        { kind: 'see', tags: ['hl', 'nature'], text: 'Ropeway up Mount Misen, then a short hike to the views over the Inland Sea', stops: [['Miyajima Ropeway', 132.3277, 34.2812], ['Mount Misen', 132.3253, 34.2791]] },
+        { kind: 'see', tags: ['nature'], text: 'Momijidani Park, a maple valley at the foot of Mount Misen', stops: [['Momijidani Park', 132.3256, 34.2937]] },
+        { kind: 'see', tags: ['tour', 'hl', 'nature'], text: 'Ropeway up Mount Misen, then a short hike to the views over the Inland Sea', stops: [['Miyajima Ropeway', 132.3277, 34.2812], ['Mount Misen', 132.3253, 34.2791]] },
         { kind: 'see', text: 'The torii again at sunset, then a dash for the last boat back: we only just made it after hiking down', stops: [['Miyajima pier', 132.3226, 34.3034]] },
         { kind: 'food', tags: ['hl'], best: 'Best food', text: 'Teppanyaki dinner in Hiroshima: wagyu, seafood and vegetables on the grill', stops: [['Hiroshima', 132.4549, 34.3941]] },
         { kind: 'see', text: 'The Flame of Peace at night', stops: [['Flame of Peace', 132.4522, 34.3921]] }
@@ -186,7 +186,7 @@ window.TRIP = {
       travel: { mode: 'Train to Narita airport', h: 1, line: [[139.7557, 35.6567], [140.3839, 35.7637]] },
       items: [
         { kind: 'walk', text: 'Ueno Park', stops: [['Ueno Park', 139.7753, 35.7152]] },
-        { kind: 'see', tags: ['hl', 'history'], text: 'Tokyo National Museum: samurai swords, Buddhist statues, lacquer and ceramics', stops: [['Tokyo National Museum', 139.7769, 35.7188]],
+        { kind: 'see', tags: ['tour', 'hl', 'history'], text: 'Tokyo National Museum: samurai swords, Buddhist statues, lacquer and ceramics', stops: [['Tokyo National Museum', 139.7769, 35.7188]],
           aside: 'Here we found Taishakuten, a 10th-century guardian whose label says he may be based on Indra (or Brahma): one of many Hindu gods taken into Buddhism as its protectors.' },
         { kind: 'food', text: 'A bottle of plain milk at the milk stand in Akihabara Station. Simple, and so good', stops: [['Milk stand, Akihabara Station', 139.7751, 35.6985]] },
         { kind: 'food', text: 'Katsu curry in Akihabara', stops: [['Akihabara', 139.7757, 35.6985]] },
@@ -224,9 +224,9 @@ window.TRIP = {
       { head: 'A train driver got off his train to help us buy tickets.',
         body: 'We thought our pass was enough; it wasn’t, and the train was minutes from leaving. The driver stepped down, walked us to the ticket machine, watched us fumble, took over, worked out the fare, waited calmly while we fumbled with the cash, and then got back into his cab.' },
       { head: 'In Hiroshima, strangers kept stopping to help.',
-        body: 'Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in the city that has suffered more than any other.' },
+        body: 'Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in a city that has suffered so much.' },
       { head: 'Pride in the work, even in small things.',
-        body: 'An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector bowed and treated every passenger with the same quiet respect.' },
+        body: 'An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector was unfailingly courteous and respectful.' },
       { head: 'We didn’t speak Japanese, and it hardly mattered.',
         body: 'We should have prepared better, and communication was a struggle. Yet everywhere we went, people found a way to help. We came home grateful to the people we met, and for being lucky enough to see Japan this way.' },
       { head: 'We felt completely safe, at any hour.',
@@ -234,7 +234,7 @@ window.TRIP = {
     ] },
     { title: 'Getting around without a car', items: [
       { head: 'Public transport everywhere, and no regrets.',
-        body: 'Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus one highway bus to Mount Fuji, a boat to Miyajima, and the odd cab.' },
+        body: 'Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus a highway bus to Mount Fuji and a local bus back down to the Shinkansen, a boat to Miyajima, and the odd cab.' },
       { head: 'Take the Shinkansen, and treat yourself to the Green Car.',
         body: 'We took three bullet trains: from near Mount Fuji to Kyoto, Osaka to Hiroshima, and Hiroshima back to Tokyo. Smooth, comfortable and fast; we loved every ride. For the long one back to Tokyo we upgraded to the Green Car (first class), and the service was excellent. Pick up a bento at the station before you board.' },
       { head: 'Send your luggage ahead, and skip a stop.',
@@ -255,6 +255,8 @@ window.TRIP = {
         body: 'We did, for random desserts, fried chicken that was always juicy, and fruit sandos: soft white bread with cream and fresh fruit, the best of all, and often sold out. One day we went to Be! Fruits Sandwich at Tokyo Station, which sells nothing but fruit sandos. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks.' },
       { head: 'Look out for the fresh orange juice machines.',
         body: 'Cheap machines that squeeze oranges on the spot, in several places. After a long day walking in the heat and humidity, they were a lifesaver.' },
+      { head: 'Book the popular restaurants, or expect a long wait.',
+        body: 'Some popular restaurants only take bookings through Japanese reservation apps such as Tabelog or TableCheck, which now work in English. Without one, expect long queues at the famous places in Tokyo and Kyoto.' },
       { head: 'Meals there are long and slow.',
         body: 'At izakaya-style places we would order a few dishes, eat, drink, order more, and keep going for three or four hours. It’s a different rhythm from the one-main-course dinners we’re used to elsewhere, and we loved it.' },
       { head: 'The beer tasted different, and we can’t explain why.',
