@@ -1175,15 +1175,17 @@
    "night": "Tokyo (Hamamatsuchō)",
    "via": [],
    "travel": {
-    "mode": "Shinkansen",
+    "mode": "Shinkansen, in the Green Car (first class)",
     "hours": 4
    },
    "walk_km": 1.6,
    "items": [
     {
      "kind": "food",
-     "text": "An ekiben (station bento) on the Shinkansen",
-     "tags": [],
+     "text": "Station bento (ekiben) in the Green Car: smooth, quiet, and excellent service",
+     "tags": [
+      "hl"
+     ],
      "places": []
     },
     {
@@ -1313,6 +1315,7 @@
   "The people make Japan. Meet their kindness with patience, and learn a few words of Japanese before you go; we wish we had.",
   "Nothing gets lost in Japan, so travel light: send your suitcases ahead and carry a backpack.",
   "You don’t need a car. Trains, a highway bus and the odd cab took us everywhere, and we never regretted it.",
+  "Ride the Shinkansen at least once; for a long ride, the Green Car is worth it.",
   "Go early, or go where the tripods aren’t. The quiet places felt like heaven.",
   "Leave room for the unplanned: a drinks fair, a food festival, sushi in a castle. They were the best moments.",
   "Covered shopping streets and markets run for blocks, some underground. A rainy day can be spent entirely under them.",
@@ -1340,7 +1343,11 @@
     },
     {
      "point": "Pride in the work, even in small things.",
-     "detail": "An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable."
+     "detail": "An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector bowed and treated every passenger with the same quiet respect."
+    },
+    {
+     "point": "We felt completely safe, at any hour.",
+     "detail": "We walked around late at night without a worry. Bright streets and shops open late made the cities feel alive rather than empty."
     }
    ]
   },
@@ -1350,6 +1357,10 @@
     {
      "point": "Public transport everywhere, and no regrets.",
      "detail": "Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus one highway bus to Mount Fuji, a boat to Miyajima, and the odd cab."
+    },
+    {
+     "point": "Take the Shinkansen, and treat yourself to the Green Car.",
+     "detail": "We took three bullet trains: from near Mount Fuji to Kyoto, Osaka to Hiroshima, and Hiroshima back to Tokyo. Smooth, comfortable and fast; we loved every ride. For the long one back to Tokyo we upgraded to the Green Car (first class), and the service was excellent. Pick up a bento at the station before you board."
     },
     {
      "point": "Send your luggage ahead, and skip a stop.",
@@ -1382,7 +1393,19 @@
     },
     {
      "point": "Go to a convenience store every day.",
-     "detail": "We did, for random desserts and fried chicken that was always juicy. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts."
+     "detail": "We did, for random desserts and fried chicken that was always juicy. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks."
+    },
+    {
+     "point": "Look out for the fresh orange juice machines.",
+     "detail": "Cheap machines that squeeze oranges on the spot, in several places. After a long day walking in the heat and humidity, they were a lifesaver."
+    },
+    {
+     "point": "Meals there are long and slow.",
+     "detail": "At izakaya-style places we would order a few dishes, eat, drink, order more, and keep going for three or four hours. It’s a different rhythm from the one-main-course dinners we’re used to in the US, and we loved it."
+    },
+    {
+     "point": "The beer tasted different, and we can’t explain why.",
+     "detail": "Nothing fancy, just the everyday Asahi and the rest. They all say “dry” on the label, but they didn’t taste dry, and the same labels at home don’t taste the same. We could have drunk a lot of it."
     },
     {
      "point": "Markets, and miles of covered streets.",

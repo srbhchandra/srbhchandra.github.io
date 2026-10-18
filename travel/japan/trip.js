@@ -176,9 +176,9 @@ window.TRIP = {
     },
     {
       n: 11, title: 'Hiroshima back to Tokyo', place: 'Hiroshima → Tokyo', base: 'Tokyo (Hamamatsuchō)', country: 'TK',
-      travel: { mode: 'Shinkansen', h: 4, line: [[132.4750, 34.3972], [139.7407, 35.6284]] },
+      travel: { mode: 'Shinkansen, in the Green Car (first class)', h: 4, line: [[132.4750, 34.3972], [139.7407, 35.6284]] },
       items: [
-        { kind: 'food', text: 'An ekiben (station bento) on the Shinkansen' },
+        { kind: 'food', tags: ['hl'], text: 'Station bento (ekiben) in the Green Car: smooth, quiet, and excellent service' },
         { kind: 'food', text: 'The food halls at Tokyo Station', stops: [['Tokyo Station', 139.7676, 35.6817]] },
         { kind: 'walk', label: 'Evening', stops: [['Yaesu', 139.7711, 35.6815], ['Kyōbashi', 139.7700, 35.6772], ['Ginza at night', 139.7633, 35.6727, 'hl']] },
         { kind: 'see', tags: ['hl'], text: 'Tokyo Tower lit up, and Zōjō-ji below it, near midnight', stops: [['Tokyo Tower', 139.7469, 35.6584], ['Zōjō-ji', 139.7502, 35.6575]] }
@@ -199,6 +199,7 @@ window.TRIP = {
     'The people make Japan. Meet their kindness with patience, and learn a few words of Japanese before you go; we wish we had.',
     'Nothing gets lost in Japan, so travel light: send your suitcases ahead and carry a backpack.',
     'You don’t need a car. Trains, a highway bus and the odd cab took us everywhere, and we never regretted it.',
+    'Ride the Shinkansen at least once; for a long ride, the Green Car is worth it.',
     'Go early, or go where the tripods aren’t. The quiet places felt like heaven.',
     'Leave room for the unplanned: a drinks fair, a food festival, sushi in a castle. They were the best moments.',
     'Covered shopping streets and markets run for blocks, some underground. A rainy day can be spent entirely under them.',
@@ -215,11 +216,15 @@ window.TRIP = {
       { head: 'In Hiroshima, strangers kept stopping to help.',
         body: 'Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in the city that has suffered more than any other.' },
       { head: 'Pride in the work, even in small things.',
-        body: 'An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable.' }
+        body: 'An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector bowed and treated every passenger with the same quiet respect.' },
+      { head: 'We felt completely safe, at any hour.',
+        body: 'We walked around late at night without a worry. Bright streets and shops open late made the cities feel alive rather than empty.' }
     ] },
     { title: 'Getting around without a car', items: [
       { head: 'Public transport everywhere, and no regrets.',
         body: 'Unlike our Central Europe trip, we didn’t rent a car. Trains took us everywhere, plus one highway bus to Mount Fuji, a boat to Miyajima, and the odd cab.' },
+      { head: 'Take the Shinkansen, and treat yourself to the Green Car.',
+        body: 'We took three bullet trains: from near Mount Fuji to Kyoto, Osaka to Hiroshima, and Hiroshima back to Tokyo. Smooth, comfortable and fast; we loved every ride. For the long one back to Tokyo we upgraded to the Green Car (first class), and the service was excellent. Pick up a bento at the station before you board.' },
       { head: 'Send your luggage ahead, and skip a stop.',
         body: 'Most hotels will forward your suitcase to your next hotel for a small fee, with handwritten forms and no computer system in sight. It always arrived on time. Our trick: send it two stops ahead (Tokyo straight to Kyoto, say) and carry a backpack for the night in between. When ours hadn’t reached Kyoto yet, the hotel staff said, “Nothing gets lost in Japan.” They were right.' },
       { head: 'Get a Suica or Pasmo card.',
@@ -235,7 +240,13 @@ window.TRIP = {
       { head: 'Some of the best food was unplanned.',
         body: 'A Japanese drinks fair we stumbled into in Akihabara (buy coupons, taste everything), a food festival in Nara Park, a fried-dumpling place with endless dumplings and cold Japanese beer, and matcha beer in Tokyo.' },
       { head: 'Go to a convenience store every day.',
-        body: 'We did, for random desserts and fried chicken that was always juicy. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts.' },
+        body: 'We did, for random desserts and fried chicken that was always juicy. 7-Eleven for onigiri and sandwiches, FamilyMart for fried chicken, Lawson for desserts. With a store open on almost every corner, we never worried about food or drinks.' },
+      { head: 'Look out for the fresh orange juice machines.',
+        body: 'Cheap machines that squeeze oranges on the spot, in several places. After a long day walking in the heat and humidity, they were a lifesaver.' },
+      { head: 'Meals there are long and slow.',
+        body: 'At izakaya-style places we would order a few dishes, eat, drink, order more, and keep going for three or four hours. It’s a different rhythm from the one-main-course dinners we’re used to in the US, and we loved it.' },
+      { head: 'The beer tasted different, and we can’t explain why.',
+        body: 'Nothing fancy, just the everyday Asahi and the rest. They all say “dry” on the label, but they didn’t taste dry, and the same labels at home don’t taste the same. We could have drunk a lot of it.' },
       { head: 'Markets, and miles of covered streets.',
         body: 'Tsukiji, Nishiki, and the long covered shopping streets were highlights in themselves: you can walk for blocks under cover, or underground. The grilled oysters on Miyajima were stunning too.' }
     ] },
