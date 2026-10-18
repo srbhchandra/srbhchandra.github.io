@@ -18,7 +18,7 @@ window.TRIP = {
     storyKicker: 'Why it was our best trip',
     storyTitle: 'It was the people',
     story: [
-      'We went for the shrines and temples, Mount Fuji and the food. Japan felt like an intense mix of the future and the past: the neon glow of Akihabara one night, a centuries-old shrine in a cedar forest the next morning. But what we remember most is the people: a cab driver who went out of his way to show us Fuji, a train driver who stepped off his train to help us buy tickets, strangers who stopped whenever we looked lost. Their stories are <a href="#notes-the-people">further down</a>. We came home grateful.'
+      'We went for the shrines and temples, Mount Fuji and the food. Japan felt like an intense mix of the future and the past: the neon glow of Akihabara one night, a centuries-old shrine in a cedar forest the next morning. But what we remember most is the people: a cab driver who went out of his way to show us Fuji, a train driver who stepped off his train to help us buy tickets, strangers who stopped whenever we looked lost. We came home grateful. Read more in <a href="#notes-the-people">The people</a>, at the end.'
     ],
     overviewTitle: 'Tokyo, Fuji, Kyoto, Osaka, Hiroshima',
     overview: 'Fly into Tokyo and out of Tokyo, and go everywhere else by train, with one highway bus to Mount Fuji. Cities are best on foot; the days swing between neon cities, old shrines and temples, and two of the most beautiful nature days of the trip: Mount Fuji at sunrise and the view from Mount Misen. It’s an ideal first trip to Japan: the classic sights, in a sensible order. If you’ve been before, skip the most crowded famous spots (Kyoto’s especially) and look for quiet places like the ones we stumbled on.'
