@@ -49,7 +49,7 @@ const days = T.days.map((d) => {
       </section>`;
 }).join('\n');
 const staticDays = `<section class="overview" id="day-0">
-        ${T.meta.story ? `<h2>${esc(T.meta.storyTitle)}</h2>${T.meta.story.map((p) => `<p>${esc(p)}</p>`).join('')}` : ''}
+        ${T.meta.story ? `<h2>${esc(T.meta.storyTitle)}</h2>${T.meta.story.map((p) => `<p>${p.replace(/<a [^>]*>(.*?)<\/a>/g, '$1')}</p>`).join('')}` : ''}
         <h3>${esc(T.meta.overviewTitle)}</h3>
         <p>${esc(T.meta.overview)}</p>
       </section>
@@ -90,7 +90,7 @@ fs.writeFileSync('itinerary.json', JSON.stringify(data, null, 1) + '\n');
 /* ---------- plain text for agents and readers (Markdown), with attribution ---------- */
 const md = [];
 md.push(`# ${data.title}`, '', `By Saurabh Bipin Chandra (${HOME}). Source: ${URL}`, '', data.summary, '');
-if (T.meta && T.meta.story) md.push(`## ${T.meta.storyTitle}`, '', ...T.meta.story.flatMap((p) => [p, '']));
+if (T.meta && T.meta.story) md.push(`## ${T.meta.storyTitle}`, '', ...T.meta.story.flatMap((p) => [p.replace(/<a [^>]*>(.*?)<\/a>/g, '$1'), '']));
 if (T.meta && T.meta.overview) md.push(T.meta.overview, '');
 T.days.forEach((d) => {
   md.push(`## Day ${d.n}: ${d.title}`, '');

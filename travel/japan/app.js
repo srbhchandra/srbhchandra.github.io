@@ -189,7 +189,7 @@
   }
   const photoDims = {};
   Object.values(PH.stops).flat().forEach((p) => { photoDims[p.src] = p; });
-  $('#notes').innerHTML = (T.notes || []).map((sec) => `<h2>${esc(sec.title)}</h2><div class="obs">${sec.items.map((it) => {
+  $('#notes').innerHTML = (T.notes || []).map((sec) => `<h2 id="notes-${sec.title.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}">${esc(sec.title)}</h2><div class="obs">${sec.items.map((it) => {
     const figs = (it.photos || []).filter(([src]) => photoDims[src]).map(([src, cap]) => {
       caps[src] = cap;
       const [w, h] = fit(photoDims[src], 560, 420);
@@ -272,7 +272,7 @@
     ov.dataset.day = 0;
     const nightsText = Object.entries(nights).map(([k, n]) => `${n} in ${C[k].name}`).join(', ');
     ov.innerHTML = (M.story ? `<p class="daynum">${esc(M.storyKicker)}</p><h2>${esc(M.storyTitle)}</h2>
-      <div class="story">${M.story.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
+      <div class="story">${M.story.map((p) => `<p>${esc(p).replace(/&lt;a href=&quot;(#[a-z-]+)&quot;&gt;(.*?)&lt;\/a&gt;/g, '<a href="$1">$2</a>')}</p>`).join('')}</div>
       <p class="daynum route-k">The route</p><h3>${esc(M.overviewTitle)}</h3>` : `<p class="daynum">The route</p><h2>${esc(M.overviewTitle)}</h2>`) + `
       <p>${esc(M.overview)}</p>
       <p>Nights: ${nightsText}.<span class="noprint"> Scroll, or pick a day above; the map follows.</span></p>

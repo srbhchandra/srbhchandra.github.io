@@ -18,10 +18,7 @@ window.TRIP = {
     storyKicker: 'Why it was our best trip',
     storyTitle: 'It was the people',
     story: [
-      'We went for the shrines and temples, Mount Fuji and the food. Japan felt like an intense mix of the future and the past: the neon glow of Akihabara one night, a centuries-old shrine in a cedar forest the next morning. But what we remember most is the people.',
-      'On our first afternoon by Mount Fuji, the mountain hid behind clouds. We took a cab, half worried we were being taken for a ride. Our driver, talking to us through a translation app, worked out that we hadn’t seen Fuji yet. He kept watch for it and stopped the moment it appeared. He waited an hour or two, without asking for anything, while we explored Nenba, a mountain village of thatched farmhouses rebuilt as an open-air museum after a typhoon wiped it out in 1966. Then, unasked, he drove us up an unpaved road to a viewpoint run by an old couple, where we had Fuji to ourselves.',
-      'It kept happening. A train driver stepped off his train, minutes before it left, to walk us through a ticket machine. In Hiroshima, of all places, strangers stopped to help whenever we looked lost at a map. When our luggage hadn’t reached Kyoto, the hotel staff told us, calmly, “Nothing gets lost in Japan.” It arrived.',
-      'We didn’t speak Japanese, and we should have prepared better. It hardly mattered. We came home grateful to the people we met, and for being lucky enough to see Japan this way.'
+      'We went for the shrines and temples, Mount Fuji and the food. Japan felt like an intense mix of the future and the past: the neon glow of Akihabara one night, a centuries-old shrine in a cedar forest the next morning. But what we remember most is the people: a cab driver who went out of his way to show us Fuji, a train driver who stepped off his train to help us buy tickets, strangers who stopped whenever we looked lost. Their stories are <a href="#notes-the-people">further down</a>. We came home grateful.'
     ],
     overviewTitle: 'Tokyo, Fuji, Kyoto, Osaka, Hiroshima',
     overview: 'Fly into Tokyo and out of Tokyo, and go everywhere else by train, with one highway bus to Mount Fuji. Cities are best on foot; the days swing between neon cities, old shrines and temples, and two of the most beautiful nature days of the trip: Mount Fuji at sunrise and the view from Mount Misen. It’s an ideal first trip to Japan: the classic sights, in a sensible order. If you’ve been before, skip the most crowded famous spots (Kyoto’s especially) and look for quiet places like the ones we stumbled on.'
@@ -230,6 +227,8 @@ window.TRIP = {
         body: 'Every time we stood looking lost at a map for a few minutes, someone stopped to guide us. It happened again and again, in the city that has suffered more than any other.' },
       { head: 'Pride in the work, even in small things.',
         body: 'An old cab driver looked almost hurt when I loaded my own suitcase into his car, and wouldn’t let me hold his bag to make his seat more comfortable. On the Shinkansen, the ticket inspector bowed and treated every passenger with the same quiet respect.' },
+      { head: 'We didn’t speak Japanese, and it hardly mattered.',
+        body: 'We should have prepared better, and communication was a struggle. Yet everywhere we went, people found a way to help. We came home grateful to the people we met, and for being lucky enough to see Japan this way.' },
       { head: 'We felt completely safe, at any hour.',
         body: 'We walked around late at night without a worry. Bright streets and shops open late made the cities feel alive rather than empty.' }
     ] },
