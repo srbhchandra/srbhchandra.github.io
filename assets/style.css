@@ -96,3 +96,12 @@ article li > ul { margin-top: .5rem; margin-bottom: 0; }
   body { font-size: 17px; }
   header.site { padding-top: 3rem; }
 }
+
+/* Reader feedback line (assets/feedback.js) */
+.feedback { max-width: var(--maxw); margin: 2.5rem 0 1rem; padding: .9rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px;
+  border-top: 1px solid var(--rule); font: 400 15px/1.4 var(--sans); color: var(--muted); }
+.feedback button { font: inherit; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
+.feedback button:hover { border-color: var(--muted); }
+.feedback .ask { border: 0; padding: 0; text-decoration: underline; text-underline-offset: 3px; color: var(--ink); }
+.feedback .sep { color: var(--rule); }
+.feedback.centred { width: min(calc(var(--maxw) - 2.5rem), calc(100% - 2.5rem)); margin: 2.5rem auto 1rem; padding: .9rem 0; }
