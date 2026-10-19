@@ -266,15 +266,11 @@
         </span>
       </div>
       <div class="pbody" id="pbody" hidden>
-        <label class="pdays" for="pslider">How many days do you have?</label>
-        <div class="prange"><input type="range" id="pslider" min="11" max="16" step="1" value="14"><output id="pout" for="pslider">14 days</output></div>
-        <div class="pmore" id="pmore" hidden>
-          <span>With an extra day, I'd spend it on</span>
-          <button type="button" data-more="nature" aria-pressed="true">Nature: the Dolomites</button>
-          <button type="button" data-more="city" aria-pressed="false">Cities: Budapest</button>
-        </div>
+        <label class="pdays" for="pslider">Shorten it: skip whole days, in the order I would</label>
+        <div class="prange"><input type="range" id="pslider" min="9" max="12" step="1" value="12"><output id="pout" for="pslider">12 of 12 days</output></div>
+        <div class="pmore" id="pmore"></div>
         <ul class="pchanges" id="pchanges"></ul>
-        <p class="pnote">Shorter versions skip whole days, the ones I'd skip myself; longer ones add only what I'd go back for. Every day has a Google Maps link; the My Maps file has every place (import it at google.com/mymaps).</p>
+        <p class="pnote">Shorter versions skip whole days, the ones I'd skip myself. The added days are ideas from our planning, not places we went. Every day has a Google Maps link; the My Maps file has every place (import it at google.com/mymaps).</p>
       </div>
     </section>
 
@@ -497,10 +493,10 @@
     </footer>
   </div>
 
-  <script src="trip.js?v=5d2915e4"></script>
+  <script src="trip.js?v=9a560927"></script>
   <script src="photos.js?v=dd7ffe93"></script>
   <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
-  <script src="app.js?v=3184b56c"></script>
+  <script src="app.js?v=b46c1053"></script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "071006d2456f44e3b63b6d9eea89bab4"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

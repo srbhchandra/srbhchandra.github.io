@@ -23,8 +23,10 @@
 
   /* ---------- the version being shown ---------- */
   const qs = new URLSearchParams(location.search);
-  let nDays = PL ? Math.min(PL.max, Math.max(PL.min, +qs.get('days') || BASE_DAYS)) : BASE_DAYS;
-  let more = qs.get('more') === 'city' ? 'city' : 'nature';
+  const EXTRA_KEYS = PL && PL.extras ? Object.keys(PL.extras) : [];
+  // Extras the reader switched on (?add=kyoto,hakone); nDays is the length before extras
+  const adds = new Set((qs.get('add') || '').split(',').filter((k) => EXTRA_KEYS.includes(k)));
+  let nDays = PL ? Math.min(BASE_DAYS, Math.max(PL.min, (+qs.get('days') || BASE_DAYS) - adds.size)) : BASE_DAYS;
   let days = [];
 
   // Build the days for nDays from the hand-written versions in trip.js. Skipped days
@@ -39,16 +41,14 @@
     let list = T.days.map(base);
     if (nDays < BASE_DAYS) {
       const v = PL.versions[nDays];
-      (v.replace || []).forEach((r) => { const at = list.findIndex((d) => d.orig === r.day); list[at] = planned(r.with, r.day); });
+      if (v.last) { const at = list.findIndex((d) => d.orig === 11); list[at] = planned(PL.lastDay, 11); }
       v.skip.forEach((n) => { list.find((d) => d.orig === n).skipped = true; });
     }
-    if (nDays > BASE_DAYS) {
-      const order = more === 'city' ? ['city', 'nature'] : ['nature', 'city'];
-      order.slice(0, nDays - BASE_DAYS).forEach((k) => {
-        const e = PL.extras[k], at = list.findIndex((d) => d.orig === e.after);
-        list.splice(at + 1, 0, planned(e.day, null));
-      });
-    }
+    // Extras go after their day, in the order they're listed in trip.js
+    EXTRA_KEYS.filter((k) => adds.has(k)).reverse().forEach((k) => {
+      const e = PL.extras[k], at = list.findIndex((d) => d.orig === e.after);
+      list.splice(at + 1, 0, planned(e.day, null));
+    });
     let n = 0;
     list.forEach((d) => {
       d.n = d.skipped ? null : ++n;
@@ -521,25 +521,26 @@
 
   /* ---------- "Plan your version" ---------- */
   const ptoggle = $('#ptoggle'), pbody = $('#pbody'), slider = $('#pslider'), pout = $('#pout');
-  if (PL) { slider.min = PL.min; slider.max = PL.max; slider.value = nDays; } else { ptoggle.hidden = true; }
+  if (PL) {
+    slider.min = PL.min; slider.max = BASE_DAYS; slider.value = nDays;
+    $('#pmore').innerHTML = '<span>Got more time? Add a day for</span>' + EXTRA_KEYS.map((k) =>
+      `<button type="button" data-add="${k}" aria-pressed="false">${esc(PL.extras[k].label)}</button>`).join('');
+  } else { ptoggle.hidden = true; }
   function renderPlanner() {
     if (!PL) { $('#psum').textContent = `${days.length} days, as we did it`; return; }
     const N = days.length;
-    slider.value = N;
-    pout.textContent = `${N} days`;
-    $('#psum').textContent = N === BASE_DAYS ? `${N} days, as we did it` : `Your version: ${N} days`;
-    $('#pmore').hidden = N <= BASE_DAYS;
-    document.querySelectorAll('#pmore button').forEach((b) => {
-      const on = N >= BASE_DAYS + 2 || b.dataset.more === more;
-      b.setAttribute('aria-pressed', on);
-    });
-    const changes = N < BASE_DAYS ? PL.versions[N].summary
-      : N > BASE_DAYS ? (more === 'city' ? ['city', 'nature'] : ['nature', 'city']).slice(0, N - BASE_DAYS).map((k) => PL.extras[k].summary) : [];
+    slider.value = nDays;
+    pout.textContent = `${nDays} of ${BASE_DAYS} days`;
+    const asWeDid = nDays === BASE_DAYS && !adds.size;
+    $('#psum').textContent = asWeDid ? `${N} days, as we did it` : `Your version: ${N} days`;
+    document.querySelectorAll('#pmore button').forEach((b) => b.setAttribute('aria-pressed', adds.has(b.dataset.add)));
+    const changes = [...(nDays < BASE_DAYS ? PL.versions[nDays].summary : []), ...EXTRA_KEYS.filter((k) => adds.has(k)).map((k) => PL.extras[k].summary)];
     $('#pchanges').innerHTML = changes.length ? changes.map((c) => `<li>${esc(c)}</li>`).join('') : '<li>No changes: this is the trip exactly as we did it.</li>';
     // Shareable address for this version
     const q = new URLSearchParams(location.search);
-    if (N === BASE_DAYS) q.delete('days'); else q.set('days', N);
-    if (N > BASE_DAYS && N < BASE_DAYS + 2) q.set('more', more); else q.delete('more');
+    if (asWeDid) q.delete('days'); else q.set('days', N);
+    if (adds.size) q.set('add', EXTRA_KEYS.filter((k) => adds.has(k)).join(',')); else q.delete('add');
+    q.delete('more');
     const s = q.toString();
     history.replaceState(null, '', location.pathname + (s ? `?${s}` : '') + location.hash);
   }
@@ -549,12 +550,14 @@
     ptoggle.setAttribute('aria-expanded', open);
     setBarH();
   });
-  slider.addEventListener('input', () => { pout.textContent = `${slider.value} days`; });
+  slider.addEventListener('input', () => { pout.textContent = `${slider.value} of ${BASE_DAYS} days`; });
   slider.addEventListener('change', () => { nDays = +slider.value; render(); updateMap(true); });
-  document.querySelectorAll('#pmore button').forEach((b) => b.addEventListener('click', () => {
-    if (days.length >= BASE_DAYS + 2) return;
-    more = b.dataset.more; render(); updateMap(true);
-  }));
+  $('#pmore').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-add]');
+    if (!b) return;
+    if (adds.has(b.dataset.add)) adds.delete(b.dataset.add); else adds.add(b.dataset.add);
+    render(); updateMap(true);
+  });
   // Exports
   $('#xpdf').addEventListener('click', () => print());
   $('#xkml').addEventListener('click', () => {
@@ -584,7 +587,7 @@
 
   /* ---------- first render, then the map ---------- */
   render();
-  if (nDays !== BASE_DAYS) { pbody.hidden = false; ptoggle.setAttribute('aria-expanded', true); setBarH(); }
+  if (nDays !== BASE_DAYS || adds.size) { pbody.hidden = false; ptoggle.setAttribute('aria-expanded', true); setBarH(); }
 
   const INK = '#1f1e1b', PAPER = '#faf9f5', MUTED = '#6b675f', FOCUS = '#2a78d6';
   try {

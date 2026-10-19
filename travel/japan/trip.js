@@ -194,6 +194,59 @@ window.TRIP = {
       ]
     }
   ],
+  /* "Plan your version". Shorter: whole days are skipped, in Saurabh's order; for 11
+     days and fewer, day 11 is swapped for a planned day that fits in the Tokyo
+     National Museum and flies home that night. Longer: readers switch on any of
+     `extras`, each a whole day inserted after `after` (original day number), with
+     items marked `added` ("Suggested, not on our trip"). */
+  plan: {
+    min: 9,
+    lastDay: { key: 'tokyo-last', photo: 11, title: 'Hiroshima to Tokyo, then home', place: 'Hiroshima → Tokyo → home', base: null, country: 'TK',
+      travel: { mode: 'Shinkansen (Green Car), then the train to Narita', h: 5, line: [[132.4750, 34.3972], [139.7407, 35.6284], [140.3839, 35.7637]] },
+      items: [{ from: [11, 0] }, { from: [12, 1] },
+        { kind: 'see', text: 'Train to Narita airport and fly home that night. The museum closes at 5 pm and on Mondays, so check the day' },
+        { from: [11, 1], dropped: true }, { from: [11, 2], dropped: true }] },
+    versions: {
+      11: { skip: [12], last: true, summary: ['The last Tokyo day skipped: the Tokyo National Museum moves to the afternoon you get back to Tokyo, and you fly home that night'] },
+      10: { skip: [12, 3], last: true, summary: ['The last Tokyo day skipped (the museum moves to the afternoon you get back)', 'The Nikko day trip skipped'] },
+      9: { skip: [12, 3, 8], last: true, summary: ['The last Tokyo day skipped (the museum moves to the afternoon you get back)', 'The Nikko day trip skipped', 'The second Osaka day skipped: Nara and Dōtonbori, then on to Hiroshima'] }
+    },
+    extras: {
+      tokyo: { label: 'Tokyo: modern', after: 2, summary: 'Added: a day of modern Tokyo', day:
+        { key: 'tokyo-modern', photo: null, title: 'Modern Tokyo: Azabudai Hills, teamLab, Toyosu', place: 'Tokyo', base: 'Tokyo (Akihabara)', country: 'TK',
+          items: [
+            { kind: 'see', added: true, text: 'Azabudai Hills: shops, food and striking new buildings, an underground supermarket, and free art', stops: [['Azabudai Hills', 139.7408, 35.6615]] },
+            { kind: 'see', added: true, tags: ['tour', 'book'], text: 'teamLab Borderless, the digital art museum in Azabudai Hills. No ticket counter: book online in advance', stops: [['teamLab Borderless', 139.7434, 35.6620]] },
+            { kind: 'see', added: true, tags: ['tour', 'book'], text: 'Toyosu: teamLab Planets (book a time slot, wear clothes you can roll above the knee, there’s water), Toyosu fish market (closes early afternoon), and Toyosu Senkyaku Banrai’s food hall with its rooftop foot bath', stops: [['teamLab Planets', 139.7897, 35.6494], ['Toyosu Market', 139.7848, 35.6452], ['Toyosu Senkyaku Banrai', 139.7837, 35.6455]] },
+            { kind: 'see', added: true, tags: ['book'], text: 'Or instead, further out: the Ghibli Museum in Mitaka (tickets sell out, book ahead), or the giant underground flood tunnel at Kasukabe (book a tour; guides speak Japanese)', stops: [['Ghibli Museum', 139.5705, 35.6963], ['Underground flood tunnel, Kasukabe', 139.7806, 35.9911]] }] } },
+      shirakawa: { label: 'Shirakawa-go', after: 3, summary: 'Added: a long day trip to Shirakawa-go', day:
+        { key: 'shirakawa', photo: null, title: 'Day trip to Shirakawa-go (a long one)', place: 'Shirakawa-go', base: 'Tokyo (Akihabara)', country: 'TK',
+          travel: { mode: 'Hokuriku Shinkansen to Toyama, then the bus, and back', h: 7.5, line: [[139.7671, 35.6812], [137.2131, 36.7005], [136.9076, 36.2599]] },
+          items: [
+            { kind: 'see', added: true, tags: ['history'], text: 'Shirakawa-go’s village of gasshō-zukuri farmhouses, with steep thatched roofs, a UNESCO World Heritage site. Have lunch in the village', stops: [['Shirakawa-go (Ogimachi)', 136.9076, 36.2599]] },
+            { kind: 'see', added: true, tags: ['tour'], text: 'Wada House, the largest farmhouse you can go inside, and the viewpoint above the village', stops: [['Wada House', 136.9076, 36.2599]] },
+            { kind: 'see', added: true, text: 'About 3¾ hours each way from Tokyo, and the bus seats need booking. To add Takayama (an hour on, with its old town, Takayama Jinya and Hida beef), stay a night instead', stops: [['Takayama Jinya', 137.2591, 36.1398]] }] } },
+      hakone: { label: 'Hakone', after: 3, summary: 'Added: a day trip to Hakone', day:
+        { key: 'hakone', photo: null, title: 'Day trip to Hakone', place: 'Hakone', base: 'Tokyo (Akihabara)', country: 'TK',
+          travel: { mode: 'Romancecar from Shinjuku, and back', h: 3, line: [[139.7006, 35.6900], [139.1035, 35.2332]] },
+          items: [
+            { kind: 'see', added: true, tags: ['nature', 'tour'], text: 'The Hakone loop: mountain railway and cable car up, then the ropeway over Ōwakudani’s steaming valley, where you eat the black eggs. The ropeway stops in strong wind', stops: [['Ōwakudani', 139.0242, 35.2474]] },
+            { kind: 'see', added: true, tags: ['nature'], text: 'A boat across Lake Ashi to Hakone Shrine’s torii in the water, with Fuji behind on a clear day', stops: [['Lake Ashi', 139.0020, 35.2145], ['Hakone Shrine', 139.0256, 35.2040]] },
+            { kind: 'see', added: true, tags: ['nature'], text: 'Mount Taikan’s viewpoint over Fuji and the Hakone valley, and a soak in a hot spring before the train back. Many people stay a night instead', stops: [['Mount Taikan', 139.0490, 35.1836], ['Hakone-Yumoto hot springs', 139.1035, 35.2332]] }] } },
+      fuji: { label: 'Mount Fuji', after: 4, summary: 'Added: one more day at Mount Fuji', day:
+        { key: 'fuji-extra', photo: null, title: 'One more day at Mount Fuji', place: 'Mount Fuji', base: 'Fujikawaguchiko', country: 'FJ',
+          items: [
+            { kind: 'see', added: true, tags: ['nature'], text: 'A second chance at a clear Fuji: mornings are usually clearest', stops: [['Chūreitō Pagoda, Arakurayama Sengen Park', 138.8014, 35.5013]] },
+            { kind: 'see', added: true, tags: ['nature'], text: 'Oshino Hakkai, eight spring-fed ponds below Fuji', stops: [['Oshino Hakkai', 138.8327, 35.4602]] },
+            { kind: 'see', added: true, tags: ['nature'], text: 'The Mount Fuji Panoramic Ropeway up from Lake Kawaguchi, and a hot spring in the evening' }] } },
+      kyoto: { label: 'Kyoto: culture', after: 6, summary: 'Added: one more day in Kyoto', day:
+        { key: 'kyoto-extra', photo: null, title: 'One more day in Kyoto', place: 'Kyoto', base: 'Kyoto', country: 'KY',
+          items: [
+            { kind: 'see', added: true, tags: ['history', 'tour'], text: 'Kinkaku-ji, the Golden Pavilion. Go at opening time', stops: [['Kinkaku-ji', 135.7295, 35.0395]] },
+            { kind: 'see', added: true, tags: ['history', 'tour'], text: 'Sanjūsangen-dō, with its 1,001 statues of Kannon', stops: [['Sanjūsangen-dō', 135.7718, 34.9879]] },
+            { kind: 'see', added: true, tags: ['nature', 'tour'], text: 'Kōdai-ji and its small bamboo grove, a quiet alternative to Arashiyama', stops: [['Kōdai-ji', 135.7806, 35.0003]] }] } }
+    }
+  },
   takeaways: [
     'The people make Japan.',
     'Nothing gets lost in Japan, so travel light: send your suitcases ahead and carry a backpack.',
