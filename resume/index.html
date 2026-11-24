@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Résumé — Saurabh Bipin Chandra</title>
-  <meta name="description" content="Résumé of Saurabh Bipin Chandra, principal machine learning scientist: AI writing detection and LLM features at Turnitin, document AI for grading at Gradescope. Short and full views." />
+  <meta name="description" content="Résumé of Saurabh Bipin Chandra, principal machine learning scientist: AI writing detection and LLM features at Turnitin, document AI for grading at Gradescope." />
   <link rel="canonical" href="https://srbhchandra.github.io/resume/" />
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Résumé — Saurabh Bipin Chandra" />
@@ -17,12 +17,6 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="/assets/style.css?v=7d750627" />
   <style>
-    .views { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -1rem 0 2rem; font: 400 15px/1.4 var(--sans); color: var(--muted); }
-    .views button { font: inherit; padding: 5px 14px; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
-    .views button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-    .views button:hover { border-color: var(--muted); }
-    .views .hint { margin-left: 4px; }
-    body.short .full { display: none !important; }
     .role { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; align-items: baseline; }
     .role .when { font: 400 14px/1.4 var(--sans); color: var(--muted); }
     details.more { margin: .25rem 0 1.25rem; border-left: 2px solid var(--rule); padding-left: 1rem; }
@@ -40,7 +34,7 @@
     blockquote { margin: .5rem 0 1rem; padding-left: 1rem; border-left: 2px solid var(--rule); color: var(--muted); font-style: italic; }
     code { font: 400 0.88em/1 ui-monospace, Menlo, monospace; }
     @media print {
-      .back, .views, .feedback, .see { display: none !important; }
+      .back, .feedback, .see { display: none !important; }
       body { font-size: 11pt; background: #fff; }
       article h2 { margin-top: 1.25rem; }
       details.more { display: none; }
@@ -60,11 +54,6 @@
         <a href="https://github.com/srbhchandra">GitHub</a>
       </p>
 
-      <div class="views" role="group" aria-label="Résumé view" hidden>
-        <button type="button" data-view="short" aria-pressed="true">Short</button>
-        <button type="button" data-view="full" aria-pressed="false">Full</button>
-        <span class="hint">The full view explains how each piece works, with links you can try.</span>
-      </div>
 
       <p>
         I build machine learning for places where a wrong answer lands on a person:
@@ -73,8 +62,8 @@
         first ML hire at Gradescope, where I built most of the document AI behind its
         grading automation, and now at Turnitin, where I tech-lead English AI writing
         detection and built LLM features in Clarity, a TIME Best Invention of 2025.
-        I usually start with the evaluation: decide what "right" means, measure it
-        honestly, then make the model meet it. Before that, four years at Texas
+        I usually start with the evaluation: decide what "right" means for the people
+        using it, measure that honestly, then make the model meet it. Before that, four years at Texas
         Instruments optimizing computer vision for automotive driver assistance.
       </p>
 
@@ -84,7 +73,7 @@
         <h3>Turnitin · Principal Machine Learning Scientist</h3>
         <span class="when">2023 – present</span>
       </div>
-      <p class="full note">At Gradescope from 2016; Turnitin acquired Gradescope in 2018. Principal since January 2023.</p>
+      <p class="note">At Gradescope from 2016 (Turnitin acquired it in 2018); senior ML scientist before becoming principal in January 2023.</p>
 
       <h4>AI writing detection · 2023 – present</h4>
       <ul>
@@ -98,17 +87,16 @@
             (July 2024); I refactored the pipeline so one report could carry several models.</li>
         <li>Improved detection of <a href="https://www.turnitin.com/press/turnitin-expands-capabilities-amid-rising-threats-posed-by-ai-bypassers">humanizer
             ("AI bypasser") rewrites</a> across the most-used services while holding
-            document false positives below 0.5%, measured on more than a million documents.</li>
+            document false positives below 0.1%, measured on more than a million documents.</li>
         <li>Designed five evaluation metrics for documents that mix human and AI
             writing, where the standard ones blur different kinds of error. They are
             now how the team picks models.</li>
-        <li>Built the training and evaluation harness: 319 notebooks became one tested
-            pipeline (1,282 tests), training runs 7–10× faster, and every document is
+        <li>Built the training and evaluation harness: hundreds of notebooks became one tested pipeline, training runs about 10× faster, and every document is
             traceable from source to split. The team used it to ship detectors for six
             new languages a quarter early. AI agents now run most of a model round
             under my review.</li>
       </ul>
-      <details class="more full">
+      <details class="more">
         <summary>How the detection work fits together</summary>
         <p>
           The detector scores each sentence and the report shows the share of a
@@ -130,10 +118,7 @@
               positives to the style of the writing rather than the writer, ruled out
               contamination and label noise, and built new training sets, including
               mined hard negatives, aimed at the gap. That research drives the next model.</li>
-          <li><strong>The harness.</strong> Since the first bypasser model, English training data has
-              doubled, sentence-level training examples grew about tenfold and the
-              evaluation set grew about fourfold. That only works with a pipeline:
-              a 1.15-million-document registry that gates every new dataset (it found
+          <li><strong>The harness.</strong> The training and evaluation data have grown several times over in a year. That only works with a pipeline: a registry of more than a million documents that gates every new dataset (it found
               evaluation documents leaking into training), one validated schema for the
               datasets, configs for every run, and model cards generated from tracked
               runs, with no hand-typed numbers.</li>
@@ -141,7 +126,7 @@
               integrated and checked data, launched and tracked training and evaluation
               jobs, compared candidates and prepared the deployment, with read-only
               cloud access and a person approving anything costly or irreversible.
-              About 6,000 lines of documentation and per-stage agent skills onboard
+              Shared documentation and per-stage agent skills onboard
               people and agents alike.</li>
           <li><strong>Earlier (2023–2024).</strong> Owned the evaluation pipeline for
               the detector's first releases, standardized sentence- and document-level
@@ -158,7 +143,7 @@
         <li>Sole developer of the instructor report's three LLM components: a
             classifier for what students ask the assistant, and summaries per category
             and per conversation. Tuned each to run on cheaper models in US, EU and APAC
-            regions, cutting LLM cost 81–89% at the same quality.</li>
+            regions, cutting LLM cost by more than 80% at the same quality.</li>
         <li>Co-led evaluation of the student AI assistant: single- and multi-turn
             evaluations and prompt tuning so it coaches instead of writing for the student.
             <a href="https://www.turnitin.com/press/turnitin-clarity-named-to-times-list-of-the-best-inventions-of-2025">Clarity
@@ -169,14 +154,12 @@
             framework, a prompt builder, evaluation tracking in Langfuse and Weave, and a
             plan for multilingual evaluation with language experts.</li>
       </ul>
-      <details class="more full">
+      <details class="more">
         <summary>How the Clarity work was evaluated</summary>
         <p>
           Clarity shows teachers how a piece of writing came together, including when
           a student asked the AI assistant for help, and the assistant has to help
-          without doing the work. Early baselines crossed 24 submissions with 24
-          prompts under 16 LLM judges and 2 code checks, about 12,700 LLM calls, to
-          rank models and prompts before choosing. The cost cut came from matching each
+          without doing the work. Early baselines ran hundreds of submission and prompt pairs past more than a dozen LLM judges and code checks to rank models and prompts before choosing. The cost cut came from matching each
           task to the cheapest model that passed the same judges in each region, plus
           prompt changes (shorter targets, guidelines moved to the system message,
           prompt caching). Before that, in 2024, I built an agentic retrieval
@@ -187,7 +170,7 @@
       </details>
 
       <div class="role">
-        <h3>Gradescope (Turnitin) · Machine Learning Scientist</h3>
+        <h3>Gradescope (Turnitin) · Senior Machine Learning Scientist</h3>
         <span class="when">2016 intern; 2017 – 2023</span>
       </div>
       <h4>Document AI for grading paper exams</h4>
@@ -207,19 +190,17 @@
             Python 3.8 and TensorFlow 2 before the runtime's end of life.</li>
         <li>Wrote the case for data flywheels that the product organization adopted.</li>
       </ul>
-      <details class="more full">
+      <details class="more">
         <summary>How each module works</summary>
         <ul>
           <li><strong>Scan splitting.</strong> Splits a stack of scanned exams into
               one submission per student by matching each page to the template's pages
-              with Siamese, set-based features. I rewrote 85% of it (features per page
-              from 45 to 186), and its confidence decides between confirming the split,
+              with Siamese, set-based features. I rewrote most of it with four times the features per page, and its confidence decides between confirming the split,
               suggesting it, or falling back.</li>
           <li><strong>Alignment and masking.</strong> Aligns each scan to its template
               with a projective transform, filtering feature matches and keeping the best
               alignment, then masks the template away to leave student ink. New
-              binarization handles shadows and coloured or textured paper, and masked
-              files got about 55% smaller.</li>
+              binarization handles shadows and coloured or textured paper, and masked files are about half the size.</li>
           <li><strong>Roster matching.</strong> Matches the handwritten name and student
               ID to the class roster. Training tricks taught it to say "not on the
               roster": removing the true entry, dropping the inferred name or ID, and
@@ -239,18 +220,16 @@
               PyTorch."</blockquote>
               Libraries now ship the same ideas (for example Hugging Face's static cache, 2024).</li>
           <li><strong>Multiple choice.</strong> An inception-style fully convolutional
-              network finds marks on full-resolution pages (up to 3300 × 2500 px), where
+              network finds marks on full-resolution pages (thousands of pixels a side), where
               mark sizes vary widely, with a confidence model and a classifier for
               student ink in each bubble.</li>
           <li><strong>Blank answers and question types.</strong> A Siamese-style residual
-              CNN detects blank answers even on misaligned pages (recall from about 75% to
-              over 80%, mostly by reviewing the data); a classifier labels question type
+              CNN detects blank answers even on misaligned pages (recall improved mostly by reviewing the data); a classifier labels question type
               and answer type.</li>
           <li><strong>Assignment template parser.</strong> Reads instructor PDFs
               (MuPDF, Mathpix for math and chemistry), finds headers and footers, and
               infers the question hierarchy with a penalty-based parser instead of hard
-              rules. 71.7% of clean PDFs reach at least 70% region accuracy; name and ID boxes
-              are found at over 80% precision and recall; a confidence model halves the
+              rules. A confidence model halves the
               bad predictions shown to users.</li>
           <li><strong>Grading 10× faster.</strong> Supported the NSF SBIR project
               showing an AI could grade a new question after an instructor graded at
@@ -271,24 +250,21 @@
             than the DSP version and shipped for surround view.</li>
         <li>Sole developer of an OS-agnostic multimedia framework (Android, Linux, QNX)
             that offloaded media work to a remote core on OMAP4/5 processors.</li>
-        <li class="full">Built a pipelined scalable video encoder (OpenMAX) that used two
+        <li>Built a pipelined scalable video encoder (OpenMAX) that used two
             SIMD engines alongside the hardware accelerator to reach 1080p at 30 fps.</li>
       </ul>
 
       <h2>Teaching and collaborations</h2>
       <ul>
-        <li>Built labs for <a href="https://fullstackdeeplearning.com/course/2022/">Full
-            Stack Deep Learning</a> (2018–2022), the course behind its UC Berkeley
-            offering: handwriting datasets, a text-line detector, and ResNet + Transformer
-            recognizers for lines and paragraphs
+        <li>Built the labs for the first <a href="https://fullstackdeeplearning.com/course/2022/">Full Stack Deep Learning</a> bootcamp (2018), and returned in 2021, for its UC Berkeley course, to extend them: handwriting datasets, a text-line detector, and ResNet + Transformer recognizers for lines and paragraphs
             (<a href="https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2022-labs">labs on GitHub</a>).</li>
         <li>With Dr. Nikita Hari (University of Cambridge) on her PhD on gallium nitride
             power electronics: a network predicting voltage waveforms from device
             properties and current.</li>
       </ul>
 
-      <h2 class="full">Recognition</h2>
-      <ul class="full">
+      <h2>Recognition</h2>
+      <ul>
         <li>Turnitin Values award, 2023, for the paraphrase-robust detector and its release plan.</li>
         <li>Clarity, which I built LLM components for, named a TIME Best Invention of 2025.</li>
         <li>Acknowledged in Singh &amp; Karayev, "Full Page Handwriting Recognition via
@@ -315,20 +291,6 @@
       </ul>
     </article>
   </div>
-  <script>
-    (function () {
-      var bar = document.querySelector('.views');
-      var buttons = bar.querySelectorAll('button');
-      function set(view) {
-        document.body.classList.toggle('short', view === 'short');
-        buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.view === view)); });
-        try { history.replaceState(null, '', view === 'full' ? '#full' : location.pathname); } catch (e) {}
-      }
-      buttons.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.view); }); });
-      bar.hidden = false;
-      set(location.hash === '#full' ? 'full' : 'short');
-    })();
-  </script>
   <script src="/assets/feedback.js?v=d066a886" defer></script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "071006d2456f44e3b63b6d9eea89bab4"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
